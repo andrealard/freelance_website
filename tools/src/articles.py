@@ -90,7 +90,7 @@ article(
 <p>Die Maschinenrichtlinie stammt aus einer Zeit, in der Sicherheit vor allem Mechanik und Schaltungstechnik bedeutete. Die Verordnung trägt dem Umstand Rechnung, dass heute Software über Sicherheit entscheidet:</p>
 <ul>
 <li><strong>Software als Sicherheitsbauteil:</strong> Auch reine Software kann ein Sicherheitsbauteil sein, wenn sie eine Sicherheitsfunktion erfüllt.</li>
-<li><strong>Schutz gegen Korrumpierung:</strong> Software, Firmware und Schnittstellen mit Sicherheitsbezug müssen gegen unbeabsichtigte und böswillige Veränderung geschützt sein. Damit wird Cybersicherheit Teil der CE-Kennzeichnung.</li>
+<li><strong>Schutz gegen Korrumpierung:</strong> Software, Firmware und Schnittstellen mit Sicherheitsbezug müssen gegen unbeabsichtigte und böswillige Veränderung geschützt sein. Dieser Schutz fließt in die Konformitätsbewertung der Maschine ein; welche Pflichten konkret gelten, hängt von Produkt, Sicherheitsfunktion und Konformitätsbewertungsverfahren ab.</li>
 <li><strong>Nachvollziehbarkeit:</strong> Eingriffe und Softwareversionen sicherheitsrelevanter Software müssen protokolliert werden. Die Risikobeurteilung umfasst den gesamten Lebenszyklus, also auch Änderungen durch Updates.</li>
 <li><strong>Lernende Systeme:</strong> Sicherheitsbauteile und Maschinen, deren Sicherheitsfunktionen auf selbstlernendem Verhalten beruhen, brauchen eine Konformitätsbewertung durch eine benannte Stelle.</li>
 </ul>
@@ -110,7 +110,7 @@ article(
 </table>
 
 <h2>Die Zulieferfalle</h2>
-<p>Die meisten Maschinenhersteller kaufen das Batteriesystem zu. Die Verantwortung für die Sicherheit der Maschine bleibt trotzdem bei ihnen. Umgekehrt gilt: Wird ein Batteriesystem oder BMS mit Sicherheitsfunktion separat in Verkehr gebracht, kann es selbst ein Sicherheitsbauteil sein, und dann treffen die CE-Pflichten den Lieferanten. Wer vom Batterielieferanten nur ein Datenblatt bekommt, kann die Schutzfunktionen weder bewerten noch in die eigene Sicherheitsbetrachtung übernehmen. Diese Unterlagen sollten Sie anfordern:</p>
+<p>Die meisten Maschinenhersteller kaufen das Batteriesystem zu. Die Verantwortung für die Sicherheit der Maschine bleibt trotzdem bei ihnen. Umgekehrt kann ein Batteriesystem oder BMS mit Sicherheitsfunktion, das separat in Verkehr gebracht wird, unter Umständen selbst als Sicherheitsbauteil gelten. Ob und welche Herstellerpflichten den Lieferanten dann treffen, hängt von der Produktrolle und dem Konformitätsbewertungsverfahren ab und sollte im Einzelfall geprüft werden. Wer vom Batterielieferanten nur ein Datenblatt bekommt, kann die Schutzfunktionen weder bewerten noch in die eigene Sicherheitsbetrachtung übernehmen. Diese Unterlagen sollten Sie anfordern:</p>
 <ol>
 <li>ein Sicherheitshandbuch mit allen Sicherheitsfunktionen, ihren Reaktionszeiten und dem sicheren Zustand,</li>
 <li>die erreichte Sicherheitsintegrität je Funktion (Performance Level oder SIL) mit Begründung,</li>
@@ -141,7 +141,7 @@ article(
 <tr><th>Datum</th><th>Was gilt</th></tr>
 <tr><td>18.02.2024</td><td>Die Batterieverordnung gilt, ihre Pflichten treten schrittweise in Kraft</td></tr>
 <tr><td>18.08.2024</td><td>Sicherheitsnachweis für stationäre Batteriespeicher nach Artikel 12</td></tr>
-<tr><td>ab 18.02.2025</td><td>Erklärung zum CO₂-Fußabdruck für EV-Batterien; gilt erst zwölf Monate nach dem delegierten Rechtsakt zur Berechnungsmethode, der noch aussteht</td></tr>
+<tr><td>ab 18.02.2025</td><td>Erklärung zum CO₂-Fußabdruck für EV-Batterien; Geltung hängt vom Inkrafttreten der delegierten Rechtsakte zur Berechnungsmethode ab; aktuellen Stand prüfen</td></tr>
 <tr><td>20.07.2026</td><td>Das EU-Register für Batteriepässe wurde geöffnet</td></tr>
 <tr><td><strong>18.02.2027</strong></td><td><strong>Batteriepass-Pflicht</strong>, QR-Code, Anforderungen an Entnehmbarkeit und Austauschbarkeit</td></tr>
 <tr><td>18.08.2027</td><td>Sorgfaltspflichten in der Lieferkette (verschoben durch Verordnung (EU) 2025/1561)</td></tr>
@@ -190,7 +190,7 @@ article(
  "KI in der sicherheitskritischen Entwicklung: Was ISO 26262 und IEC 61508 zulassen",
  "KI-Werkzeuge schreiben Anforderungen, Testfälle und Code in Minuten. In der funktionalen Sicherheit lautet die Frage deshalb nicht mehr, ob Teams KI nutzen, sondern wie, ohne den Sicherheitsnachweis zu gefährden.",
  '''
-<div class="box"><p><strong>Kurz gesagt:</strong> ISO 26262 und IEC 61508 kennen keine Sonderregeln für KI. KI-Werkzeuge werden wie jedes andere Software-Werkzeug behandelt, und ihre Ergebnisse gelten nicht automatisch als Sicherheitsnachweis. Werkzeuge, deren Fehler sich auf das Produkt oder den Nachweis auswirken können, müssen nach ISO 26262-8 Abschnitt 11 oder IEC 61508-3 bewertet und gegebenenfalls qualifiziert werden. Ein Mensch bleibt Autor und verantwortlich für jedes Ergebnis.</p></div>
+<div class="box"><p><strong>Kurz gesagt:</strong> ISO 26262 und IEC 61508 kennen keine Sonderregeln für KI. KI-Werkzeuge werden wie jedes andere Software-Werkzeug behandelt, und ihre Ergebnisse gelten nicht automatisch als Sicherheitsnachweis. Werkzeuge, deren Fehler sich auf das Produkt oder den Nachweis auswirken können, müssen nach ISO 26262-8 Abschnitt 11 oder IEC 61508-3 bewertet und gegebenenfalls qualifiziert werden. Bewährt hat sich außerdem die Regel, dass ein Mensch Autor und verantwortlich für jedes Ergebnis bleibt; wörtlich vorgeschrieben ist das in den Normen nicht.</p></div>
 
 <h2>Wo KI wirklich hilft</h2>
 <p>Den größten Nutzen bringt KI auf der linken Seite des V-Modells, wo viel Text entsteht und Vollständigkeit zählt:</p>
@@ -207,11 +207,11 @@ article(
 
 <h2>Was die Normen verlangen</h2>
 <h3>ISO 26262-8, Abschnitt 11</h3>
-<p>Für jedes Software-Werkzeug wird ein Tool Confidence Level (TCL) bestimmt. Es ergibt sich aus zwei Fragen: Kann ein Fehler des Werkzeugs einen Fehler ins Produkt bringen oder einen Fehler unentdeckt lassen (Tool Impact)? Und wie wahrscheinlich ist es, dass ein solcher Fehler verhindert oder entdeckt wird (Tool Error Detection)? Bei TCL1 ist keine Qualifizierung nötig, bei TCL2 und TCL3 schon.</p>
+<p>Für jedes Software-Werkzeug wird ein Tool Confidence Level (TCL) bestimmt. Es ergibt sich aus zwei Fragen: Kann ein Fehler des Werkzeugs einen Fehler ins Produkt bringen oder einen Fehler unentdeckt lassen (Tool Impact)? Und wie wahrscheinlich ist es, dass ein solcher Fehler verhindert oder entdeckt wird (Tool Error Detection)? Bei TCL1 sind keine Qualifizierungsmaßnahmen erforderlich; für TCL2 und TCL3 nennt die Norm, abhängig vom ASIL, Methoden zur Werkzeugqualifizierung.</p>
 <h3>IEC 61508-3</h3>
 <p>Offline-Werkzeuge werden in drei Klassen eingeteilt: T1 erzeugt keine Ausgaben, die direkt oder indirekt zum ausführbaren Code beitragen; T2 unterstützt Test oder Verifikation und kann Fehler übersehen, aber nicht selbst erzeugen; T3 erzeugt Ausgaben, die direkt oder indirekt zum ausführbaren Code des sicherheitsbezogenen Systems beitragen. Je höher die Klasse, desto mehr Nachweis wird für das Werkzeug verlangt.</p>
 <h3>Was daraus folgt</h3>
-<p>Ein Sprachmodell zu qualifizieren, ist praktisch kaum möglich, zumal sich Modelle laufend ändern. Der gangbare Weg führt über die Fehlererkennung: Wer die nachfolgende Prüfung so gestaltet, dass Fehler im KI-Ergebnis sicher gefunden werden, senkt das Tool Confidence Level und macht eine Qualifizierung des Modells unnötig. KI-Ergebnisse werden dann wie Arbeit eines neuen Kollegen behandelt: hilfreich, aber nie ungeprüft.</p>
+<p>Ein Sprachmodell zu qualifizieren, ist praktisch kaum möglich, zumal sich Modelle laufend ändern. Ein möglicher Weg führt über die Fehlererkennung: Ist die nachfolgende Verifikation so gestaltet, dass Fehler im KI-Ergebnis mit hoher Wahrscheinlichkeit gefunden werden, kann sich daraus ein niedrigeres Tool Confidence Level ergeben. Ob das trägt, muss für den konkreten Verwendungszweck begründet und dokumentiert werden. KI-Ergebnisse werden dann wie Arbeit eines neuen Kollegen behandelt: hilfreich, aber nie ungeprüft.</p>
 
 <h2>Fünf Regeln, die sich bewähren</h2>
 <ol>
@@ -224,7 +224,7 @@ article(
 <p>Assessoren nach Automotive SPICE dürften künftig genau danach fragen: wer oder was ein Artefakt erzeugt hat, was seine Richtigkeit belegt und wie es rückverfolgbar ist. Wer diese Fragen beantworten kann, gewinnt mit KI Zeit, ohne Nachweisqualität zu verlieren.</p>
 ''',
  [("Darf KI-generierter Code in sicherheitskritischer Software verwendet werden?", "Ja, wenn er wie jeder andere Code entwickelt, geprüft und verifiziert wird. Entscheidend ist, dass Fehler des Werkzeugs durch die nachfolgende Verifikation sicher entdeckt werden und ein Mensch für das Ergebnis verantwortlich ist."),
-  ("Muss ein Sprachmodell nach ISO 26262 qualifiziert werden?", "Nur wenn sich aus Tool Impact und Tool Error Detection ein Tool Confidence Level von TCL2 oder TCL3 ergibt. Meist ist es praktikabler, die Fehlererkennung so zu gestalten, dass TCL1 erreicht wird."),
+  ("Muss ein Sprachmodell nach ISO 26262 qualifiziert werden?", "Nur wenn sich aus Tool Impact und Tool Error Detection ein Tool Confidence Level von TCL2 oder TCL3 ergibt. Über eine wirksame nachgelagerte Fehlererkennung lässt sich unter Umständen ein niedrigeres TCL begründen; das muss im Einzelfall nachgewiesen werden."),
   ("Was ist ein Tool Confidence Level?", "Eine Einstufung nach ISO 26262-8, die angibt, wie viel Vertrauen in ein Software-Werkzeug nötig ist. Sie ergibt sich aus der möglichen Auswirkung eines Werkzeugfehlers und der Wahrscheinlichkeit, ihn zu erkennen.")],
  "KI%20und%20funktionale%20Sicherheit")
 
@@ -234,7 +234,7 @@ article(
  "Cloud-BMS & digitaler Zwilling für Batteriespeicher und Flotten | dolavolt",
  "Wie Cloud-BMS und digitale Batterie-Zwillinge Alterung vorhersagen, Garantierisiken senken und Second Life ermöglichen – für Speicherparks, Maschinen- und Fahrzeugflotten.",
  "Cloud-BMS und digitaler Zwilling: Wie Betriebsdaten Batterien wertvoller machen",
- "Ein BMS sieht eine Batterie. Ein Cloud-BMS sieht Hunderte, ob in einem Speicherpark, einer Maschinenflotte oder einer Fahrzeugflotte. Aus diesem Unterschied entstehen bessere Alterungsmodelle, belastbarere Garantien und ein messbarer Restwert, vorausgesetzt, Batterie und Backend sind sauber verbunden.",
+ "Ein BMS sieht eine Batterie. Ein Cloud-BMS sieht Hunderte, ob in einem Speicherpark, einer Maschinenflotte oder einer Fahrzeugflotte. Daraus können bessere Alterungsmodelle, belastbarere Garantieaussagen und eine fundiertere Restwertbewertung entstehen, vorausgesetzt, Batterie und Backend sind sauber verbunden.",
  '''
 <h2>Was ist ein Cloud-BMS?</h2>
 <p>Ein Cloud-BMS ergänzt das Batteriemanagement vor Ort um eine Backend-Komponente. Das Steuergerät bleibt für Echtzeit und Sicherheit zuständig, in der Cloud laufen rechenintensive Modelle, die aus den Daten vieler Batterien lernen. Die Ergebnisse fließen als verbesserte Parameter oder Software-Update zurück.</p>
@@ -245,7 +245,7 @@ article(
 <h2>Wofür sich das lohnt</h2>
 <ul>
 <li><strong>Batteriepass:</strong> belastbare SoH-Werte über das ganze Batterieleben.</li>
-<li><strong>Garantie und Restwert:</strong> Bessere Prognosen senken Rückstellungen und machen gebrauchte Batterien bewertbar.</li>
+<li><strong>Garantie und Restwert:</strong> Bessere Prognosen können Rückstellungen senken und gebrauchte Batterien bewertbar machen.</li>
 <li><strong>Frühwarnung:</strong> Auffällige Zellen oder Module werden erkannt, bevor sie ausfallen.</li>
 <li><strong>Betrieb von Speichern:</strong> Wer die Alterung kennt, kann Fahrpläne und Vermarktung so planen, dass die Batterie die zugesagte Lebensdauer erreicht.</li>
 <li><strong>Bessere Algorithmen:</strong> Zustandsschätzung wird mit echten Felddaten kalibriert, gerade bei LFP-Zellen ein großer Gewinn.</li>
