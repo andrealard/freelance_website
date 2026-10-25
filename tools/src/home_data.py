@@ -24,16 +24,14 @@ SHORT_EN = [
  ("requirements-architektur-aspice", "Requirements and ASPICE", "Requirements, software architecture and Automotive SPICE."),
 ]
 FAQ_DE = [
- ("Wie arbeiten wir zusammen?", "Als Verstärkung Ihres Teams auf Stunden- oder Tagesbasis im Dienstvertrag oder mit klar abgegrenzten Arbeitspaketen zum Festpreis im Werkvertrag. Sie beauftragen uns direkt oder über Ihren Personaldienstleister."),
+ ("Wie arbeiten wir zusammen?", "Als Verstärkung Ihres Teams auf Stunden- oder Tagesbasis im Dienstvertrag oder mit klar abgegrenzten Arbeitspaketen zum Festpreis im Werkvertrag."),
  ("Arbeiten Sie remote oder vor Ort?", "Überwiegend remote. Für Workshops, Integration und Tests kommen wir zu Ihnen, im Raum München, Ingolstadt, Regensburg und Stuttgart regelmäßig, europaweit nach Absprache."),
  ("Arbeiten Sie auch außerhalb des Pkw?", "Ja. Wir unterstützen auch Projekte zur Elektrifizierung von Land-, Bau- und Kommunalmaschinen, mit den dort gültigen Normen wie ISO 25119 und ISO 13849 sowie Maschinenverordnung oder Typgenehmigung für Traktoren."),
- ("Übernehmen Sie bestehende Software-Module?", "Ja. Wir übernehmen bestehende Module, arbeiten uns strukturiert ein und dokumentieren so, dass Ihr Team sie später selbst weiterführen kann."),
 ]
 FAQ_EN = [
- ("How do we work together?", "As part of your team on an hourly or daily basis, or through clearly scoped fixed-price work packages. Contract us directly or through your staffing agency."),
+ ("How do we work together?", "As part of your team on an hourly or daily basis, or through clearly scoped fixed-price work packages."),
  ("Do you work remotely or on site?", "Mostly remotely. We come on site for workshops, integration and testing, regularly around Munich, Ingolstadt, Regensburg and Stuttgart, and across Europe by arrangement."),
  ("Do you work outside passenger cars?", "Yes. We also support projects electrifying agricultural, construction and municipal machinery, under the standards that apply there, such as ISO 25119 and ISO 13849, and the Machinery Regulation or tractor type approval."),
- ("Do you take over existing software modules?", "Yes. We take over existing modules, get up to speed in a structured way and document them so your team can carry them forward."),
 ]
 
 def facts(rows): return '<dl class="facts">' + "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows) + "</dl>"

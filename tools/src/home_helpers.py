@@ -31,18 +31,14 @@ HOME_FAQ_DE = [
  ("Ab wann sind Sie verfügbar?", "Unsere aktuelle Verfügbarkeit steht im Steckbrief oben auf dieser Seite. Fragen Sie auch kurzfristige Einsätze gerne direkt an, Sie bekommen innerhalb von zwei Werktagen eine Antwort."),
  ("Arbeiten Sie remote oder vor Ort?", "Beides. Wir arbeiten überwiegend remote und kommen für Workshops, Integration und Tests zu Ihnen, im Raum München, Ingolstadt, Regensburg und Stuttgart regelmäßig, europaweit nach Absprache."),
  ("Wie rechnen Sie ab?", "Im Dienstvertrag nach Stunden oder Tagen, im Werkvertrag zum Festpreis für ein definiertes Ergebnis. Unseren Stunden- oder Tagessatz nennen wir Ihnen mit dem Angebot."),
- ("Können wir Sie über einen Personaldienstleister beauftragen?", "Ja. Sie können uns direkt beauftragen oder über Ihren Personaldienstleister beziehungsweise Ihre Vermittlungsplattform."),
  ("Arbeiten Sie in Arbeitnehmerüberlassung?", "Nein. Wir arbeiten als selbstständige Ingenieure im Dienst- oder Werkvertrag mit eigener Ausstattung und klar beschriebenen Leistungen, nicht in Arbeitnehmerüberlassung."),
  ("Arbeiten Sie mit unseren Werkzeugen und Rechnern?", "Ja, wenn Ihre IT-Richtlinien das verlangen. Ansonsten arbeiten wir mit eigener Ausstattung. Projektspezifische Lizenzen, etwa für MATLAB/Simulink oder Vector-Werkzeuge, stellt in der Regel der Auftraggeber."),
- ("Übernehmen Sie bestehende Software-Module?", "Ja. Wir übernehmen bestehende Module, arbeiten uns strukturiert ein und dokumentieren so, dass Ihr Team sie später selbst weiterführen kann."),
  ("Unterschreiben Sie eine Geheimhaltungsvereinbarung?", "Selbstverständlich, vor dem ersten fachlichen Austausch."),
 ]
 HOME_FAQ_EN = [
  ("When are you available?", "Our current availability is shown in the profile at the top of this page. Short-notice requests are welcome; you get an answer within two business days."),
  ("Do you work remotely or on site?", "Both. We mostly work remotely and come on site for workshops, integration and testing, regularly in the Munich, Ingolstadt, Regensburg and Stuttgart areas and across Europe by arrangement."),
  ("How do you charge?", "Time and materials by the hour or day, or a fixed price for a defined deliverable. We quote our rate with the offer."),
- ("Can we engage you through an agency?", "Yes. You can contract us directly or through your staffing agency or freelance platform."),
- ("Do you take over existing software modules?", "Yes. We take over existing modules, get up to speed in a structured way and document them so your team can carry them forward."),
  ("Do you sign an NDA?", "Of course, before any technical exchange."),
 ]
 

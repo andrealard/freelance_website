@@ -9,6 +9,5 @@ page("leistungen/index.html", "Leistungen: Experten für BMS-Software, ISO 26262
  <div><h3>Im Team auf Zeit</h3><p>Als Teil Ihres Entwicklungsteams auf Stunden- oder Tagesbasis im Dienstvertrag, in Ihren Werkzeugen und Prozessen.</p></div>
  <div><h3>Arbeitspakete zum Festpreis</h3><p>Klar abgegrenzte Aufgaben, etwa ein Sicherheitskonzept oder ein Softwaremodul, im Werkvertrag mit definiertem Ergebnis.</p></div>
  <div><h3>Remote und vor Ort</h3><p>Überwiegend remote, für Workshops, Integration und Tests bei Ihnen: München, Ingolstadt, Regensburg, Stuttgart und europaweit nach Absprache.</p></div>
- <div><h3>Direkt oder über Partner</h3><p>Direkt oder über Ihren Personaldienstleister. Wir arbeiten als eigenständiges Ingenieurbüro mit eigener Ausstattung, nicht in Arbeitnehmerüberlassung.</p></div>
 </div></div></section>''',
      extra_head=f'<meta name="keywords" content="{KW_DE}">\n')
