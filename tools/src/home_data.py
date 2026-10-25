@@ -26,12 +26,12 @@ SHORT_EN = [
 FAQ_DE = [
  ("Wie arbeiten wir zusammen?", "Als Verstärkung Ihres Teams auf Stunden- oder Tagesbasis im Dienstvertrag oder mit klar abgegrenzten Arbeitspaketen zum Festpreis im Werkvertrag."),
  ("Arbeiten Sie remote oder vor Ort?", "Überwiegend remote. Für Workshops, Integration und Tests kommen wir zu Ihnen, im Raum München, Ingolstadt, Regensburg und Stuttgart regelmäßig, europaweit nach Absprache."),
- ("Arbeiten Sie auch außerhalb des Pkw?", "Ja. Wir unterstützen auch Projekte zur Elektrifizierung von Land-, Bau- und Kommunalmaschinen, mit den dort gültigen Normen wie ISO 25119 und ISO 13849 sowie Maschinenverordnung oder Typgenehmigung für Traktoren."),
+ ("Arbeiten Sie auch außerhalb der Automobilbranche?", "Ja. Neben Pkw und Nutzfahrzeugen unterstützen wir Projekte zur Elektrifizierung von Land-, Bau- und Kommunalmaschinen. Dort gelten je nach Maschine andere Normen, etwa ISO 25119, ISO 13849 oder ISO 19014, und statt der Fahrzeug-Typgenehmigung die Maschinenverordnung bzw. bei Traktoren die Typgenehmigung nach Verordnung (EU) 167/2013."),
 ]
 FAQ_EN = [
  ("How do we work together?", "As part of your team on an hourly or daily basis, or through clearly scoped fixed-price work packages."),
  ("Do you work remotely or on site?", "Mostly remotely. We come on site for workshops, integration and testing, regularly around Munich, Ingolstadt, Regensburg and Stuttgart, and across Europe by arrangement."),
- ("Do you work outside passenger cars?", "Yes. We also support projects electrifying agricultural, construction and municipal machinery, under the standards that apply there, such as ISO 25119 and ISO 13849, and the Machinery Regulation or tractor type approval."),
+ ("Do you work outside the automotive industry?", "Yes. Besides cars and commercial vehicles, we support projects electrifying agricultural, construction and municipal machinery. Depending on the machine, other standards apply there, such as ISO 25119, ISO 13849 or ISO 19014, and instead of vehicle type approval the Machinery Regulation or, for tractors, type approval under Regulation (EU) 167/2013."),
 ]
 
 def facts(rows): return '<dl class="facts">' + "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows) + "</dl>"
