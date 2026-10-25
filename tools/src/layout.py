@@ -10,10 +10,10 @@ LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="24"
 
 T = {
  "de": dict(nav=[("#kompetenzen","Kompetenzen"),("leistungen/","Leistungen"),("#trends","Trends"),("#erfahrung","Erfahrung"),("wissen/","Wissen")], other=("en/","English","en"),
-            cta="Projekt anfragen", skip="Zum Inhalt springen", tagline="BMS-Experten für Hochvolt-Batteriesysteme in Automotive und Landtechnik.",
+            cta="Projekt anfragen", skip="Zum Inhalt springen", tagline="BMS-Experten für Hochvolt-Batteriesysteme in Automotive und Landtechnik",
             fh=("Leistungen","Wissen","Kontakt"), imp="Impressum", dsg="Datenschutz", navlabel="Hauptnavigation"),
  "en": dict(nav=[("#skills","Competencies"),("#trends","Trends"),("#experience","Experience")], other=("","Deutsch","de"),
-            cta="Discuss your project", skip="Skip to content", tagline="BMS experts for high-voltage battery systems in automotive and agricultural machinery.",
+            cta="Discuss your project", skip="Skip to content", tagline="BMS experts for high-voltage battery systems in automotive and agricultural machinery",
             fh=("Services (DE)","Insights (DE)","Contact"), imp="Legal notice", dsg="Privacy", navlabel="Main navigation"),
 }
 
