@@ -24,7 +24,6 @@ HOME_DE = f'''
 <section id="kompetenzen" class="band">
  <div class="wrap">
   <div class="head"><h2>Kompetenzen</h2><p class="lead">Was wir in Ihr Projekt einbringen. <a href="{{r}}leistungen/">Alle Leistungen im Detail</a></p></div>
-  {ARCH_DE}
   <div class="skills"><div class="skill"><h3>Systems Engineering</h3><p>Systemanforderungen, Lasten- und Pflichtenhefte, Systemkonzepte und Architektur für Hochvolt-Batteriesysteme.</p></div><div class="skill"><h3>BMS-Funktionen</h3><p>Zellüberwachung über AFE in BMU/CMU-Architekturen, Strommessung, Balancing, SOC-, SOH- und SOP-Schätzung, Schützsteuerung und Precharge, Isolationsüberwachung, Fehlerbehandlung und Degradation.</p></div><div class="skill"><h3>Embedded Software</h3><p>Seriensoftware in C auf AUTOSAR-Basis (SWC, RTE, BSW), modellbasiert mit MATLAB/Simulink und Stateflow.</p></div><div class="skill"><h3>Funktionale Sicherheit</h3><p>Serienerfahrung nach ISO 26262 bis ASIL D, auf dieser Grundlage auch IEC 61508, ISO 13849 und ISO 25119: Sicherheitskonzepte, Sicherheitsanalysen, Sicherheitsmechanismen mit Fehlertoleranzzeit und sicherem Zustand.</p></div><div class="skill"><h3>Diagnose und Kommunikation</h3><p>UDS, Fehlerspeicher, XCP, CAN, CAN FD, LIN und J1939, Ladekommunikation nach ISO 15118 und DIN 70121.</p></div><div class="skill"><h3>Verifikation</h3><p>Unit-Tests, statische Codeanalyse nach MISRA C, SIL und HIL, Verifikationsnachweise und Arbeitsprodukte für Automotive-SPICE-Assessments.</p></div></div>
  </div>
 </section>
@@ -89,7 +88,6 @@ HOME_EN = f'''
 <section id="skills" class="band">
  <div class="wrap">
   <div class="head"><h2>Competencies</h2><p class="lead">What we bring to your project.</p></div>
-  {ARCH_EN}
   <div class="skills"><div class="skill"><h3>Systems engineering</h3><p>System requirements, specifications, system concepts and architecture for high-voltage battery systems.</p></div><div class="skill"><h3>BMS functions</h3><p>Cell monitoring via AFE in BMU/CMU architectures, current measurement, balancing, SOC, SOH and SOP estimation, contactor control and precharge, insulation monitoring, fault handling and degradation.</p></div><div class="skill"><h3>Embedded software</h3><p>Production software in C on AUTOSAR, model-based with MATLAB/Simulink and Stateflow.</p></div><div class="skill"><h3>Functional safety</h3><p>Series experience under ISO 26262 up to ASIL D, and on that basis IEC 61508, ISO 13849 and ISO 25119: safety concepts, safety analyses, safety mechanisms with fault tolerant time interval and safe state.</p></div><div class="skill"><h3>Diagnostics and communication</h3><p>UDS, fault memory, XCP, CAN, CAN FD, LIN and J1939, charging communication to ISO 15118 and DIN 70121.</p></div><div class="skill"><h3>Verification</h3><p>Unit testing, MISRA C static analysis, SIL and HIL, verification evidence and work products for Automotive SPICE assessments.</p></div></div>
  </div>
 </section>

@@ -202,7 +202,7 @@ FIGS = {
 }
 
 # ---------------- Icons für die Kompetenzen ----------------
-_I = lambda body: f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{body}</svg>'
+_I = lambda body: f'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{body}</svg>'
 ICONS = {
  "sys": _I('<rect x="3" y="3" width="18" height="5" rx="1"/><rect x="3" y="10" width="8" height="11" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/>'),
  "bms": _I('<rect x="2" y="7" width="17" height="11" rx="2"/><path d="M21 11v3"/><path d="M11 9l-3 4h4l-2 3"/>'),

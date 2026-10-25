@@ -281,11 +281,6 @@ h3.sub{margin:64px 0 28px;font-size:1.35rem}
 .hero.solo h1{max-width:23ch}
 
 /* ---------- Grafiken ---------- */
-.arch{margin:8px 0 48px;padding:28px;background:var(--white);border:1px solid var(--line);border-radius:10px}
-.arch svg{display:block;width:100%;height:auto;font-family:inherit}
-.arch svg.m{display:none;max-width:420px;margin:0 auto}
-.arch figcaption{margin-top:16px;font-size:.9rem;color:var(--ink-2);max-width:none}
-@media (max-width:760px){.arch{padding:16px}.arch svg.d{display:none}.arch svg.m{display:block}}
 .fig{margin:0 0 20px;padding:14px 16px 10px;background:var(--white);border:1px solid var(--line);border-radius:8px;max-width:380px}
 .fig figcaption{font-size:.75rem;color:var(--ink-2);text-align:right;margin-top:2px}
 .fig svg{display:block;width:100%;height:auto;font-family:inherit}
