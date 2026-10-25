@@ -271,57 +271,61 @@ article(
 # ---------- 6: Euro 7 und GB 38031 ----------
 article(
  "euro-7-gb-38031-bms",
- "Euro 7 und GB 38031-2025: Was neue Vorschriften vom BMS verlangen | dolavolt",
- "Euro 7 schreibt ab 29.11.2026 Mindestwerte für die Batteriehaltbarkeit vor, China verlangt mit GB 38031-2025 ab 1.7.2026 für neue Typen kein Feuer und keine Explosion bei thermischem Durchgehen. Was das für SOH-Schätzung, Früherkennung und Fehlerreaktion im BMS bedeutet.",
- "Euro 7 und GB 38031: Was neue Vorschriften vom BMS verlangen",
- "Zwei Vorschriften stellen 2026 neue Anforderungen an Batteriemanagement-Software. Euro 7 macht die Alterung der Batterie zum Gegenstand der Typgenehmigung, die chinesische GB 38031-2025 verlangt, dass ein thermisches Durchgehen weder zu Feuer noch zu einer Explosion führt.",
+ "Euro 7 und GB 38031-2025: Was neue Vorschriften für das BMS bedeuten | dolavolt",
+ "Euro 7 legt Mindestanforderungen an die Haltbarkeit von Antriebsbatterien fest, GB 38031-2025 verschärft in China seit 1.7.2026 die Anforderungen an die thermische Sicherheit. Was das für SOCE-Ermittlung, Überwachung thermischer Ereignisse und Fehlerreaktion im BMS bedeutet.",
+ "Euro 7 und GB 38031: Was neue Vorschriften für das BMS bedeuten",
+ "Zwei Regelwerke rücken die Haltbarkeit und die Sicherheit von Traktionsbatterien stärker in den Fokus. Die Euro-7-Verordnung legt Mindestanforderungen an die Haltbarkeit von Antriebsbatterien fest. Die chinesische Sicherheitsnorm GB 38031-2025 konkretisiert unter anderem die Anforderungen an die thermische Sicherheit. Für BMS-Entwickler ergeben sich daraus Aufgaben bei Zustandsschätzung, Überwachung thermischer Ereignisse, Fehlerreaktion und Validierung.",
  '''
-<div class="box"><p><strong>Kurz gesagt:</strong> Euro 7 (Verordnung (EU) 2024/1257) legt für neue Pkw-Typen ab dem 29.11.2026 fest, dass die Batterie nach fünf Jahren oder 100.000&nbsp;km noch 80&nbsp;% und nach acht Jahren oder 160.000&nbsp;km noch 72&nbsp;% ihrer zertifizierten Energie haben muss. GB 38031-2025 gilt in China seit dem 1.7.2026 für neue Typgenehmigungen, ab dem 1.7.2027 für bestehende Typen, und verlangt: kein Feuer, keine Explosion, auch bei thermischem Durchgehen.</p></div>
+<div class="box"><p><strong>Kurz gesagt:</strong> Für Elektro- und Plug-in-Hybrid-Pkw der Klasse M1 sieht Euro 7 mindestens 80&nbsp;% der zertifizierten Energie bis fünf Jahre oder 100.000&nbsp;km und mindestens 72&nbsp;% bis acht Jahre oder 160.000&nbsp;km vor, für leichte Nutzfahrzeuge (N1) 75&nbsp;% beziehungsweise 67&nbsp;%. GB 38031-2025 ist seit dem 1.7.2026 in China in Kraft: In der vorgeschriebenen thermischen Propagationsprüfung darf das Batteriesystem weder Feuer fangen noch explodieren, und es muss rechtzeitig ein Warnsignal ausgegeben werden.</p></div>
 
-<h2>Euro 7: Batteriehaltbarkeit wird Zulassungsthema</h2>
-<p>Euro 7 führt Mindestwerte für die Haltbarkeit von Traktionsbatterien in Elektro- und Plug-in-Hybridfahrzeugen ein. Maßgeblich ist der State of Certified Energy (SOCE), also der Anteil der bei der Typgenehmigung zertifizierten Energie, der zu einem Zeitpunkt noch verfügbar ist.</p>
+<h2>Euro 7: Batteriehaltbarkeit wird typgenehmigungsrelevant</h2>
+<p>Die Euro-7-Verordnung (EU) 2024/1257 führt Mindestanforderungen an die Haltbarkeit von Traktionsbatterien in Elektro- und Plug-in-Hybridfahrzeugen ein. Bezugsgröße ist der State of Certified Energy (SOCE): der Anteil der bei der Typgenehmigung zertifizierten Batterieenergie, der zu einem Zeitpunkt noch verfügbar ist. Die Prüfmethoden und Anforderungen konkretisiert die Durchführungsverordnung (EU) 2026/1764.</p>
 <table>
 <tr><th>Fahrzeugklasse</th><th>5 Jahre oder 100.000 km</th><th>8 Jahre oder 160.000 km</th></tr>
 <tr><td>Pkw (M1)</td><td>80 %</td><td>72 %</td></tr>
 <tr><td>Leichte Nutzfahrzeuge (N1)</td><td>75 %</td><td>67 %</td></tr>
 </table>
-<p>Es gilt jeweils der Wert, der zuerst erreicht wird. Ab dem 29.11.2026 gilt Euro 7 für neue Typen von Pkw und leichten Nutzfahrzeugen, ab dem 29.11.2027 für alle neu zugelassenen Fahrzeuge dieser Klassen. Für schwere Nutzfahrzeuge und Busse sind noch keine Werte festgelegt. Zusätzlich sollen Angaben zur Batteriealterung für Nutzer zugänglich sein, unter anderem über den Umweltpass des Fahrzeugs; die Details regeln Durchführungsrechtsakte.</p>
-<h3>Was das für das BMS heißt</h3>
+<p>Maßgeblich ist jeweils die Grenze, die zuerst erreicht wird. Euro 7 gilt ab dem 29.11.2026 für neue Typen von Pkw und leichten Nutzfahrzeugen und ab dem 29.11.2027 für alle neuen Fahrzeuge dieser Klassen. Für schwere Nutzfahrzeuge und Busse sind noch keine Werte festgelegt. Euro 7 sieht außerdem einen Umweltpass des Fahrzeugs vor; welche Batteriedaten er im Einzelnen enthält, ergibt sich aus den Durchführungsbestimmungen.</p>
+<h3>Was das für die BMS-Entwicklung bedeutet</h3>
+<p>Die folgenden Punkte sind fachliche Schlussfolgerungen, keine wörtlichen Anforderungen der Verordnung.</p>
 <ul>
-<li><strong>Die SOH-Schätzung wird überprüfbar.</strong> Ein Wert, der für die Typgenehmigung und gegenüber dem Kunden zählt, braucht eine nachvollziehbare Herleitung und eine Validierung über die Lebensdauer.</li>
-<li><strong>Bezug zur zertifizierten Energie.</strong> Die Schätzung muss zur Messmethode der Zertifizierung passen, sonst entstehen Abweichungen, die niemand erklären kann.</li>
-<li><strong>Langzeitdrift.</strong> Sensoroffsets, Temperaturfehler und seltene Vollzyklen wirken über Jahre. Gerade bei LFP-Zellen mit flacher Kennlinie ist der Einfluss besonders groß.</li>
-<li><strong>Auslesbarkeit und Genauigkeit.</strong> Der SOCE-Wert muss über die OBD-Schnittstelle auslesbar sein und die Genauigkeitsanforderung an den SOCE-Monitor erfüllen. Die Mindestwerte werden an der Fahrzeugflotte überprüft.</li>
+<li><strong>SOCE ist nicht gleich SOH.</strong> SOCE ist eine regulatorisch definierte, typgenehmigungsbezogene Größe. Ein beliebiger interner SOH-Wert des BMS genügt dafür nicht. Die Ermittlung des SOCE muss zur vorgeschriebenen Mess- und Bewertungsmethode passen und nachvollziehbar validiert sein.</li>
+<li><strong>Auslesbarkeit.</strong> Die Verordnung sieht vor, dass Daten zur Batteriehaltbarkeit über die OBD-Schnittstelle bereitgestellt werden. Datenpfad und Datenqualität müssen dafür ausgelegt sein.</li>
+<li><strong>Langzeitverhalten.</strong> Sensoroffsets, Temperaturfehler und seltene Vollzyklen wirken über Jahre. Bei LFP-Zellen mit flacher Kennlinie ist der Einfluss besonders groß.</li>
 </ul>
 
-<h2>GB 38031-2025: kein Feuer, keine Explosion</h2>
-<p>Die bisherige chinesische Norm verlangte bei thermischem Durchgehen im Wesentlichen eine Warnung rund fünf Minuten vor einer Gefährdung der Insassen. Die neue Fassung GB 38031-2025, verbindlich seit dem 1.7.2026 für neue Typgenehmigungen und ab dem 1.7.2027 für bestehende Typen, geht weiter: Das Batteriesystem darf auch bei thermischem Durchgehen weder Feuer fangen noch explodieren. Die Warnung bleibt Pflicht, und in einem festgelegten Zeitfenster um die Warnung darf kein Rauch in den Innenraum gelangen. Hinzu kommen eine Prüfung des Unterbodenschutzes und ein Kurzschlusstest nach 300 Schnellladezyklen.</p>
-<h3>Was das für das BMS heißt</h3>
-<p>Erfüllt wird die Anforderung vor allem über die Auslegung des Batteriesystems, etwa Propagationsbarrieren und Entgasung. Das BMS liefert Detektion und Warnung.</p>
+<h2>GB 38031-2025: kein Feuer, keine Explosion in der Propagationsprüfung</h2>
+<p>GB 38031-2025 ersetzt GB 38031-2020 und ist seit dem 1.7.2026 in Kraft. Für bestehende Zertifizierungen sieht das China Quality Certification Centre (CQC) eine Umstellung bis zum 1.7.2027 vor; die konkreten Übergangsanforderungen sind je nach Typgenehmigung und Zertifizierungsverfahren zu prüfen.</p>
+<p>Kern der Neufassung: In der vorgeschriebenen thermischen Propagationsprüfung darf das Batteriesystem weder Feuer fangen noch explodieren. Ein thermisches Warnsignal muss innerhalb der vorgegebenen Frist ausgegeben werden, und in einem festgelegten Zeitfenster darf kein Rauch in den Fahrzeuginnenraum gelangen; die Norm unterscheidet dabei zwischen Prüfungen auf System- und auf Fahrzeugebene. Neu sind außerdem ein Unterboden-Aufpralltest und ein externer Kurzschlusstest nach 300 Schnellladezyklen, bei dem ebenfalls weder Feuer noch Explosion auftreten dürfen.</p>
+<h3>Was das für die BMS-Entwicklung bedeutet</h3>
+<p>Die Norm stellt Anforderungen an das Batteriesystem, nicht an eine bestimmte BMS-Software. Erfüllt werden sie über das Zusammenspiel von Zellchemie, thermischen Barrieren, Entgasung und mechanischer Auslegung. Das BMS trägt Detektion, Warnung und definierte Steuerungsreaktionen bei. Die folgenden Punkte sind Engineering-Empfehlungen, keine ausdrücklichen Normpflichten.</p>
 <ul>
-<li><strong>Früherkennung.</strong> Spannungseinbrüche, Temperaturgradienten und gegebenenfalls Gas- oder Drucksensorik müssen zuverlässig und ohne Fehlalarme ausgewertet werden.</li>
-<li><strong>Reaktion.</strong> Was das System bei einem erkannten Ereignis tut, vom Öffnen der Schütze bis zur Warnung, muss für jeden Betriebszustand definiert und abgesichert sein, auch beim Laden und im Stand.</li>
-<li><strong>Schnellladen.</strong> Die Prüfung nach 300 Schnellladezyklen macht die Schnellladestrategie und ihre Grenzwerte im BMS sicherheitsrelevant.</li>
+<li><strong>Detektion.</strong> Spannungseinbrüche und Temperaturgradienten zuverlässig und ohne Fehlalarme auswerten; je nach Systemkonzept auch Gas- oder Drucksensorik.</li>
+<li><strong>Reaktion.</strong> Die Systemreaktion auf ein erkanntes Ereignis, vom Öffnen der Schütze bis zur Warnung, für alle Betriebszustände definieren und absichern, auch beim Laden und im Stand.</li>
+<li><strong>Schnellladen.</strong> Der Test nach 300 Schnellladezyklen macht die Schnellladestrategie und ihre Grenzwerte zu einem sicherheitsrelevanten Thema.</li>
 </ul>
 <p>Auch wer nicht für den chinesischen Markt entwickelt, sollte die Norm kennen: Sie setzt einen Maßstab, an dem sich Kunden und Wettbewerber orientieren.</p>
 
 <h2>Checkliste</h2>
 <ol>
-<li>SOH-Schätzung gegen die Anforderungen aus Euro 7 bewerten: Herleitung, Validierung, Langzeitverhalten.</li>
-<li>Datenpfad für Alterungsinformationen vom BMS bis zum Nutzer prüfen.</li>
+<li>SOCE-Ermittlung gegen die Euro-7-Methodik prüfen: Herleitung, Validierung, Langzeitverhalten.</li>
+<li>Bereitstellung der Haltbarkeitsdaten über OBD und den Weg in den Umweltpass klären.</li>
 <li>Detektionskette für thermische Ereignisse analysieren: Signale, Schwellen, Fehlalarmrate.</li>
 <li>Fehlerreaktion für alle Betriebszustände definieren und mit Fehlerinjektion prüfen.</li>
 <li>Schnellladestrategie und Alterungsmodell auf häufiges DC-Laden auslegen.</li>
 </ol>
+<p>Für eine verbindliche Bewertung ist der vollständige Wortlaut der jeweils geltenden Verordnung, der Durchführungsbestimmungen und der Norm einschließlich der Übergangsregeln heranzuziehen.</p>
 ''',
- [("Ab wann gelten die Euro-7-Anforderungen an die Batteriehaltbarkeit?", "Ab dem 29.11.2026 für neue Typen von Pkw und leichten Nutzfahrzeugen, ab dem 29.11.2027 für alle neu zugelassenen Fahrzeuge dieser Klassen."),
-  ("Welche Mindestwerte schreibt Euro 7 für Pkw vor?", "80 % der zertifizierten Batterieenergie nach fünf Jahren oder 100.000 km und 72 % nach acht Jahren oder 160.000 km, je nachdem, was zuerst erreicht wird."),
-  ("Was verlangt GB 38031-2025?", "Seit dem 1.7.2026 für neue Typgenehmigungen und ab dem 1.7.2027 für bestehende Typen darf ein Batteriesystem in China auch bei thermischem Durchgehen weder Feuer fangen noch explodieren. Dazu kommen Prüfungen zum Unterbodenaufprall und ein Kurzschlusstest nach 300 Schnellladezyklen.")],
+ [("Ab wann gelten die Euro-7-Anforderungen an die Batteriehaltbarkeit?", "Ab dem 29.11.2026 für neue Typen von Pkw und leichten Nutzfahrzeugen, ab dem 29.11.2027 für alle neuen Fahrzeuge dieser Klassen."),
+  ("Welche Mindestwerte schreibt Euro 7 für Pkw vor?", "80 % der zertifizierten Batterieenergie bis fünf Jahre oder 100.000 km und 72 % bis acht Jahre oder 160.000 km, je nachdem, was zuerst erreicht wird."),
+  ("Ist der SOH-Wert des BMS dasselbe wie der SOCE nach Euro 7?", "Nein. Der SOCE ist eine regulatorisch definierte, typgenehmigungsbezogene Größe. Seine Ermittlung muss zur vorgeschriebenen Methode passen; ein beliebiger interner SOH-Wert genügt nicht."),
+  ("Was verlangt GB 38031-2025?", "Seit dem 1.7.2026 darf ein Batteriesystem in der vorgeschriebenen thermischen Propagationsprüfung weder Feuer fangen noch explodieren, und ein Warnsignal muss rechtzeitig erfolgen. Hinzu kommen ein Unterboden-Aufpralltest und ein externer Kurzschlusstest nach 300 Schnellladezyklen.")],
  "Euro%207%20und%20GB%2038031")
+
 
 # ---------- Wissen-Index ----------
 items = [
- ("euro-7-gb-38031-bms", "Regulierung", "Euro 7 und GB 38031: Was neue Vorschriften vom BMS verlangen", "Batteriehaltbarkeit nach Euro 7 und kein Feuer bei thermischem Durchgehen in China."),
+ ("euro-7-gb-38031-bms", "Regulierung", "Euro 7 und GB 38031: Was neue Vorschriften für das BMS bedeuten", "SOCE nach Euro 7 und die thermische Propagationsprüfung nach GB 38031-2025."),
  ("batteriespeicher-sicherheit-artikel-12", "Speicher", "Batteriespeicher sicher nachweisen: Was Artikel 12 verlangt", "Die elf Sicherheitsparameter, die Rolle des BMS und welche Normen bis zur Harmonisierung helfen."),
  ("maschinenverordnung-2027-batteriesystem", "Maschinen", "Maschinenverordnung 2027 und das Batteriesystem", "Software als Sicherheitsbauteil, Schutz gegen Korrumpierung und was Sie vom Batterielieferanten verlangen sollten."),
  ("eu-batteriepass-2027", "Regulierung", "EU-Batteriepass 2027: Was das BMS jetzt liefern muss", "Wer den Pass ausstellt, welche Daten aus dem BMS kommen und was für Speicher und Industriebatterien gilt."),
