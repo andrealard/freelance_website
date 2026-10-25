@@ -41,9 +41,9 @@ TOOLS_FLAG = ""
 
 service_page(
  "bms-softwareentwicklung",
- "BMS-Softwareentwicklung Freelancer: Batteriemanagement-Software für Hochvolt-Batterien | dolavolt",
- "Freiberufliche BMS-Softwareentwicklung für Hochvolt-Batteriesysteme: SoC-, SoH- und SoP-Schätzung, Zellüberwachung, Balancing, Schützsteuerung, Isolationsüberwachung und Ladesteuerung. Remote oder vor Ort in München.",
- "BMS Experten, BMS Software Freelancer, Batteriemanagementsystem Entwicklung, AFE, BMU, CMU, Pyrofuse, Crashabschaltung, Lastenheft BMS, Euro 7 SOH, Thermal Runaway Erkennung, BMS Entwickler freiberuflich, Hochvolt Batterie Software, SoC Schätzung, SoH Schätzung, State of Health, State of Charge, State of Power, Kalman-Filter Batterie, Zellüberwachung, Balancing, Schützsteuerung, Contactor Management, Precharge, Isolationsüberwachung, HVIL, Ladesteuerung, 800 V, BMS Embedded Software, BMS Simulink, Batteriepass BMS",
+ "BMS-Softwareentwicklung: Batteriemanagement-Software für Hochvolt-Batterien | dolavolt",
+ "BMS-Softwareentwicklung für Hochvolt-Batteriesysteme: SoC-, SoH- und SoP-Schätzung, Zellüberwachung, Balancing, Schützsteuerung, Isolationsüberwachung und Ladesteuerung. Remote oder vor Ort in München.",
+ "BMS Experten, Batteriemanagementsystem Entwicklung, AFE, BMU, CMU, Pyrofuse, Crashabschaltung, Lastenheft BMS, Euro 7 SOH, Thermal Runaway Erkennung, Hochvolt Batterie Software, SoC Schätzung, SoH Schätzung, State of Health, State of Charge, State of Power, Kalman-Filter Batterie, Zellüberwachung, Balancing, Schützsteuerung, Contactor Management, Precharge, Isolationsüberwachung, HVIL, Ladesteuerung, 800 V, BMS Embedded Software, BMS Simulink, Batteriepass BMS",
  "BMS-Softwareentwicklung für Hochvolt-Batteriesysteme",
  "Wir entwickeln BMS-Software für Hochvolt-Batterien, als Verstärkung Ihres Teams oder als abgegrenztes Arbeitspaket, mit der Erfahrung aus der Pkw-Serienentwicklung.",
  ["Systemanforderungen, Lasten- und Pflichtenhefte und Systemkonzepte für das BMS",
@@ -69,9 +69,9 @@ service_page(
 
 service_page(
  "funktionale-sicherheit-iso-26262",
- "Functional Safety Engineer Freelancer: Funktionale Sicherheit nach ISO 26262 | dolavolt",
- "Freiberufliche Unterstützung in der funktionalen Sicherheit nach ISO 26262: HARA, Sicherheitskonzepte, FMEA, FTA, FMEDA, DFA und Safety Case für Hochvolt-Batteriesysteme und Steuergeräte.",
- "Functional Safety Experte, Functional Safety Freelancer, Funktionale Sicherheit ISO 26262, Verifikation Sicherheitsziele, Zertifizierung sicherheitskritischer Systeme, ECE-R100, IEC 62619, Functional Safety Engineer freiberuflich, FuSa Freelancer, Safety Engineer Automotive, HARA, ASIL, Sicherheitskonzept, Functional Safety Concept, Technical Safety Concept, FMEA, FTA, FMEDA, DFA, Safety Case, Freedom from Interference, Werkzeugqualifizierung, IEC 61508, ISO/SAE 21434",
+ "Funktionale Sicherheit nach ISO 26262: Safety Engineering für Hochvolt-Batteriesysteme | dolavolt",
+ "Funktionale Sicherheit nach ISO 26262: HARA, Sicherheitskonzepte, FMEA, FTA, FMEDA, DFA und Safety Case für Hochvolt-Batteriesysteme und Steuergeräte.",
+ "Functional Safety Experte, Funktionale Sicherheit ISO 26262, Verifikation Sicherheitsziele, Zertifizierung sicherheitskritischer Systeme, ECE-R100, IEC 62619, Safety Engineer Automotive, HARA, ASIL, Sicherheitskonzept, Functional Safety Concept, Technical Safety Concept, FMEA, FTA, FMEDA, DFA, Safety Case, Freedom from Interference, Werkzeugqualifizierung, IEC 61508, ISO/SAE 21434",
  "Funktionale Sicherheit nach ISO 26262 für Hochvolt-Batteriesysteme",
  "Überladung, Kurzschluss oder Übertemperatur können zu thermischem Durchgehen führen. Für Hochvolt-Batteriesysteme ergeben sich Sicherheitsziele deshalb typischerweise bis ASIL C oder D. Wir übernehmen Safety-Arbeitspakete von der Gefährdungsanalyse bis zum Safety Case.",
  ["Gefährdungs- und Risikoanalyse (HARA) und Sicherheitsziele mit ASIL-Einstufung",
@@ -93,9 +93,9 @@ service_page(
 
 service_page(
  "autosar-embedded-software",
- "AUTOSAR Freelancer und Embedded Software Entwickler Automotive | dolavolt",
- "Freiberufliche Embedded-Software-Entwicklung für Automotive-Steuergeräte: AUTOSAR Classic und Adaptive, Embedded C und C++, RTE- und BSW-Konfiguration, UDS-Diagnose, CAN FD und Automotive Ethernet.",
- "AUTOSAR Freelancer, Embedded Software Entwickler Automotive, Embedded C Freelancer, AUTOSAR Classic, AUTOSAR Adaptive, Software Integrator, RTE Konfiguration, BSW Konfiguration, Vector DaVinci, MICROSAR, EB tresos, UDS Diagnose, DEM, DCM, CAN FD, LIN, Automotive Ethernet, MISRA C, Steuergerätesoftware, Software-Defined Vehicle",
+ "AUTOSAR und Embedded-Software-Entwicklung für Automotive-Steuergeräte | dolavolt",
+ "Embedded-Software-Entwicklung für Automotive-Steuergeräte: AUTOSAR Classic und Adaptive, Embedded C und C++, RTE- und BSW-Konfiguration, UDS-Diagnose, CAN FD und Automotive Ethernet.",
+ "Embedded Software Entwickler Automotive, AUTOSAR Classic, AUTOSAR Adaptive, Software Integrator, RTE Konfiguration, BSW Konfiguration, Vector DaVinci, MICROSAR, EB tresos, UDS Diagnose, DEM, DCM, CAN FD, LIN, Automotive Ethernet, MISRA C, Steuergerätesoftware, Software-Defined Vehicle",
  "AUTOSAR und Embedded Software für Automotive-Steuergeräte",
  "Wir entwickeln und integrieren Embedded Software für Automotive-Steuergeräte nach AUTOSAR, in C und C++. Als erfahrene Embedded-Entwickler und Software-Integratoren steigen wir ohne lange Anlaufzeit in Ihre bestehende Architektur und Toolchain ein.",
  ["Entwicklung von AUTOSAR-Softwarekomponenten (SWC)",
@@ -116,9 +116,9 @@ service_page(
 
 service_page(
  "matlab-simulink-modellbasierte-entwicklung",
- "MATLAB/Simulink Freelancer: Modellbasierte Entwicklung für Automotive | dolavolt",
- "Freiberufliche modellbasierte Entwicklung mit MATLAB/Simulink und Stateflow: Funktionsentwicklung, Seriencodegenerierung mit Embedded Coder, MIL, SIL und Back-to-Back-Tests nach ISO 26262.",
- "MATLAB Simulink Freelancer, Simulink Entwickler freiberuflich, modellbasierte Entwicklung Automotive, Model-Based Design, Stateflow, Embedded Coder, Seriencodegenerierung, MIL, SIL, Back-to-Back-Test, Simulink Test, Modellierrichtlinien, MAB Guidelines, Polyspace, Batteriemodell, Simulink BMS",
+ "MATLAB/Simulink: Modellbasierte Entwicklung für Automotive | dolavolt",
+ "Modellbasierte Entwicklung mit MATLAB/Simulink und Stateflow: Funktionsentwicklung, Seriencodegenerierung mit Embedded Coder, MIL, SIL und Back-to-Back-Tests nach ISO 26262.",
+ "modellbasierte Entwicklung Automotive, Model-Based Design, Stateflow, Embedded Coder, Seriencodegenerierung, MIL, SIL, Back-to-Back-Test, Simulink Test, Modellierrichtlinien, MAB Guidelines, Polyspace, Batteriemodell, Simulink BMS",
  "MATLAB/Simulink und modellbasierte Entwicklung",
  "Viele BMS- und Steuergerätefunktionen entstehen heute modellbasiert. Wir entwickeln Simulink- und Stateflow-Modelle, die sich sauber in Seriencode übersetzen, testen und nach ISO 26262 absichern lassen.",
  ["Funktionsentwicklung in Simulink und Stateflow",
@@ -138,9 +138,9 @@ service_page(
 
 service_page(
  "test-absicherung-hil",
- "Software-Test und HIL-Absicherung Freelancer für BMS und Steuergeräte | dolavolt",
- "Freiberufliche Absicherung von Steuergerätesoftware: anforderungsbasierte Tests, Unit- und Integrationstests, HIL-Tests, Testautomatisierung und Fehlerinjektion nach Automotive SPICE und ISO 26262.",
- "Software Test Freelancer Automotive, HIL Test Freelancer, Testingenieur freiberuflich, Hardware-in-the-Loop, dSPACE, Vector CANoe, vTESTstudio, ECU-TEST, Testautomatisierung Python, Fehlerinjektion, Integrationstest, SWE.4, SWE.5, SWE.6, BMS Test, Steuergerätetest, Restbussimulation",
+ "Software-Test und HIL-Absicherung für BMS und Steuergeräte | dolavolt",
+ "Absicherung von Steuergerätesoftware: anforderungsbasierte Tests, Unit- und Integrationstests, HIL-Tests, Testautomatisierung und Fehlerinjektion nach Automotive SPICE und ISO 26262.",
+ "Hardware-in-the-Loop, dSPACE, Vector CANoe, vTESTstudio, ECU-TEST, Testautomatisierung Python, Fehlerinjektion, Integrationstest, SWE.4, SWE.5, SWE.6, BMS Test, Steuergerätetest, Restbussimulation",
  "Software-Test und HIL-Absicherung für BMS und Steuergeräte",
  "Ein BMS ist nur so gut wie seine Absicherung. Wir testen anforderungsbasiert, von Modul- und Integrationstests bis zum Hardware-in-the-Loop, und liefern die Verifikationsnachweise für ISO 26262 sowie die Arbeitsprodukte für Automotive-SPICE-Assessments.",
  ["Testspezifikation aus System- und Softwareanforderungen",
@@ -161,9 +161,9 @@ service_page(
 
 service_page(
  "requirements-architektur-aspice",
- "Requirements Engineering, Softwarearchitektur und Automotive SPICE Freelancer | dolavolt",
- "Freiberufliche Unterstützung in Requirements Engineering, Softwarearchitektur und Automotive SPICE: System- und Softwareanforderungen, Architektur, Rückverfolgbarkeit und Vorbereitung von ASPICE-Assessments.",
- "Requirements Engineer Freelancer, Requirements Engineering Automotive, Softwarearchitektur Automotive, Software Architekt Freelancer, Automotive SPICE, ASPICE Assessment, ASPICE Level 2, SYS.2, SWE.1, SWE.2, Rückverfolgbarkeit, Traceability, Polarion, DOORS, codebeamer, Systems Engineering",
+ "Requirements Engineering, Softwarearchitektur und Automotive SPICE | dolavolt",
+ "Requirements Engineering, Softwarearchitektur und Automotive SPICE: System- und Softwareanforderungen, Architektur, Rückverfolgbarkeit und Vorbereitung von ASPICE-Assessments.",
+ "Requirements Engineering Automotive, Softwarearchitektur Automotive, Automotive SPICE, ASPICE Assessment, ASPICE Level 2, SYS.2, SWE.1, SWE.2, Rückverfolgbarkeit, Traceability, Polarion, DOORS, codebeamer, Systems Engineering",
  "Requirements Engineering, Softwarearchitektur und Automotive SPICE",
  "Saubere Anforderungen und eine klare Architektur entscheiden, ob ein Projekt im Assessment besteht und ob die Software über Jahre wartbar bleibt. Wir bringen Struktur in Anforderungen, Architektur und Nachweise.",
  ["System- und Softwareanforderungen (SYS.2, SWE.1)",
@@ -226,5 +226,5 @@ rows = [
 ]
 svc_rows = "".join(f'<a class="read" href="{s}.html"><span class="topic">Leistung</span><div><h3>{dict(SERVICES)[s]}</h3><p>{d}</p></div><span class="go">Mehr</span></a>' for s, d in rows)
 page("leistungen/index.html", "Leistungen: Experten für BMS-Software, ISO 26262, AUTOSAR und Simulink | dolavolt",
-     "Übersicht unserer freiberuflichen Engineering-Leistungen im Automotive: BMS-Software, funktionale Sicherheit nach ISO 26262, AUTOSAR, MATLAB/Simulink, Test und HIL, Requirements und ASPICE.",
+     "Übersicht unserer Engineering-Leistungen für Hochvolt-Batteriesysteme: BMS-Software, funktionale Sicherheit nach ISO 26262, AUTOSAR, MATLAB/Simulink, Test und HIL, Requirements und ASPICE.",
      f'<section><div class="wrap"><div class="head"><h1>Leistungen</h1><p class="lead">Expertise für Automotive-Entwicklungsteams, von der Anforderung bis zur Serie.</p></div><div class="reads">{svc_rows}</div></div></section>')

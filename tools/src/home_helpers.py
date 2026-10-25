@@ -1,6 +1,6 @@
 
 # =====================================================================
-# Startseiten – Freelance-Positionierung
+# Startseiten
 # =====================================================================
 def module_svg(aria):
     cols, rows, p, r0 = 12, 6, 30, 12.5
@@ -20,12 +20,12 @@ def faq_html(f): return "".join(f"<details><summary>{q}</summary><p>{a}</p></det
 def faq_schema(f): return {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in f]}
 TODO = lambda s: f'<span class="todo">{s}</span>'
 
-KW_DE = ("Freelancer Automotive, Freiberufler Automotive, BMS Software Freelancer, Batteriemanagementsystem, BMS Entwickler, Embedded Software Entwickler Automotive, "
-         "AUTOSAR Freelancer, MATLAB Simulink Freelancer, Functional Safety Freelancer, ISO 26262, FuSa, Funktionale Sicherheit, Hochvolt Batterie, Elektromobilität, "
-         "Embedded C, Software Integrator, Automotive SPICE, ASPICE, HIL Test, Requirements Engineering, Software-Defined Vehicle, Batteriepass, Ingenieur freiberuflich München, "
-         "externe Unterstützung Automotive, Projektunterstützung Embedded, Interim Engineering")
-KW_EN = ("freelance BMS engineer, battery management system software, automotive freelancer Germany, embedded software engineer automotive, AUTOSAR freelancer, "
-         "MATLAB Simulink freelancer, functional safety engineer ISO 26262, FuSa consultant, high-voltage battery software, Automotive SPICE, HIL testing, contractor Munich")
+KW_DE = ("Batteriemanagementsystem, BMS Entwickler, Embedded Software Entwickler Automotive, "
+         "ISO 26262, FuSa, Funktionale Sicherheit, Hochvolt Batterie, Elektromobilität, "
+         "Embedded C, Software Integrator, Automotive SPICE, ASPICE, HIL Test, Requirements Engineering, Software-Defined Vehicle, Batteriepass, "
+         "externe Unterstützung Automotive, Projektunterstützung Embedded")
+KW_EN = ("battery management system software, embedded software engineer automotive, "
+         "functional safety engineer ISO 26262, FuSa consultant, high-voltage battery software, Automotive SPICE, HIL testing")
 
 HOME_FAQ_DE = [
  ("Ab wann sind Sie verfügbar?", "Unsere aktuelle Verfügbarkeit steht im Steckbrief oben auf dieser Seite. Fragen Sie auch kurzfristige Einsätze gerne direkt an, Sie bekommen innerhalb von zwei Werktagen eine Antwort."),
@@ -43,7 +43,7 @@ HOME_FAQ_EN = [
 ]
 
 ORG = {"@type": "Organization", "@id": BASE + "/#org", "name": "dolavolt", "url": BASE + "/", "logo": BASE + "/assets/og.png", "email": "hallo@dolavolt.de",
-       "description": "Expertise für BMS-Software, Embedded Software, MATLAB/Simulink, AUTOSAR und funktionale Sicherheit nach ISO 26262 im Automotive, auch als Freelancer im Dienst- oder Werkvertrag.",
+       "description": "Expertise für BMS-Software, Embedded Software, MATLAB/Simulink, AUTOSAR und funktionale Sicherheit nach ISO 26262 für Pkw, Nutzfahrzeuge und elektrische Arbeitsmaschinen.",
        "address": {"@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE"},
        "knowsLanguage": ["de", "en", "it"],
        "knowsAbout": ["Batteriemanagementsystem", "BMS-Software", "Hochvolt-Batteriesysteme", "State of Charge", "State of Health", "Schützsteuerung", "ISO 26262", "Funktionale Sicherheit",
@@ -64,7 +64,7 @@ SVC_DE = [
 ]
 SVC_EN = [
  ("bms-softwareentwicklung", "BMS software", "State estimation (SoC, SoH, SoP), cell monitoring, balancing, contactor management, mode management, insulation monitoring and charge control for high-voltage batteries."),
- ("funktionale-sicherheit-iso-26262", "Functional safety (ISO 26262)", "HARA, safety concepts, FMEA, FTA, FMEDA and safety case, as an interim functional safety engineer."),
+ ("funktionale-sicherheit-iso-26262", "Functional safety (ISO 26262)", "HARA, safety concepts, FMEA, FTA, FMEDA and safety case."),
  ("autosar-embedded-software", "AUTOSAR and embedded software", "AUTOSAR Classic and Adaptive, embedded C and C++, RTE and BSW configuration, UDS diagnostics and software integration."),
  ("matlab-simulink-modellbasierte-entwicklung", "MATLAB/Simulink", "Function development in Simulink and Stateflow, production code with Embedded Coder, MIL, SIL and back-to-back testing."),
  ("test-absicherung-hil", "Testing and HIL", "Requirements-based testing, HIL validation, test automation and fault injection to ASPICE and ISO 26262."),
