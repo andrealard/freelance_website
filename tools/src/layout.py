@@ -123,7 +123,7 @@ def article(slug, title, desc, headline, intro, content, faq, subj):
 {content}
 <h2>Häufige Fragen</h2>
 {faq_html}
-<div class="article-cta"><h2>Sie brauchen Verstärkung für Ihr BMS-Projekt?</h2><p>Wir bringen Serienerfahrung in BMS-Software, AUTOSAR, MATLAB/Simulink und funktionaler Sicherheit nach ISO 26262 in Ihr Team. Remote oder vor Ort.</p><a class="btn" href="mailto:hallo@dolavolt.de?subject=Projektanfrage%20({subj})">Projekt besprechen</a></div>
+<div class="article-cta"><h2>Sie brauchen Verstärkung für Ihr BMS-Projekt?</h2><p>Wir bringen Serienerfahrung in BMS-Software, AUTOSAR, MATLAB/Simulink und funktionaler Sicherheit nach ISO 26262 in Ihr Team. Remote oder vor Ort.</p><a class="btn" href="{{r}}#kontakt">Projekt anfragen</a></div>
 </article>'''
     page(f"wissen/{slug}.html", title, desc, body, schema, ogtype="article")
 

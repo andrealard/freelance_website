@@ -35,7 +35,7 @@ def service_page(slug, title, desc, keywords, h1, intro, tasks, results, tools, 
 {faq_h}
 <h2>Weitere Leistungen</h2>
 <ul class="related">{others}</ul>
-<div class="article-cta"><h2>Passt das zu Ihrem Projekt?</h2><p>Schicken Sie uns Aufgabe, Zeitraum und Einsatzort. Sie bekommen innerhalb von zwei Werktagen eine Rückmeldung.</p><a class="btn" href="mailto:hallo@dolavolt.de?subject=Projektanfrage%20{name.replace(' ', '%20')}">Projekt besprechen</a></div>
+<div class="article-cta"><h2>Passt das zu Ihrem Projekt?</h2><p>Schicken Sie uns Aufgabe, Zeitraum und Einsatzort. Sie bekommen innerhalb von zwei Werktagen eine Rückmeldung.</p><a class="btn" href="{{r}}#kontakt">Projekt anfragen</a></div>
 </article>'''
     page(f"leistungen/{slug}.html", title, desc, body, schema, ogtype="article",
          extra_head=f'<meta name="keywords" content="{keywords}">\n')
