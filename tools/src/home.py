@@ -75,7 +75,6 @@ HOME_DE = f'''
    <div class="trend"><span class="when">29.11.2026</span><h3>Euro 7: Batteriehaltbarkeit</h3><p>Neue Pkw-Typen müssen nach fünf Jahren oder 100.000&nbsp;km noch 80&nbsp;% ihrer zertifizierten Energie haben, nach acht Jahren oder 160.000&nbsp;km noch 72&nbsp;%. Die Ermittlung des State of Certified Energy (SOCE) wird damit typgenehmigungsrelevant.</p></div>
    <div class="trend"><span class="when">20.01.2027</span><h3>Maschinenverordnung</h3><p>Software mit Sicherheitsfunktion und der Schutz gegen Korrumpierung fließen in die Konformitätsbewertung ein, je nach Sicherheitsfunktion auch beim Batteriesystem elektrischer Bau- und selbstfahrender Landmaschinen. Traktoren unterliegen der Typgenehmigung nach Verordnung (EU) 167/2013. <a href="{{r}}wissen/maschinenverordnung-2027-batteriesystem.html">Mehr dazu</a></p></div>
    <div class="trend"><span class="when">18.02.2027</span><h3>EU-Batteriepass</h3><p>Pflicht für EV-Batterien und Industriebatterien über 2&nbsp;kWh. Angaben zum Gesundheitszustand kommen aus dem BMS. <a href="{{r}}wissen/eu-batteriepass-2027.html">Mehr dazu</a></p></div>
-   <div class="trend"><span class="when">In Serie</span><h3>Elektrische Arbeitsmaschinen</h3><p>Traktoren, Bagger und Radlader mit Hochvoltbatterie sind in Serie. Für das BMS gelten dort andere Regeln als im Pkw: stundenlange Dauerlast statt Lastspitzen, monatelange Standzeiten und funktionale Sicherheit je nach Maschine nach ISO 25119, ISO 13849 oder ISO 19014.</p></div>
   </div>
  </div>
 </section>
@@ -140,7 +139,6 @@ HOME_EN = f'''
    <div class="trend"><span class="when">29 Nov 2026</span><h3>Euro 7: battery durability</h3><p>New passenger-car types must retain 80&nbsp;% of certified energy after five years or 100,000&nbsp;km and 72&nbsp;% after eight years or 160,000&nbsp;km. Determining the state of certified energy (SOCE) becomes relevant for type approval.</p></div>
    <div class="trend"><span class="when">20 Jan 2027</span><h3>EU Machinery Regulation</h3><p>Software with a safety function and protection against corruption feed into the conformity assessment, depending on the safety function also for the battery system of electric construction and self-propelled agricultural machinery. Tractors fall under EU type approval (Regulation (EU) 167/2013).</p></div>
    <div class="trend"><span class="when">18 Feb 2027</span><h3>EU battery passport</h3><p>Mandatory for EV batteries and industrial batteries above 2&nbsp;kWh. State-of-health data comes from the BMS.</p></div>
-   <div class="trend"><span class="when">In production</span><h3>Electric work machines</h3><p>Tractors, excavators and wheel loaders with high-voltage batteries are in series production. Their BMS follows different rules than in a car: hours of continuous load instead of peaks, months of idle time and functional safety to ISO 25119, ISO 13849 or ISO 19014, depending on the machine.</p></div>
   </div>
  </div>
 </section>
