@@ -1,6 +1,9 @@
 import json, os, sys
 ROOT = sys.argv[1]
 BASE = "https://www.dolavolt.de"
+# Impressum und Datenschutz vorerst ausgeblendet: auf True setzen, sobald die Angaben stehen
+LEGAL = False
+LEGAL_PAGES = ("impressum.html", "datenschutz.html")
 DATE = "2026-10-15"
 
 LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="24" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.6"/><rect x="26.5" y="13" width="3.5" height="6" rx="1" fill="#B5652F"/><rect x="6" y="12" width="4" height="8" fill="#1F44D6"/><rect x="12" y="12" width="4" height="8" fill="#1F44D6"/><rect x="18" y="12" width="4" height="8" fill="#1F44D6" opacity=".35"/></svg>'
@@ -50,11 +53,12 @@ def footer(r, lang):
    <div><h4>{t["fh"][1]}</h4><ul><li><a href="{r}wissen/euro-7-gb-38031-bms.html">Euro 7 und GB 38031</a></li><li><a href="{r}wissen/eu-batteriepass-2027.html">Batteriepass 2027</a></li><li><a href="{r}wissen/ki-funktionale-sicherheit.html">KI und ISO 26262</a></li><li><a href="{r}wissen/cloud-bms-digitaler-zwilling.html">Cloud-BMS</a></li><li><a href="{r}wissen/">{"Alle Artikel" if lang=="de" else "All articles (German)"}</a></li></ul></div>
    <div><h4>{t["fh"][2]}</h4><ul><li><a href="mailto:hallo@dolavolt.de">hallo@dolavolt.de</a></li><li><a href="{r}{t["other"][0]}">{t["other"][1]}</a></li></ul></div>
   </div>
-  <div class="legal"><span>© 2026 dolavolt</span><span><a href="{r}impressum.html">{t["imp"]}</a>&ensp;<a href="{r}datenschutz.html">{t["dsg"]}</a></span></div>
+  <div class="legal"><span>© 2026 dolavolt</span>{f'<span><a href="{r}impressum.html">{t["imp"]}</a>&ensp;<a href="{r}datenschutz.html">{t["dsg"]}</a></span>' if LEGAL else ""}</div>
  </div>
 </footer>'''
 
 def page(path, title, desc, body, schema=None, robots="index,follow", ogtype="website", lang="de", extra_head="", absolute=False):
+    if not LEGAL and path in LEGAL_PAGES: return
     depth = path.count("/")
     r = "/" if absolute else ("../" * depth if depth else "./")
     a = "/" if absolute else ("../" * depth)  # asset prefix

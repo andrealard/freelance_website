@@ -17,13 +17,13 @@ def form(lang):
     L = (dict(n="Name", c="Unternehmen", e="E-Mail", p="Telefon (optional)", t="Thema", m="Ihr Anliegen",
               mp="Worum geht es, in welcher Phase ist das Projekt, ab wann und in welchem Umfang brauchen Sie Unterstützung?",
               opts=["BMS-Softwareentwicklung", "Funktionale Sicherheit", "Elektrifizierung Land- und Baumaschinen", "Systems Engineering und Architektur", "Sonstiges"],
-              b="Anfrage senden", note='Wir nutzen Ihre Angaben nur zur Beantwortung der Anfrage. Details in der <a href="{r}datenschutz.html">Datenschutzerklärung</a>.',
+              b="Anfrage senden", note='Wir nutzen Ihre Angaben nur zur Beantwortung der Anfrage.' + (' Details in der <a href="{r}datenschutz.html">Datenschutzerklärung</a>.' if LEGAL else ''),
               alt="Oder direkt per E-Mail:")
          if de else
          dict(n="Name", c="Company", e="Email", p="Phone (optional)", t="Topic", m="Your request",
               mp="What is it about, what phase is the project in, from when and to what extent do you need support?",
               opts=["BMS software development", "Functional safety", "Electrifying agricultural and construction machinery", "Systems engineering and architecture", "Other"],
-              b="Send request", note='We use your details only to answer your request. See our <a href="{r}datenschutz.html">privacy policy</a>.',
+              b="Send request", note='We use your details only to answer your request.' + (' See our <a href="{r}datenschutz.html">privacy policy</a>.' if LEGAL else ''),
               alt="Or email us directly:"))
     o = "".join(f"<option>{x}</option>" for x in L["opts"])
     return f"""<form class="cform" method="post" action="/anfrage">
