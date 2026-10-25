@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KI in der sicherheitskritischen Entwicklung: Was ISO 26262 und IEC 61508 zulassen | dolavolt</title>
+<meta name="description" content="Dürfen KI-Werkzeuge Anforderungen, Tests und Code für sicherheitskritische Systeme erzeugen? Was ISO 26262 und IEC 61508 zur Werkzeugqualifizierung verlangen und welche Regeln sich in der Praxis bewähren.">
+<link rel="canonical" href="https://www.dolavolt.de/wissen/ki-funktionale-sicherheit.html">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#E8ECEF">
+<meta name="author" content="dolavolt">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="dolavolt">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="KI in der sicherheitskritischen Entwicklung: Was ISO 26262 und IEC 61508 zulassen | dolavolt">
+<meta property="og:description" content="Dürfen KI-Werkzeuge Anforderungen, Tests und Code für sicherheitskritische Systeme erzeugen? Was ISO 26262 und IEC 61508 zur Werkzeugqualifizierung verlangen und welche Regeln sich in der Praxis bewähren.">
+<meta property="og:url" content="https://www.dolavolt.de/wissen/ki-funktionale-sicherheit.html">
+<meta property="og:image" content="https://www.dolavolt.de/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "KI in der sicherheitskritischen Entwicklung: Was ISO 26262 und IEC 61508 zulassen", "description": "Dürfen KI-Werkzeuge Anforderungen, Tests und Code für sicherheitskritische Systeme erzeugen? Was ISO 26262 und IEC 61508 zur Werkzeugqualifizierung verlangen und welche Regeln sich in der Praxis bewähren.", "inLanguage": "de-DE", "datePublished": "2026-10-15", "dateModified": "2026-10-15", "mainEntityOfPage": "https://www.dolavolt.de/wissen/ki-funktionale-sicherheit.html", "image": "https://www.dolavolt.de/assets/og.png", "author": {"@type": "Organization", "name": "dolavolt", "url": "https://www.dolavolt.de/"}, "publisher": {"@type": "Organization", "name": "dolavolt", "logo": {"@type": "ImageObject", "url": "https://www.dolavolt.de/assets/og.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.dolavolt.de/"}, {"@type": "ListItem", "position": 2, "name": "Wissen", "item": "https://www.dolavolt.de/wissen/"}, {"@type": "ListItem", "position": 3, "name": "KI in der sicherheitskritischen Entwicklung: Was ISO 26262 und IEC 61508 zulassen", "item": "https://www.dolavolt.de/wissen/ki-funktionale-sicherheit.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Darf KI-generierter Code in sicherheitskritischer Software verwendet werden?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, wenn er wie jeder andere Code entwickelt, geprüft und verifiziert wird. Entscheidend ist, dass Fehler des Werkzeugs durch die nachfolgende Verifikation sicher entdeckt werden und ein Mensch für das Ergebnis verantwortlich ist."}}, {"@type": "Question", "name": "Muss ein Sprachmodell nach ISO 26262 qualifiziert werden?", "acceptedAnswer": {"@type": "Answer", "text": "Nur wenn sich aus Tool Impact und Tool Error Detection ein Tool Confidence Level von TCL2 oder TCL3 ergibt. Meist ist es praktikabler, die Fehlererkennung so zu gestalten, dass TCL1 erreicht wird."}}, {"@type": "Question", "name": "Was ist ein Tool Confidence Level?", "acceptedAnswer": {"@type": "Answer", "text": "Eine Einstufung nach ISO 26262-8, die angibt, wie viel Vertrauen in ein Software-Werkzeug nötig ist. Sie ergibt sich aus der möglichen Auswirkung eines Werkzeugfehlers und der Wahrscheinlichkeit, ihn zu erkennen."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+ <nav class="wrap nav" aria-label="Hauptnavigation">
+  <a class="logo" href="../"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="24" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.6"/><rect x="26.5" y="13" width="3.5" height="6" rx="1" fill="#B5652F"/><rect x="6" y="12" width="4" height="8" fill="#1F44D6"/><rect x="12" y="12" width="4" height="8" fill="#1F44D6"/><rect x="18" y="12" width="4" height="8" fill="#1F44D6" opacity=".35"/></svg>dolavolt</a>
+  <ul><li><a href="../#kompetenzen">Kompetenzen</a></li><li><a href="../leistungen/">Leistungen</a></li><li><a href="../#trends">Trends</a></li><li><a href="../#erfahrung">Erfahrung</a></li><li><a href="../wissen/">Wissen</a></li></ul>
+  <div class="nav-right">
+   <a class="lang" href="../en/" hreflang="en" lang="en">English</a>
+   <a class="btn small" href="../#kontakt">Ingenieur sprechen</a>
+  </div>
+ </nav>
+</header>
+<main id="main">
+<article class="article">
+<nav class="crumbs" aria-label="Brotkrumen"><a href="../">Start</a> / <a href="../wissen/">Wissen</a></nav>
+<h1>KI in der sicherheitskritischen Entwicklung: Was ISO 26262 und IEC 61508 zulassen</h1>
+<p class="meta">Stand: 15. Oktober 2026</p>
+<p class="lead">KI-Werkzeuge schreiben Anforderungen, Testfälle und Code in Minuten. In der funktionalen Sicherheit lautet die Frage deshalb nicht mehr, ob Teams KI nutzen, sondern wie, ohne den Sicherheitsnachweis zu gefährden.</p>
+
+<div class="box"><p><strong>Kurz gesagt:</strong> ISO 26262 und IEC 61508 kennen keine Sonderregeln für KI. KI-Werkzeuge werden wie jedes andere Software-Werkzeug behandelt, und ihre Ergebnisse gelten nicht automatisch als Sicherheitsnachweis. Werkzeuge, deren Fehler sich auf das Produkt oder den Nachweis auswirken können, müssen nach ISO 26262-8 Abschnitt 11 oder IEC 61508-3 bewertet und gegebenenfalls qualifiziert werden. Ein Mensch bleibt Autor und verantwortlich für jedes Ergebnis.</p></div>
+
+<h2>Wo KI wirklich hilft</h2>
+<p>Den größten Nutzen bringt KI auf der linken Seite des V-Modells, wo viel Text entsteht und Vollständigkeit zählt:</p>
+<ul>
+<li>erste Entwürfe von Anforderungen und Sicherheitsanforderungen,</li>
+<li>Ableitung von Testfällen, einschließlich Grenzwert- und Fehlerfällen,</li>
+<li>Prüfung der Rückverfolgbarkeit zwischen Anforderungen, Architektur, Code und Tests,</li>
+<li>Pflege von Dokumentation, die sonst veraltet,</li>
+<li>Code-Review als zusätzliches Augenpaar.</li>
+</ul>
+
+<h2>Wo das Risiko liegt</h2>
+<p>Auf der rechten Seite des V-Modells geht es um Nachweise: Verifikation, Integration und Sicherheitsargumentation. Ein Sprachmodell, das falsch liegt, liegt überzeugend falsch. Wer seine Ergebnisse ungeprüft in die Nachweiskette übernimmt, riskiert Befunde im Assessment und im schlimmsten Fall ein Produkt, dessen Sicherheit nur behauptet ist.</p>
+
+<h2>Was die Normen verlangen</h2>
+<h3>ISO 26262-8, Abschnitt 11</h3>
+<p>Für jedes Software-Werkzeug wird ein Tool Confidence Level (TCL) bestimmt. Es ergibt sich aus zwei Fragen: Kann ein Fehler des Werkzeugs einen Fehler ins Produkt bringen oder einen Fehler unentdeckt lassen (Tool Impact)? Und wie wahrscheinlich ist es, dass ein solcher Fehler verhindert oder entdeckt wird (Tool Error Detection)? Bei TCL1 ist keine Qualifizierung nötig, bei TCL2 und TCL3 schon.</p>
+<h3>IEC 61508-3</h3>
+<p>Offline-Werkzeuge werden in drei Klassen eingeteilt: T1 erzeugt keine Ausgaben, die direkt oder indirekt zum ausführbaren Code beitragen; T2 unterstützt Test oder Verifikation und kann Fehler übersehen, aber nicht selbst erzeugen; T3 erzeugt Ausgaben, die direkt oder indirekt zum ausführbaren Code des sicherheitsbezogenen Systems beitragen. Je höher die Klasse, desto mehr Nachweis wird für das Werkzeug verlangt.</p>
+<h3>Was daraus folgt</h3>
+<p>Ein Sprachmodell zu qualifizieren, ist praktisch kaum möglich, zumal sich Modelle laufend ändern. Der gangbare Weg führt über die Fehlererkennung: Wer die nachfolgende Prüfung so gestaltet, dass Fehler im KI-Ergebnis sicher gefunden werden, senkt das Tool Confidence Level und macht eine Qualifizierung des Modells unnötig. KI-Ergebnisse werden dann wie Arbeit eines neuen Kollegen behandelt: hilfreich, aber nie ungeprüft.</p>
+
+<h2>Fünf Regeln, die sich bewähren</h2>
+<ol>
+<li><strong>Herkunft protokollieren:</strong> Prompt, Modell und Version, Eingaben, Ausgabe und Prüfer werden zum Zeitpunkt der Erzeugung festgehalten.</li>
+<li><strong>Ein Mensch ist Autor:</strong> Jedes Artefakt hat einen verantwortlichen Ingenieur, der es geprüft hat.</li>
+<li><strong>Modellwechsel ist eine Konfigurationsänderung:</strong> Eine neue Modellversion wird behandelt wie ein neues Werkzeug.</li>
+<li><strong>Keine KI als alleinige Verifikation:</strong> KI darf zusätzlich prüfen, aber nicht die einzige Prüfung sein, solange das Werkzeug dafür nicht qualifiziert ist.</li>
+<li><strong>Vertrauliche Daten schützen:</strong> Nur freigegebene Werkzeuge mit geklärter Datenverarbeitung kommen an Kundenunterlagen.</li>
+</ol>
+<p>Assessoren nach Automotive SPICE dürften künftig genau danach fragen: wer oder was ein Artefakt erzeugt hat, was seine Richtigkeit belegt und wie es rückverfolgbar ist. Wer diese Fragen beantworten kann, gewinnt mit KI Zeit, ohne Nachweisqualität zu verlieren.</p>
+
+<h2>Häufige Fragen</h2>
+<details><summary>Darf KI-generierter Code in sicherheitskritischer Software verwendet werden?</summary><p>Ja, wenn er wie jeder andere Code entwickelt, geprüft und verifiziert wird. Entscheidend ist, dass Fehler des Werkzeugs durch die nachfolgende Verifikation sicher entdeckt werden und ein Mensch für das Ergebnis verantwortlich ist.</p></details><details><summary>Muss ein Sprachmodell nach ISO 26262 qualifiziert werden?</summary><p>Nur wenn sich aus Tool Impact und Tool Error Detection ein Tool Confidence Level von TCL2 oder TCL3 ergibt. Meist ist es praktikabler, die Fehlererkennung so zu gestalten, dass TCL1 erreicht wird.</p></details><details><summary>Was ist ein Tool Confidence Level?</summary><p>Eine Einstufung nach ISO 26262-8, die angibt, wie viel Vertrauen in ein Software-Werkzeug nötig ist. Sie ergibt sich aus der möglichen Auswirkung eines Werkzeugfehlers und der Wahrscheinlichkeit, ihn zu erkennen.</p></details>
+<div class="article-cta"><h2>Sie brauchen Verstärkung für Ihr BMS-Projekt?</h2><p>Wir bringen Serienerfahrung in BMS-Software, AUTOSAR, MATLAB/Simulink und funktionaler Sicherheit nach ISO 26262 in Ihr Team. Remote oder vor Ort.</p><a class="btn" href="mailto:hallo@dolavolt.de?subject=Projektanfrage%20(KI%20und%20funktionale%20Sicherheit)">Projekt besprechen</a></div>
+</article>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="foot">
+   <div><a class="logo" href="../"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="8" width="24" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.6"/><rect x="26.5" y="13" width="3.5" height="6" rx="1" fill="#B5652F"/><rect x="6" y="12" width="4" height="8" fill="#1F44D6"/><rect x="12" y="12" width="4" height="8" fill="#1F44D6"/><rect x="18" y="12" width="4" height="8" fill="#1F44D6" opacity=".35"/></svg>dolavolt</a><p>BMS-Experten für Hochvolt-Batteriesysteme in Automotive und Landtechnik. Aus München.</p></div>
+   <div><h4>Leistungen</h4><ul><li><a href="../leistungen/bms-softwareentwicklung.html">BMS-Softwareentwicklung</a></li><li><a href="../leistungen/elektrifizierung-land-baumaschinen.html">Elektrifizierung Land- und Baumaschinen</a></li><li><a href="../leistungen/funktionale-sicherheit-iso-26262.html">Funktionale Sicherheit ISO 26262</a></li><li><a href="../leistungen/autosar-embedded-software.html">AUTOSAR und Embedded Software</a></li><li><a href="../leistungen/matlab-simulink-modellbasierte-entwicklung.html">MATLAB/Simulink</a></li><li><a href="../leistungen/test-absicherung-hil.html">Test und HIL-Absicherung</a></li><li><a href="../leistungen/requirements-architektur-aspice.html">Requirements und ASPICE</a></li></ul></div>
+   <div><h4>Wissen</h4><ul><li><a href="../wissen/euro-7-gb-38031-bms.html">Euro 7 und GB 38031</a></li><li><a href="../wissen/eu-batteriepass-2027.html">Batteriepass 2027</a></li><li><a href="../wissen/ki-funktionale-sicherheit.html">KI und ISO 26262</a></li><li><a href="../wissen/cloud-bms-digitaler-zwilling.html">Cloud-BMS</a></li><li><a href="../wissen/">Alle Artikel</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li><a href="mailto:hallo@dolavolt.de">hallo@dolavolt.de</a></li><li><a href="../en/">English</a></li></ul></div>
+  </div>
+  <div class="legal"><span>© 2026 dolavolt</span><span><a href="../impressum.html">Impressum</a>&ensp;<a href="../datenschutz.html">Datenschutz</a></span></div>
+ </div>
+</footer>
+</body>
+</html>
