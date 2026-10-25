@@ -17,7 +17,7 @@ HOME_DE = f'''
  <div class="wrap">
   <h1>Experten für<br>Batterie&shy;management und funktionale Sicherheit.</h1>
   <p class="lead">Ihr Engineering-Partner für Hochvolt-Batteriesysteme: von der Systemanforderung über die BMS-Software bis zum Sicherheitsnachweis. Für Pkw, Nutzfahrzeuge und elektrische Arbeitsmaschinen.</p>
-  <div class="actions"><a class="btn" href="#kontakt">Mit einem BMS-Ingenieur sprechen</a><a class="btn quiet" href="#kompetenzen">Kompetenzen ansehen</a></div>
+  <div class="actions"><a class="btn" href="#kontakt">Projekt anfragen</a><a class="btn quiet" href="#kompetenzen">Kompetenzen ansehen</a></div>
  </div>
 </section>
 
@@ -81,7 +81,7 @@ HOME_EN = f'''
  <div class="wrap">
   <h1>Experts in battery management and functional safety.</h1>
   <p class="lead">Your engineering partner for high-voltage battery systems: from system requirements and BMS software to the safety case. For passenger cars, commercial vehicles and electric working machines.</p>
-  <div class="actions"><a class="btn" href="#contact">Talk to a BMS engineer</a><a class="btn quiet" href="#skills">See our skills</a></div>
+  <div class="actions"><a class="btn" href="#contact">Discuss your project</a><a class="btn quiet" href="#skills">See our skills</a></div>
  </div>
 </section>
 
