@@ -21,7 +21,6 @@ def service_page(slug, title, desc, keywords, h1, intro, tasks, results, tools, 
 <nav class="crumbs" aria-label="Brotkrumen"><a href="{{r}}">Start</a> / <a href="{{r}}leistungen/">Leistungen</a></nav>
 <h1>{h1}</h1>
 <p class="lead">{intro}</p>
-<div class="box"><p><strong>Auf einen Blick:</strong> als Verstärkung Ihres Teams oder als Arbeitspaket mit definiertem Ergebnis · remote oder vor Ort im Raum München, Ingolstadt, Regensburg und Stuttgart · Deutsch und Englisch</p></div>
 <h2>Was wir übernehmen</h2>
 <ul>{li(tasks)}</ul>
 {extra}
