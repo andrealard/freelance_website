@@ -335,4 +335,4 @@ items = [
 cards = "".join(f'<a class="read" href="{s}.html"><span class="topic">{t}</span><div><h3>{h}</h3><p>{d}</p></div><span class="go">Lesen</span></a>' for s, t, h, d in items)
 page("wissen/index.html", "Wissen: BMS, Batteriesicherheit und Regulierung | dolavolt",
      "Fachartikel zu Batterieverordnung, Maschinenverordnung 2027, Batteriepass, KI in der funktionalen Sicherheit und Cloud-BMS. Kompakt erklärt von dolavolt.",
-     f'<section><div class="wrap"><div class="head"><h1>Wissen</h1><p class="lead">Was Hersteller von Batteriesystemen bis 2027 wissen müssen, erklärt von Ingenieuren, die BMS und Sicherheitsnachweise selbst entwickeln.</p></div><div class="reads">{cards}</div></div></section>')
+     f'<section><div class="wrap"><div class="head"><h1>Wissen</h1><p class="lead">Was Hersteller von Batteriesystemen bis 2027 wissen müssen</p></div><div class="reads">{cards}</div></div></section>')
