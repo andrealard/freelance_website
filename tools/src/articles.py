@@ -110,7 +110,7 @@ article(
 </table>
 
 <h2>Die Zulieferfalle</h2>
-<p>Die meisten Maschinenhersteller kaufen das Batteriesystem zu. Die Verantwortung für die Sicherheit der Maschine bleibt trotzdem bei ihnen. Umgekehrt kann ein Batteriesystem oder BMS mit Sicherheitsfunktion, das separat in Verkehr gebracht wird, unter Umständen selbst als Sicherheitsbauteil gelten. Ob und welche Herstellerpflichten den Lieferanten dann treffen, hängt von der Produktrolle und dem Konformitätsbewertungsverfahren ab und sollte im Einzelfall geprüft werden. Wer vom Batterielieferanten nur ein Datenblatt bekommt, kann die Schutzfunktionen weder bewerten noch in die eigene Sicherheitsbetrachtung übernehmen. Diese Unterlagen sollten Sie anfordern:</p>
+<p>Die meisten Maschinenhersteller kaufen das Batteriesystem zu. Die Pflichten aus der Maschinenverordnung, einschließlich Risikobeurteilung und Konformitätsbewertung, liegen in erster Linie beim Hersteller der Maschine. Ein in die Maschine eingebautes BMS ist nicht automatisch ein eigenständiges Sicherheitsbauteil mit eigener CE-Kennzeichnung. Umgekehrt kann ein Batteriesystem oder BMS mit Sicherheitsfunktion, das separat in Verkehr gebracht wird, unter Umständen selbst als Sicherheitsbauteil gelten. Ob und welche Herstellerpflichten den Lieferanten dann treffen, hängt von der Produktrolle und dem Konformitätsbewertungsverfahren ab und sollte im Einzelfall geprüft werden. Wer vom Batterielieferanten nur ein Datenblatt bekommt, kann die Schutzfunktionen weder bewerten noch in die eigene Sicherheitsbetrachtung übernehmen. Diese Unterlagen sollten Sie anfordern:</p>
 <ol>
 <li>ein Sicherheitshandbuch mit allen Sicherheitsfunktionen, ihren Reaktionszeiten und dem sicheren Zustand,</li>
 <li>die erreichte Sicherheitsintegrität je Funktion (Performance Level oder SIL) mit Begründung,</li>
@@ -148,10 +148,10 @@ article(
 </table>
 
 <h2>Wer den Pass ausstellen muss</h2>
-<p>Verantwortlich ist, wer die Batterie in der EU in Verkehr bringt, in der Regel also, wer sie fertigstellt. Für Speicherintegratoren heißt das: Wer Module in der EU zu einem System zusammenbaut, ist häufig selbst Hersteller im Sinne der Verordnung. Ein Lieferant außerhalb der EU kann den Pass nicht stellvertretend für Sie registrieren, und wer Arbeit an Dienstleister vergibt, gibt damit die Verantwortung nicht ab.</p>
+<p>Verantwortlich ist, wer die Batterie in der EU in Verkehr bringt, in der Regel also, wer sie fertigstellt. Für Speicherintegratoren heißt das: Wer Module in der EU zu einem System zusammenbaut, ist häufig selbst Hersteller im Sinne der Verordnung. Wer Arbeit an Dienstleister vergibt, gibt damit die Verantwortung nicht ab. Ein BMS-Zulieferer ist dagegen nicht automatisch selbst passpflichtig; er liefert aber die Daten, auf denen die dynamischen Angaben beruhen.</p>
 
 <h2>Warum der Batteriepass ein BMS-Thema ist</h2>
-<p>Der Pass ist kein einmal ausgefülltes Datenblatt, sondern ein Datensatz, der die Batterie über ihr ganzes Leben begleitet. Ein Teil der Angaben ist statisch: Hersteller, Typ, Chemie. Ein anderer Teil ist dynamisch, allen voran Leistung und Haltbarkeit. Angaben zum Gesundheitszustand (State of Health) betreffen Batterien mit BMS. Damit wird die Qualität der SoH-Schätzung im Steuergerät zu einer Größe, die nach außen sichtbar wird.</p>
+<p>Der Pass ist kein einmal ausgefülltes Datenblatt, sondern ein Datensatz, der die Batterie über ihr ganzes Leben begleitet. Ein Teil der Angaben ist statisch: Hersteller, Typ, Chemie. Ein anderer Teil ist dynamisch, allen voran Leistung und Haltbarkeit. Angaben zum Gesundheitszustand (State of Health) betreffen Batterien mit BMS und werden je nach Batteriekategorie und Zugriffsberechtigung bereitgestellt, nicht pauschal öffentlich. Damit wird die Qualität der SoH-Schätzung im Steuergerät zu einer Größe, die nach außen sichtbar wird.</p>
 <ul>
 <li><strong>Nachvollziehbare Zustandsschätzung:</strong> Kapazitäts- und Innenwiderstandsschätzung müssen dokumentiert, validiert und für die eingesetzte Zellchemie geeignet sein.</li>
 <li><strong>Sicherer Datenpfad:</strong> Die Werte müssen zuverlässig und manipulationssicher vom BMS ins Backend gelangen.</li>
@@ -160,8 +160,8 @@ article(
 </ul>
 
 <h2>Was das für Speicher und Industriebatterien heißt</h2>
-<p>Viele stationäre Speicher und Staplerbatterien nutzen LFP-Zellen. Deren Spannungskennlinie ist über weite Bereiche fast flach, was die Zustandsschätzung deutlich schwieriger macht als bei NMC-Zellen. Ein SoH-Wert, der im Pass steht und von Kunden, Versicherern oder Käufern einer gebrauchten Batterie gelesen wird, muss trotzdem belastbar sein.</p>
-<p>Hinzu kommt das zweite Leben: Wird eine Batterie wiederaufgearbeitet oder umgenutzt, etwa eine Fahrzeugbatterie als Speicher, braucht sie einen neuen Pass. Das gilt auch für Batterien, die vor Februar 2027 in Verkehr gebracht und danach wiederaufgearbeitet werden.</p>
+<p>Viele stationäre Speicher und Staplerbatterien nutzen LFP-Zellen. Deren Spannungskennlinie ist über weite Bereiche fast flach, was die Zustandsschätzung deutlich schwieriger macht als bei NMC-Zellen. Ein SoH-Wert, auf den sich Berechtigte etwa beim Weiterverkauf oder bei der Wiederaufarbeitung stützen, muss trotzdem belastbar sein.</p>
+<p>Hinzu kommt das zweite Leben: Für Batterien, die für die Wiederverwendung vorbereitet, umgenutzt oder wiederaufgearbeitet werden, sieht die Batterieverordnung einen neuen, mit dem ursprünglichen verknüpften Pass vor. Wer dafür verantwortlich ist und welche Angaben fortgeschrieben werden, richtet sich nach den konkreten Regeln der Verordnung und sollte im Einzelfall geprüft werden.</p>
 
 <h2>Klein anfangen, groß planen</h2>
 <p>Zum Start liegt der Schwerpunkt auf Identifikation, Typ, Modell und technischen Kerndaten. CO₂-Fußabdruck, Rezyklatanteile und Angaben zu Sorgfaltspflichten kommen schrittweise hinzu, weitere delegierte Rechtsakte sind zu erwarten. Legen Sie Datenmodell und Schnittstellen deshalb so an, dass Sie künftige Felder ohne Neuentwicklung ergänzen können.</p>
@@ -295,7 +295,7 @@ article(
 </ul>
 
 <h2>GB 38031-2025: kein Feuer, keine Explosion in der Propagationsprüfung</h2>
-<p>GB 38031-2025 ersetzt GB 38031-2020 und ist seit dem 1.7.2026 in Kraft. Für bestehende Zertifizierungen sieht das China Quality Certification Centre (CQC) eine Umstellung bis zum 1.7.2027 vor; die konkreten Übergangsanforderungen sind je nach Typgenehmigung und Zertifizierungsverfahren zu prüfen.</p>
+<p>GB 38031-2025 ersetzt GB 38031-2020 und ist seit dem 1.7.2026 in Kraft. Für die Umstellung bestehender Zertifizierungen nennt das China Quality Certification Centre (CQC) den 1.7.2027 sowie weitere Stufen für Aussetzung und Entzug von Zertifikaten. Das ist ein Zertifizierungsübergang, keine allgemeine Frist für alle Fahrzeugtypen; maßgeblich sind die jeweilige Zertifizierungsregel und das konkrete Verfahren.</p>
 <p>Kern der Neufassung: In der vorgeschriebenen thermischen Propagationsprüfung darf das Batteriesystem weder Feuer fangen noch explodieren. Ein thermisches Warnsignal muss innerhalb der vorgegebenen Frist ausgegeben werden, und in einem festgelegten Zeitfenster darf kein Rauch in den Fahrzeuginnenraum gelangen; die Norm unterscheidet dabei zwischen Prüfungen auf System- und auf Fahrzeugebene. Neu sind außerdem ein Unterboden-Aufpralltest und ein externer Kurzschlusstest nach 300 Schnellladezyklen, bei dem ebenfalls weder Feuer noch Explosion auftreten dürfen.</p>
 <h3>Was das für die BMS-Entwicklung bedeutet</h3>
 <p>Die Norm stellt Anforderungen an das Batteriesystem, nicht an eine bestimmte BMS-Software. Erfüllt werden sie über das Zusammenspiel von Zellchemie, thermischen Barrieren, Entgasung und mechanischer Auslegung. Das BMS trägt Detektion, Warnung und definierte Steuerungsreaktionen bei. Die folgenden Punkte sind Engineering-Empfehlungen, keine ausdrücklichen Normpflichten.</p>
