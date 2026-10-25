@@ -301,3 +301,10 @@ h3.sub{margin:64px 0 28px;font-size:1.35rem}
 .cform .fnote a{color:#fff}
 .cform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 @media (max-width:560px){.cform .row2{grid-template-columns:1fr}}
+
+/* ---------- Pfeil-Links statt unterstrichen ---------- */
+.sol .more a,.trend p a,.head .lead a{color:var(--ink);font-weight:650;text-decoration:none}
+.sol .more a::after,.trend p a::after,.head .lead a::after{content:"→";display:inline-block;margin-left:.4em;color:var(--copper);transition:transform .15s ease}
+.sol .more a:hover,.trend p a:hover,.head .lead a:hover{color:var(--cobalt)}
+.sol .more a:hover::after,.trend p a:hover::after,.head .lead a:hover::after{transform:translateX(4px)}
+.sol .more a:focus-visible,.trend p a:focus-visible,.head .lead a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
