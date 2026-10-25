@@ -7,7 +7,7 @@
 - **Zusagen prüfen:** Antwort innerhalb von zwei Werktagen, Einsatzorte München/Ingolstadt/Regensburg/Stuttgart.
 
 ## 2. Deployment
-Siehe `README.md` im Repository-Root: Cloudflare Pages mit Git-Anbindung, Build-Befehl leer, Ausgabeordner `site`. `site/_headers` setzt Security-Header (CSP, HSTS usw.) und Caching automatisch.
+Siehe `README.md` im Repository-Root: Cloudflare Worker mit statischen Assets aus `site`, Deploy-Befehl `npx wrangler deploy`. `site/_headers` setzt Security-Header (CSP, HSTS usw.) und Caching automatisch.
 
 ## 3. Gefunden werden als Freelancer
 1. **Google Search Console und Bing Webmaster Tools:** Domain verifizieren, `sitemap.xml` einreichen.

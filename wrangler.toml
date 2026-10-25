@@ -1,4 +1,9 @@
-# Cloudflare Pages – statische Website ohne Build-Schritt
-name = "dolavolt"
-pages_build_output_dir = "./site"
+# Cloudflare Workers mit statischen Assets (kein Build-Schritt).
+# Der Ordner ./site wird 1:1 ausgeliefert; _headers darin setzt die Security-Header.
+name = "freelance-website"
 compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./site"
+not_found_handling = "404-page"
+html_handling = "auto-trailing-slash"

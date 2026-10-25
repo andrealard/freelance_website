@@ -7,29 +7,26 @@ Statische Website (HTML/CSS, kein JavaScript, keine Cookies) für dolavolt: Batt
 | Pfad | Inhalt |
 |---|---|
 | `site/` | Die fertige Website – genau dieser Ordner wird ausgeliefert |
-| `site/_headers` | Security- und Cache-Header für Cloudflare Pages |
-| `site/404.html` | Fehlerseite (wird von Cloudflare Pages automatisch genutzt) |
+| `site/_headers` | Security- und Cache-Header |
+| `site/404.html` | Fehlerseite (über `not_found_handling`) |
 | `tools/build.py` | Erzeugt alle Seiten, `sitemap.xml` und `robots.txt` aus `tools/src/` neu |
 | `tools/src/` | Texte und Seitenvorlagen (Startseite, Leistungen, Fachartikel, Rechtliches) |
 | `docs/` | Anleitung zum Livegang und Keyword-Recherche |
-| `wrangler.toml` | Cloudflare-Pages-Konfiguration (Ausgabeordner `site`) |
+| `wrangler.toml` | Cloudflare-Konfiguration (Worker mit statischen Assets aus `site`) |
 
-## Hosting auf Cloudflare Pages (Git-Anbindung)
+## Hosting auf Cloudflare (Workers mit statischen Assets)
 
-1. Cloudflare-Dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-2. GitHub verbinden und das Repository `andrealard/freelance_website` auswählen.
-3. Build-Einstellungen:
-   - **Production branch:** `main`
-   - **Framework preset:** `None`
-   - **Build command:** *leer lassen*
-   - **Build output directory:** `site`
-4. **Save and Deploy.** Die Seite ist danach unter `https://<projektname>.pages.dev` erreichbar.
-5. **Custom domains** → `www.dolavolt.de` und `dolavolt.de` hinzufügen (Domain muss bei Cloudflare liegen oder per CNAME zeigen).
-6. Weiterleitung `dolavolt.de` → `https://www.dolavolt.de`: **Rules → Redirect Rules**, 301.
+Das Projekt ist als Cloudflare Worker mit statischen Assets konfiguriert (`wrangler.toml`, Ordner `site`). Es gibt keinen Build-Schritt.
 
-Jeder Push auf `main` veröffentlicht die Seite automatisch neu. Pushes auf andere Branches erzeugen eine Vorschau-URL.
+1. Cloudflare-Dashboard → **Workers & Pages** → **Create** → **Import a repository** → `andrealard/freelance_website`.
+2. Build-Einstellungen: **Build command** leer lassen, **Deploy command** `npx wrangler deploy` (Standard).
+3. Deploy. Die Seite ist danach unter `https://<worker-name>.<account>.workers.dev` erreichbar.
+4. **Settings → Domains & Routes** → Custom Domain `www.dolavolt.de` und `dolavolt.de` hinzufügen.
+5. Weiterleitung `dolavolt.de` → `https://www.dolavolt.de`: **Rules → Redirect Rules**, 301.
 
-Alternativ ohne Git-Anbindung: `npx wrangler pages deploy` im Repository-Root (liest `wrangler.toml`).
+Der `name` in `wrangler.toml` muss dem Worker-Namen im Dashboard entsprechen. Weicht er ab, öffnet Cloudflare automatisch einen Pull Request, der ihn korrigiert – einfach mergen.
+
+Jeder Push auf `main` veröffentlicht die Seite automatisch neu.
 
 ## Inhalte ändern
 
