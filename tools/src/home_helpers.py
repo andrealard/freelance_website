@@ -56,7 +56,7 @@ HREFLANG = f'<link rel="alternate" hreflang="de" href="{BASE}/">\n<link rel="alt
 
 SVC_DE = [
  ("bms-softwareentwicklung", "Zustandsschätzung (SoC, SoH, SoP), Zellüberwachung, Balancing, Schützsteuerung, Betriebsmodi, Isolationsüberwachung und Ladesteuerung für Hochvolt-Batterien."),
- ("funktionale-sicherheit-iso-26262", "Gefährdungsanalyse (HARA), Sicherheitskonzepte, FMEA, FTA, FMEDA und Safety Case, als Functional Safety Engineer auf Zeit."),
+ ("funktionale-sicherheit-iso-26262", "Gefährdungsanalyse (HARA), Sicherheitskonzepte, FMEA, FTA, FMEDA und Safety Case."),
  ("autosar-embedded-software", "AUTOSAR Classic und Adaptive, Embedded C und C++, RTE- und BSW-Konfiguration, UDS-Diagnose und Software-Integration."),
  ("matlab-simulink-modellbasierte-entwicklung", "Funktionsentwicklung in Simulink und Stateflow, Seriencode mit Embedded Coder, MIL, SIL und Back-to-Back-Tests."),
  ("test-absicherung-hil", "Anforderungsbasierte Tests, HIL-Absicherung, Testautomatisierung und Fehlerinjektion nach ASPICE und ISO 26262."),

@@ -74,7 +74,7 @@ service_page(
  "Functional Safety Engineer Freelancer: Funktionale Sicherheit nach ISO 26262 | dolavolt",
  "Freiberufliche Unterstützung in der funktionalen Sicherheit nach ISO 26262: HARA, Sicherheitskonzepte, FMEA, FTA, FMEDA, DFA und Safety Case für Hochvolt-Batteriesysteme und Steuergeräte.",
  "Functional Safety Experte, Functional Safety Freelancer, Funktionale Sicherheit ISO 26262, Verifikation Sicherheitsziele, Zertifizierung sicherheitskritischer Systeme, ECE-R100, IEC 62619, Functional Safety Engineer freiberuflich, FuSa Freelancer, Safety Engineer Automotive, HARA, ASIL, Sicherheitskonzept, Functional Safety Concept, Technical Safety Concept, FMEA, FTA, FMEDA, DFA, Safety Case, Freedom from Interference, Werkzeugqualifizierung, IEC 61508, ISO/SAE 21434",
- "Funktionale Sicherheit nach ISO 26262: Safety Engineering auf Zeit",
+ "Funktionale Sicherheit nach ISO 26262 für Hochvolt-Batteriesysteme",
  "Überladung, Kurzschluss oder Übertemperatur können zu thermischem Durchgehen führen. Für Hochvolt-Batteriesysteme ergeben sich Sicherheitsziele deshalb typischerweise bis ASIL C oder D. Wir übernehmen Safety-Arbeitspakete von der Gefährdungsanalyse bis zum Safety Case.",
  ["Gefährdungs- und Risikoanalyse (HARA) und Sicherheitsziele mit ASIL-Einstufung",
   "Funktionales Sicherheitskonzept (FSC)",
