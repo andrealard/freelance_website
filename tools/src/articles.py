@@ -323,8 +323,62 @@ article(
  "Euro%207%20und%20GB%2038031")
 
 
+article(
+ "software-defined-vehicle-bms",
+ "Software-Defined Vehicle: Was es für das BMS bedeutet | dolavolt",
+ "Over-the-Air-Updates nach UN R156, Cybersecurity nach UN R155 und ISO/SAE 21434, zonale E/E-Architekturen: Was das Software-Defined Vehicle für BMS-Software und Sicherheitsnachweis bedeutet.",
+ "Software-Defined Vehicle: Was es für das BMS bedeutet",
+ "Im Software-Defined Vehicle wird Fahrzeugsoftware über den gesamten Lebenszyklus weiterentwickelt und per Update ausgeliefert. Für das Batteriemanagementsystem heißt das: Seriensoftware wird updatefähig, Funktionen verteilen sich neu auf die E/E-Architektur, und Cybersecurity wird Teil der Entwicklung.",
+ """
+<div class="box"><p><strong>Kurz gesagt:</strong> In der EU müssen neue Pkw und Nutzfahrzeuge seit Juli 2024 die UN-Regelungen R155 (Cybersecurity) und R156 (Software-Updates) erfüllen. Für das BMS bedeutet das updatefähige Seriensoftware, die über jedes Update hinweg funktional sicher bleibt, und einen Cybersecurity-Prozess nach ISO/SAE 21434. Der sicherheitskritische Kern bleibt auf dem BMS-Steuergerät, Daten und Auswertung rücken näher an Zentralrechner und Backend.</p></div>
+
+<h2>Updates über den gesamten Lebenszyklus</h2>
+<p>UN R156 verlangt vom Fahrzeughersteller ein Software-Update-Managementsystem: Updates müssen geplant, auf ihre Auswirkungen auf typgenehmigungsrelevante Systeme bewertet, sicher übertragen und dokumentiert werden. Die Softwarestände eines Fahrzeugs werden dazu über Identifikationsnummern (RXSWIN) nachvollziehbar gehalten. ISO 24089 beschreibt das zugehörige Software-Update-Engineering.</p>
+<h3>Was das für die BMS-Entwicklung bedeutet</h3>
+<p>Die folgenden Punkte sind fachliche Schlussfolgerungen, keine wörtlichen Anforderungen der Regelungen.</p>
+<ul>
+<li><strong>Updatefähigkeit als Anforderung.</strong> Bootloader, Speicheraufteilung, Versionierung und Rückfallstrategie müssen von Anfang an mitgedacht werden, nicht erst kurz vor dem Serienstart.</li>
+<li><strong>Sicherer Zustand während des Updates.</strong> Ein Update darf nur in geeigneten Betriebszuständen laufen. Schützlage, Ladezustand und Fehlerreaktion während und nach dem Flashen müssen festgelegt sein.</li>
+<li><strong>Sicherheitsnachweis pro Softwarestand.</strong> Jede Änderung braucht eine Auswirkungsanalyse nach ISO 26262. Wer Anforderungen, Architektur und Tests sauber verknüpft hält, kann Updates schneller und belastbar freigeben.</li>
+<li><strong>Kalibrierdaten.</strong> Auch geänderte Parameter, etwa für Derating oder Ladestrategie, sind Softwareänderungen mit Wirkung auf Sicherheit und Haltbarkeit.</li>
+</ul>
+
+<h2>Cybersecurity wird Entwicklungsaufgabe</h2>
+<p>UN R155 verlangt ein Cybersecurity-Managementsystem über den Fahrzeuglebenszyklus. Für die Entwicklung der Steuergeräte ist ISO/SAE 21434 der maßgebliche Standard. Für das BMS stehen dabei vor allem die Kommunikationsschnittstellen und der Updatepfad im Fokus.</p>
+<ul>
+<li><strong>Bedrohungsanalyse (TARA)</strong> für Fahrzeugbus, Diagnosezugang und Ladeschnittstelle.</li>
+<li><strong>Abgesicherte Kommunikation</strong> zum Beispiel über Secure Onboard Communication (SecOC) und geschützte Diagnosezugriffe.</li>
+<li><strong>Secure Boot und signierte Updates</strong>, damit nur freigegebene Software auf das Steuergerät gelangt.</li>
+<li><strong>Zusammenspiel mit der funktionalen Sicherheit:</strong> Security-Maßnahmen dürfen die Fehlerreaktion nicht verzögern, und Safety- und Security-Analysen müssen aufeinander abgestimmt sein.</li>
+</ul>
+
+<h2>Neue E/E-Architekturen</h2>
+<p>Zonale und zentrale Architekturen bündeln Funktionen auf wenigen leistungsfähigen Rechnern. Das BMS bleibt davon nicht unberührt, wird aber nicht einfach aufgelöst.</p>
+<ul>
+<li><strong>Der Kern bleibt lokal.</strong> Zellüberwachung, Schützsteuerung, Isolationsüberwachung und die Sicherheitsmechanismen mit kurzen Fehlertoleranzzeiten bleiben auf dem BMS-Steuergerät nahe an der Batterie.</li>
+<li><strong>Auswertung wandert.</strong> Rechenintensive Zustandsschätzung, Alterungsmodelle und Flottenauswertung lassen sich teilweise auf Zentralrechner oder ins Backend verlagern.</li>
+<li><strong>Schnittstellen werden zum Vertrag.</strong> Serviceorientierte Kommunikation, etwa über Automotive Ethernet und SOME/IP, verlangt klar spezifizierte Schnittstellen zwischen BMS und Fahrzeug, auch für die Datenqualität, die Euro 7 und Batteriepass voraussetzen.</li>
+</ul>
+
+<h2>Checkliste</h2>
+<ol>
+<li>Updatefähigkeit des BMS als Systemanforderung aufnehmen: Bootloader, Speicher, Rückfallstrategie.</li>
+<li>Betriebszustände für Updates und die Fehlerreaktion beim Flashen festlegen.</li>
+<li>Auswirkungsanalyse für Software- und Parameteränderungen im Sicherheitsprozess verankern.</li>
+<li>TARA nach ISO/SAE 21434 für Bus, Diagnose und Ladeschnittstelle durchführen.</li>
+<li>Funktionsaufteilung zwischen BMS-Steuergerät, Zentralrechner und Backend begründet festlegen.</li>
+</ol>
+<p>Für eine verbindliche Bewertung sind der vollständige Wortlaut von UN R155 und R156 sowie die jeweiligen Typgenehmigungsvorgaben heranzuziehen.</p>
+""",
+ [("Was ist ein Software-Defined Vehicle?", "Ein Fahrzeug, dessen Funktionen überwiegend durch Software bestimmt werden und das über seinen Lebenszyklus per Update weiterentwickelt wird, meist auf Basis zentraler oder zonaler E/E-Architekturen."),
+  ("Gelten UN R155 und R156 für das BMS?", "Die Regelungen richten sich an den Fahrzeughersteller und betreffen das ganze Fahrzeug. Das BMS ist als updatefähiges, vernetztes Steuergerät Teil davon und muss die entsprechenden Anforderungen aus Cybersecurity- und Update-Management mittragen."),
+  ("Wandert das BMS in die Cloud?", "Nicht der sicherheitskritische Kern. Zellüberwachung, Schützsteuerung und Sicherheitsmechanismen bleiben auf dem BMS-Steuergerät. Datenauswertung, Alterungsmodelle und Flottenanalysen können ergänzend im Backend laufen.")],
+ "Software-Defined%20Vehicle")
+
+
 # ---------- Wissen-Index ----------
 items = [
+ ("software-defined-vehicle-bms", "Fahrzeug", "Software-Defined Vehicle: Was es für das BMS bedeutet", "Over-the-Air-Updates nach UN R156, Cybersecurity nach ISO/SAE 21434 und neue E/E-Architekturen."),
  ("euro-7-gb-38031-bms", "Regulierung", "Euro 7 und GB 38031: Was neue Vorschriften für das BMS bedeuten", "SOCE nach Euro 7 und die thermische Propagationsprüfung nach GB 38031-2025."),
  ("batteriespeicher-sicherheit-artikel-12", "Speicher", "Batteriespeicher sicher nachweisen: Was Artikel 12 verlangt", "Die elf Sicherheitsparameter, die Rolle des BMS und welche Normen bis zur Harmonisierung helfen."),
  ("maschinenverordnung-2027-batteriesystem", "Maschinen", "Maschinenverordnung 2027 und das Batteriesystem", "Software als Sicherheitsbauteil, Schutz gegen Korrumpierung und was Sie vom Batterielieferanten verlangen sollten."),

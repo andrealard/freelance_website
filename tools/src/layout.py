@@ -50,7 +50,7 @@ def footer(r, lang):
   <div class="foot">
    <div><a class="logo" href="{home}">{LOGO}dolavolt</a><p>{t["tagline"]}</p></div>
    <div><h4>{t["fh"][0]}</h4><ul>{"".join(f'<li><a href="{r}leistungen/{sl}.html">{nm}</a></li>' for sl, nm in SERVICES)}</ul></div>
-   <div><h4>{t["fh"][1]}</h4><ul><li><a href="{r}wissen/euro-7-gb-38031-bms.html">Euro 7 und GB 38031</a></li><li><a href="{r}wissen/eu-batteriepass-2027.html">Batteriepass 2027</a></li><li><a href="{r}wissen/ki-funktionale-sicherheit.html">KI und ISO 26262</a></li><li><a href="{r}wissen/cloud-bms-digitaler-zwilling.html">Cloud-BMS</a></li><li><a href="{r}wissen/">{"Alle Artikel" if lang=="de" else "All articles (German)"}</a></li></ul></div>
+   <div><h4>{t["fh"][1]}</h4><ul><li><a href="{r}wissen/euro-7-gb-38031-bms.html">Euro 7 und GB 38031</a></li><li><a href="{r}wissen/eu-batteriepass-2027.html">Batteriepass 2027</a></li><li><a href="{r}wissen/software-defined-vehicle-bms.html">Software-Defined Vehicle</a></li><li><a href="{r}wissen/cloud-bms-digitaler-zwilling.html">Cloud-BMS</a></li><li><a href="{r}wissen/">{"Alle Artikel" if lang=="de" else "All articles (German)"}</a></li></ul></div>
    <div><h4>{t["fh"][2]}</h4><ul><li><a href="mailto:hallo@dolavolt.de">hallo@dolavolt.de</a></li><li><a href="{r}{t["other"][0]}">{t["other"][1]}</a></li></ul></div>
   </div>
   <div class="legal"><span>© 2026 dolavolt</span>{f'<span><a href="{r}impressum.html">{t["imp"]}</a>&ensp;<a href="{r}datenschutz.html">{t["dsg"]}</a></span>' if LEGAL else ""}</div>
