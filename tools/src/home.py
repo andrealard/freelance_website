@@ -57,7 +57,7 @@ HOME_DE = f'''
 
 <section id="loesungen">
  <div class="wrap">
-  <div class="head"><h2>Wo BMS-Projekte hängen bleiben</h2><p class="lead">Vier Themen, die in BMS-Projekten häufig Aufwand verursachen.</p></div>
+  <div class="head"><h2>Typische Herausforderungen in BMS-Projekten</h2><p class="lead">Vier Themen, die in BMS-Projekten häufig Aufwand verursachen.</p></div>
   <div class="sols">
    {sol("Ladezustand bei LFP-Zellen", "Im flachen Bereich der Kennlinie ändert sich die Ruhespannung (OCV) einer LFP-Zelle typischerweise um weniger als ein Millivolt pro Prozent Ladezustand. Hinzu kommt eine Hysterese, die von Zelltyp, Temperatur und Vorgeschichte abhängt. Korrekturen über die OCV greifen kaum, Coulomb-Counting driftet mit jedem Offset des Stromsensors.", "Modellbasierte Zustandsschätzer, etwa adaptive Kalman-Filter, abgestimmt auf reale Fahr- und Ladeprofile. Ruhephasen und die steileren Kennlinienbereiche bei niedrigem und hohem Ladezustand nutzen wir zur Rekalibrierung, soweit Relaxationszeit und Temperatur eine belastbare Korrektur zulassen.", "{r}leistungen/bms-softwareentwicklung.html", "BMS-Softwareentwicklung", LAB_DE)}
    {sol("Schütze, Precharge und Fehlerreaktion", "Ein verschweißtes Schütz, ein abgebrochener Precharge, ein Isolationswiderstand unter dem Grenzwert von 100&nbsp;Ω/V für Gleichspannungskreise nach UN-R100: Kritisch sind selten die Nominalzustände, sondern die Übergänge zwischen Fahren, Laden und Abschalten.", "Wir entwickeln Betriebsmodi und Schützsteuerung von den Fehlerfällen her und legen in der Auslegung für jeden Übergang fest, welcher sichere Zustand innerhalb welcher Fehlertoleranzzeit (FTTI) erreicht werden muss.", "{r}leistungen/bms-softwareentwicklung.html", "Schützsteuerung und Betriebsmodi", LAB_DE)}
@@ -121,7 +121,7 @@ HOME_EN = f'''
 
 <section id="solutions">
  <div class="wrap">
-  <div class="head"><h2>Where BMS projects get stuck</h2><p class="lead">Four topics that often cost time in BMS projects.</p></div>
+  <div class="head"><h2>Typical challenges in BMS projects</h2><p class="lead">Four topics that often cost time in BMS projects.</p></div>
   <div class="sols">
    {sol("State of charge with LFP cells", "In the flat region of the curve, the open-circuit voltage (OCV) of an LFP cell typically changes by less than one millivolt per percent of state of charge, plus hysteresis that depends on cell type, temperature and history. OCV-based correction barely works, and coulomb counting drifts with every current-sensor offset.", "Model-based state estimators, such as adaptive Kalman filters, tuned on real driving and charging profiles. We use rest phases and the steeper parts of the curve at low and high state of charge for recalibration, where relaxation time and temperature allow a reliable correction.", "{r}leistungen/bms-softwareentwicklung.html", "BMS software development (DE)", LAB_EN)}
    {sol("Contactors, precharge and fault reaction", "A welded contactor, an aborted precharge, insulation resistance below the UN R100 limit of 100&nbsp;Ω/V for DC circuits: the critical moments are rarely the nominal states but the transitions between driving, charging and shutdown.", "We design mode and contactor management from the failure cases and, during design, define for every transition the safe state and the fault tolerant time interval (FTTI) within which it must be reached.", "{r}leistungen/bms-softwareentwicklung.html", "Contactor and mode management (DE)", LAB_EN)}
@@ -169,10 +169,10 @@ KW_DE = KW_DE + ", Experten Batteriemanagement, Systemingenieur BMS, Lastenheft 
 KW_EN = KW_EN + ", BMS experts, BMS systems engineer, Euro 7 battery durability, SOCE, GB 38031, thermal runaway detection, J1939, commercial vehicle battery"
 HOME_DE, HOME_EN = with_icons(HOME_DE), with_icons(HOME_EN)
 page("index.html", "Experten für Batteriemanagement (BMS) und funktionale Sicherheit nach ISO 26262 | dolavolt",
-     "Experten für Batteriemanagement-Software und funktionale Sicherheit: Systemkonzepte, SOC/SOH/SOP, Schützsteuerung, AUTOSAR, MATLAB/Simulink, ISO 26262 bis ASIL D, ISO 25119. Für Pkw, Nutzfahrzeuge und elektrische Land- und Baumaschinen. Auch als Freelancer.",
+     "Experten für Batteriemanagement-Software und funktionale Sicherheit: Systemkonzepte, SOC/SOH/SOP, Schützsteuerung, AUTOSAR, MATLAB/Simulink, ISO 26262 bis ASIL D, ISO 25119. Für Pkw, Nutzfahrzeuge und elektrische Land- und Baumaschinen. Remote oder vor Ort.",
      HOME_DE, {"@context": "https://schema.org", "@graph": [ORG, SERVICE, {"@type": "WebSite", "url": BASE + "/", "name": "dolavolt", "inLanguage": "de-DE"}, faq_schema(FAQ_DE)]},
      extra_head=HREFLANG + f'<meta name="keywords" content="{KW_DE}">\n')
 page("en/index.html", "Experts in Battery Management (BMS) and ISO 26262 Functional Safety | dolavolt",
-     "Experts in battery management software and functional safety: system concepts, SOC/SOH/SOP, contactor control, AUTOSAR, MATLAB/Simulink, ISO 26262 up to ASIL D, ISO 25119. For cars, commercial vehicles and electric agricultural and construction machinery. Freelance or fixed-price.",
+     "Experts in battery management software and functional safety: system concepts, SOC/SOH/SOP, contactor control, AUTOSAR, MATLAB/Simulink, ISO 26262 up to ASIL D, ISO 25119. For cars, commercial vehicles and electric agricultural and construction machinery. Remote or on site.",
      HOME_EN, {"@context": "https://schema.org", "@graph": [ORG, faq_schema(FAQ_EN)]}, lang="en",
      extra_head=HREFLANG + f'<meta name="keywords" content="{KW_EN}">\n')
