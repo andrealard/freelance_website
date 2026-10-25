@@ -231,4 +231,4 @@ rows = [
 svc_rows = "".join(f'<a class="read" href="{s}.html"><span class="topic">Leistung</span><div><h3>{dict(SERVICES)[s]}</h3><p>{d}</p></div><span class="go">Mehr</span></a>' for s, d in rows)
 page("leistungen/index.html", "Leistungen: Experten für BMS-Software, ISO 26262, AUTOSAR und Simulink | dolavolt",
      "Übersicht unserer freiberuflichen Engineering-Leistungen im Automotive: BMS-Software, funktionale Sicherheit nach ISO 26262, AUTOSAR, MATLAB/Simulink, Test und HIL, Requirements und ASPICE.",
-     f'<section><div class="wrap"><div class="head"><h1>Leistungen</h1><p class="lead">Expertise für Automotive-Entwicklungsteams, vom Requirement bis zum Release.</p></div><div class="reads">{svc_rows}</div></div></section>')
+     f'<section><div class="wrap"><div class="head"><h1>Leistungen</h1><p class="lead">Expertise für Automotive-Entwicklungsteams, von der Anforderung bis zur Serie.</p></div><div class="reads">{svc_rows}</div></div></section>')

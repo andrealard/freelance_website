@@ -56,7 +56,7 @@ HOME_DE = f'''
 <section id="erfahrung">
  <div class="wrap">
   <div class="head"><h2>Worauf unsere Arbeit beruht</h2><p class="lead">Langjährige Erfahrung in der Serienentwicklung von Hochvolt-Batteriemanagementsystemen.</p></div>
-  {exp([("BMS-Entwicklung", "Entwicklung von Hochvolt-BMS-Software für die Pkw-Serie nach ISO 26262 und Automotive SPICE, von der Anforderung bis zum Release."),
+  {exp([("BMS-Entwicklung", "Entwicklung von Hochvolt-BMS-Software für die Pkw-Serie nach ISO 26262 und Automotive SPICE, von der Anforderung bis zur Serie."),
         ("Konzeption", "System-, Betriebs- und Sicherheitskonzepte für Hochvolt-Batteriesysteme."),
         ("Architektur", "System- und Softwarearchitekturen für das BMS, von der Funktionsaufteilung bis zur Schnittstelle zwischen Hardware und Software.")])}
  </div>
@@ -120,7 +120,7 @@ HOME_EN = f'''
 <section id="experience">
  <div class="wrap">
   <div class="head"><h2>What our work is built on</h2><p class="lead">Many years of experience in series development of high-voltage battery management systems.</p></div>
-  {exp([("BMS development", "Development of high-voltage BMS software for passenger-car series production to ISO 26262 and Automotive SPICE, from requirements to release."),
+  {exp([("BMS development", "Development of high-voltage BMS software for passenger-car series production to ISO 26262 and Automotive SPICE, from requirements to series production."),
         ("Concepts", "System, operating and safety concepts for high-voltage battery systems."),
         ("Architecture", "System and software architectures for the BMS, from function allocation to the hardware-software interface.")])}
  </div>
