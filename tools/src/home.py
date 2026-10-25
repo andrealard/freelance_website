@@ -3,7 +3,7 @@
 # Startseite nach dem Muster echter Expertenseiten
 # =====================================================================
 def sol(title, today, withus, href, linktext, lab=("Heute", "Mit dolavolt")):
-    return (f'<div class="sol"><h3>{title}</h3><p class="today"><b>{lab[0]}</b>{today}</p>'
+    return (f'<div class="sol"><h3>{title}</h3>{FIGS.get(title, "")}<p class="today"><b>{lab[0]}</b>{today}</p>'
             f'<p class="with"><b>{lab[1]}</b>{withus}</p><p class="more"><a href="{href}">{linktext}</a></p></div>')
 
 LAB_DE = ("Herausforderung", "Unser Ansatz")
@@ -24,6 +24,7 @@ HOME_DE = f'''
 <section id="kompetenzen" class="band">
  <div class="wrap">
   <div class="head"><h2>Kompetenzen</h2><p class="lead">Was wir in Ihr Projekt einbringen. <a href="{{r}}leistungen/">Alle Leistungen im Detail</a></p></div>
+  {ARCH_DE}
   <div class="skills"><div class="skill"><h3>Systems Engineering</h3><p>Systemanforderungen, Lasten- und Pflichtenhefte, Systemkonzepte und Architektur für Hochvolt-Batteriesysteme.</p></div><div class="skill"><h3>BMS-Funktionen</h3><p>Zellüberwachung über AFE in BMU/CMU-Architekturen, Strommessung, Balancing, SOC-, SOH- und SOP-Schätzung, Schützsteuerung und Precharge, Isolationsüberwachung, Fehlerbehandlung und Degradation.</p></div><div class="skill"><h3>Embedded Software</h3><p>Seriensoftware in C auf AUTOSAR-Basis (SWC, RTE, BSW), modellbasiert mit MATLAB/Simulink und Stateflow.</p></div><div class="skill"><h3>Funktionale Sicherheit</h3><p>Serienerfahrung nach ISO 26262 bis ASIL D, auf dieser Grundlage auch IEC 61508, ISO 13849 und ISO 25119: Sicherheitskonzepte, Sicherheitsanalysen, Sicherheitsmechanismen mit Fehlertoleranzzeit und sicherem Zustand.</p></div><div class="skill"><h3>Diagnose und Kommunikation</h3><p>UDS, Fehlerspeicher, XCP, CAN, CAN FD, LIN und J1939, Ladekommunikation nach ISO 15118 und DIN 70121.</p></div><div class="skill"><h3>Verifikation</h3><p>Unit-Tests, statische Codeanalyse nach MISRA C, SIL und HIL, Verifikationsnachweise und Arbeitsprodukte für Automotive-SPICE-Assessments.</p></div></div>
  </div>
 </section>
@@ -88,6 +89,7 @@ HOME_EN = f'''
 <section id="skills" class="band">
  <div class="wrap">
   <div class="head"><h2>Competencies</h2><p class="lead">What we bring to your project.</p></div>
+  {ARCH_EN}
   <div class="skills"><div class="skill"><h3>Systems engineering</h3><p>System requirements, specifications, system concepts and architecture for high-voltage battery systems.</p></div><div class="skill"><h3>BMS functions</h3><p>Cell monitoring via AFE in BMU/CMU architectures, current measurement, balancing, SOC, SOH and SOP estimation, contactor control and precharge, insulation monitoring, fault handling and degradation.</p></div><div class="skill"><h3>Embedded software</h3><p>Production software in C on AUTOSAR, model-based with MATLAB/Simulink and Stateflow.</p></div><div class="skill"><h3>Functional safety</h3><p>Series experience under ISO 26262 up to ASIL D, and on that basis IEC 61508, ISO 13849 and ISO 25119: safety concepts, safety analyses, safety mechanisms with fault tolerant time interval and safe state.</p></div><div class="skill"><h3>Diagnostics and communication</h3><p>UDS, fault memory, XCP, CAN, CAN FD, LIN and J1939, charging communication to ISO 15118 and DIN 70121.</p></div><div class="skill"><h3>Verification</h3><p>Unit testing, MISRA C static analysis, SIL and HIL, verification evidence and work products for Automotive SPICE assessments.</p></div></div>
  </div>
 </section>
@@ -140,6 +142,7 @@ HOME_EN = f'''
 
 KW_DE = KW_DE + ", Experten Batteriemanagement, Systemingenieur BMS, Lastenheft Batteriesystem, Euro 7 Batteriehaltbarkeit, SOCE, GB 38031, thermisches Durchgehen, Thermal Runaway Erkennung, ECE-R100, IEC 62619, J1939, Nutzfahrzeug Hochvoltbatterie, Elektrotraktor, Fendt e107"
 KW_EN = KW_EN + ", BMS experts, BMS systems engineer, Euro 7 battery durability, SOCE, GB 38031, thermal runaway detection, J1939, commercial vehicle battery"
+HOME_DE, HOME_EN = with_icons(HOME_DE), with_icons(HOME_EN)
 page("index.html", "Experten für Batteriemanagement (BMS) und funktionale Sicherheit nach ISO 26262 | dolavolt",
      "Experten für Batteriemanagement-Software und funktionale Sicherheit: Systemkonzepte, SOC/SOH/SOP, Schützsteuerung, AUTOSAR, MATLAB/Simulink, ISO 26262 bis ASIL D, ISO 25119. Für Pkw, Nutzfahrzeuge und elektrische Land- und Baumaschinen. Auch als Freelancer, aus München.",
      HOME_DE, {"@context": "https://schema.org", "@graph": [ORG, SERVICE, {"@type": "WebSite", "url": BASE + "/", "name": "dolavolt", "inLanguage": "de-DE"}, faq_schema(FAQ_DE)]},
