@@ -64,8 +64,7 @@ service_page(
   "Dokumentation und Arbeitsprodukte für Automotive SPICE und ISO 26262"],
  "MATLAB/Simulink, Stateflow, Embedded Coder, AUTOSAR Classic, C, MISRA C, Vector CANoe, XCP, ISO 15118, DIN 70121, Polarion oder DOORS, ISO 26262, Automotive SPICE, ECE-R100, Euro 7, GB 38031, EU-Batterieverordnung.",
  [("Für welche Zellchemien entwickeln Sie BMS-Software?", "Für Lithium-Ionen-Chemien wie NMC und LFP. LFP stellt wegen der flachen Spannungskennlinie besondere Anforderungen an die Ladezustandsschätzung."),
-  ("Arbeiten Sie modellbasiert oder in C?", "Beides. Wir richten uns nach Ihrer Toolchain: Funktionsentwicklung in MATLAB/Simulink mit Codegenerierung oder Implementierung in C innerhalb einer AUTOSAR-Architektur."),
-  ("Übernehmen Sie auch bestehende BMS-Software?", "Ja. Wir übernehmen bestehende Module, etwa Schützsteuerung oder Betriebsmodi, arbeiten uns strukturiert ein und dokumentieren so, dass Ihr Team sie später selbst weiterführen kann.")])
+  ("Arbeiten Sie modellbasiert oder in C?", "Beides. Wir richten uns nach Ihrer Toolchain: Funktionsentwicklung in MATLAB/Simulink mit Codegenerierung oder Implementierung in C innerhalb einer AUTOSAR-Architektur.")])
 
 service_page(
  "funktionale-sicherheit-iso-26262",

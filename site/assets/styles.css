@@ -308,3 +308,13 @@ h3.sub{margin:64px 0 28px;font-size:1.35rem}
 .sol .more a:hover,.trend p a:hover,.head .lead a:hover{color:var(--cobalt)}
 .sol .more a:hover::after,.trend p a:hover::after,.head .lead a:hover::after{transform:translateX(4px)}
 .sol .more a:focus-visible,.trend p a:focus-visible,.head .lead a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+
+/* ---------- Links ohne Blau-Unterstrich ---------- */
+a{color:var(--ink);text-decoration-color:var(--copper);text-decoration-thickness:1.5px;text-underline-offset:4px}
+a:hover{color:var(--cobalt);text-decoration-color:var(--cobalt)}
+.related{list-style:none;padding-left:0;columns:2;column-gap:40px}
+.related li{break-inside:avoid;padding:10px 0;border-bottom:1px solid var(--line);margin:0}
+.related a{display:inline-block;text-decoration:none;font-weight:650}
+.related a::after{content:"→";display:inline-block;margin-left:.4em;color:var(--copper);transition:transform .15s ease}
+.related a:hover::after{transform:translateX(4px)}
+@media (max-width:620px){.related{columns:1}}
