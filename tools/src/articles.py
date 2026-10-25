@@ -259,8 +259,6 @@ article(
 <li><strong>Kontrollierte Rückführung:</strong> Was die Cloud lernt, kommt geprüft und rückverfolgbar zurück ins System.</li>
 </ol>
 
-<h2>Unser Ansatz</h2>
-<p>Wir denken Cloud-BMS vom Steuergerät aus: Welche Signale sind belastbar, wie werden sie verdichtet, wie werden Modelle validiert und wie kommt das Ergebnis sicher zurück? So entsteht ein Datenkreislauf, der Sicherheit, Batteriepass und Geschäftsmodell gleichzeitig bedient.</p>
 ''',
  [("Ersetzt ein Cloud-BMS das BMS vor Ort?", "Nein. Schutzfunktionen und Echtzeitregelung bleiben im System. Die Cloud ergänzt Analysen, Prognosen und Kalibrierung."),
   ("Welche Daten braucht ein digitaler Batterie-Zwilling?", "Typischerweise Strom-, Spannungs- und Temperaturverläufe in verdichteter Form, Lade- und Nutzungsereignisse sowie die geschätzten Zustandsgrößen des BMS."),
