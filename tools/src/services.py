@@ -28,8 +28,6 @@ def service_page(slug, title, desc, keywords, h1, intro, tasks, results, tools, 
 <ul>{li(results)}</ul>
 <h2>Werkzeuge und Standards</h2>
 <p>{tools}</p>
-<h2>Für wen wir arbeiten</h2>
-<p>{audience or "Für Automobilhersteller (OEM), Tier-1- und Tier-2-Zulieferer, Batterie- und Steuergerätehersteller sowie Engineering-Dienstleister, die für ein Projekt erfahrene Unterstützung brauchen, sei es zur Verstärkung des Teams oder für ein Arbeitspaket mit festem Termin."}</p>
 <h2>Häufige Fragen</h2>
 {faq_h}
 <h2>Weitere Leistungen</h2>
