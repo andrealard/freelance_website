@@ -16,17 +16,18 @@ Statische Website (HTML/CSS, kein JavaScript, keine Cookies) für dolavolt: Batt
 
 ## Hosting auf Cloudflare (Workers mit statischen Assets)
 
-Das Projekt ist als Cloudflare Worker mit statischen Assets konfiguriert (`wrangler.toml`, Ordner `site`). Es gibt keinen Build-Schritt.
+Die Seite ist als Cloudflare Worker mit statischen Assets konfiguriert (`wrangler.toml`, Ordner `site`). Veröffentlicht wird per GitHub Action (`.github/workflows/deploy.yml`) bei jedem Push auf `main`. Die Cloudflare-GitHub-App wird dafür nicht gebraucht, so bleibt der dolavolt-Account unabhängig von anderen Cloudflare-Accounts.
 
-1. Cloudflare-Dashboard → **Workers & Pages** → **Create** → **Import a repository** → `andrealard/freelance_website`.
-2. Build-Einstellungen: **Build command** leer lassen, **Deploy command** `npx wrangler deploy` (Standard).
-3. Deploy. Die Seite ist danach unter `https://<worker-name>.<account>.workers.dev` erreichbar.
-4. **Settings → Domains & Routes** → Custom Domain `www.dolavolt.de` und `dolavolt.de` hinzufügen.
-5. Weiterleitung `dolavolt.de` → `https://www.dolavolt.de`: **Rules → Redirect Rules**, 301.
+Einmalig einrichten:
 
-Der `name` in `wrangler.toml` muss dem Worker-Namen im Dashboard entsprechen. Weicht er ab, öffnet Cloudflare automatisch einen Pull Request, der ihn korrigiert – einfach mergen.
+1. Cloudflare (dolavolt-Account): **My Profile → API Tokens → Create Token → Vorlage „Edit Cloudflare Workers“**, bei *Account Resources* den dolavolt-Account wählen, Token erstellen und kopieren.
+2. GitHub: **Settings → Secrets and variables → Actions → New repository secret**
+   - `CLOUDFLARE_API_TOKEN` = das Token
+   - `CLOUDFLARE_ACCOUNT_ID` = Account-ID des dolavolt-Accounts
+3. Cloudflare: **Workers & Pages → freelance-website → Settings → Build → Disable builds**, damit nicht doppelt veröffentlicht wird.
+4. GitHub: **Actions → Deploy to Cloudflare → Run workflow** für den ersten Lauf.
 
-Jeder Push auf `main` veröffentlicht die Seite automatisch neu.
+Eigene Domain: **Settings → Domains & Routes** → `www.dolavolt.de` und `dolavolt.de`; Weiterleitung ohne www → mit www über **Rules → Redirect Rules** (301).
 
 ## Inhalte ändern
 
