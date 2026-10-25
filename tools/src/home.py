@@ -72,8 +72,8 @@ HOME_DE = f'''
   <div class="head"><h2>Aktuelle Entwicklungen</h2><p class="lead">Mehrere Vorschriften stellen neue Anforderungen an Zustandsschätzung und Fehlerreaktion</p></div>
   <div class="trends">
    <div class="trend"><span class="when">01.07.2026</span><h3>China: GB 38031-2025</h3><p>Seit 1.7.2026 in Kraft: In der vorgeschriebenen Propagationsprüfung darf das Batteriesystem weder Feuer fangen noch explodieren, eine Warnung muss rechtzeitig erfolgen. Erreicht wird das über Zellen, Barrieren, Entgasung und Mechanik; das BMS trägt Detektion, Warnung und Fehlerreaktion bei. <a href="{{r}}wissen/euro-7-gb-38031-bms.html">Was das für das BMS heißt</a></p></div>
-   <div class="trend urgent"><span class="when">29.11.2026</span><h3>Euro 7: Batteriehaltbarkeit</h3><p>Neue Pkw-Typen müssen nach fünf Jahren oder 100.000&nbsp;km noch 80&nbsp;% ihrer zertifizierten Energie haben, nach acht Jahren oder 160.000&nbsp;km noch 72&nbsp;%. Die Ermittlung des State of Certified Energy (SOCE) wird damit typgenehmigungsrelevant.</p></div>
-   <div class="trend urgent"><span class="when">20.01.2027</span><h3>Maschinenverordnung</h3><p>Software mit Sicherheitsfunktion und der Schutz gegen Korrumpierung fließen in die Konformitätsbewertung ein, je nach Sicherheitsfunktion auch beim Batteriesystem elektrischer Bau- und selbstfahrender Landmaschinen. Traktoren unterliegen der Typgenehmigung nach Verordnung (EU) 167/2013. <a href="{{r}}wissen/maschinenverordnung-2027-batteriesystem.html">Mehr dazu</a></p></div>
+   <div class="trend"><span class="when">29.11.2026</span><h3>Euro 7: Batteriehaltbarkeit</h3><p>Neue Pkw-Typen müssen nach fünf Jahren oder 100.000&nbsp;km noch 80&nbsp;% ihrer zertifizierten Energie haben, nach acht Jahren oder 160.000&nbsp;km noch 72&nbsp;%. Die Ermittlung des State of Certified Energy (SOCE) wird damit typgenehmigungsrelevant.</p></div>
+   <div class="trend"><span class="when">20.01.2027</span><h3>Maschinenverordnung</h3><p>Software mit Sicherheitsfunktion und der Schutz gegen Korrumpierung fließen in die Konformitätsbewertung ein, je nach Sicherheitsfunktion auch beim Batteriesystem elektrischer Bau- und selbstfahrender Landmaschinen. Traktoren unterliegen der Typgenehmigung nach Verordnung (EU) 167/2013. <a href="{{r}}wissen/maschinenverordnung-2027-batteriesystem.html">Mehr dazu</a></p></div>
    <div class="trend"><span class="when">18.02.2027</span><h3>EU-Batteriepass</h3><p>Pflicht für EV-Batterien und Industriebatterien über 2&nbsp;kWh. Angaben zum Gesundheitszustand kommen aus dem BMS. <a href="{{r}}wissen/eu-batteriepass-2027.html">Mehr dazu</a></p></div>
    <div class="trend"><span class="when">In Serie</span><h3>Elektrische Arbeitsmaschinen</h3><p>Traktoren, Bagger und Radlader mit Hochvoltbatterie sind in Serie. Für das BMS gelten dort andere Regeln als im Pkw: stundenlange Dauerlast statt Lastspitzen, monatelange Standzeiten und funktionale Sicherheit je nach Maschine nach ISO 25119, ISO 13849 oder ISO 19014.</p></div>
   </div>
@@ -82,10 +82,11 @@ HOME_DE = f'''
 
 <section id="erfahrung">
  <div class="wrap">
-  <div class="head"><h2>Worauf unsere Arbeit beruht</h2><p class="lead">Langjährige Erfahrung in der Serienentwicklung von Hochvolt-Batteriemanagementsystemen</p></div>
-  {exp([("BMS-Entwicklung", "Entwicklung von Hochvolt-BMS-Software für die Pkw-Serie nach ISO 26262 und Automotive SPICE, von der Anforderung bis zur Serie."),
-        ("Konzeption", "System-, Betriebs- und Sicherheitskonzepte für Hochvolt-Batteriesysteme."),
-        ("Architektur", "System- und Softwarearchitekturen für das BMS, von der Funktionsaufteilung bis zur Schnittstelle zwischen Hardware und Software.")])}
+  <div class="head"><h2>Erfahrung</h2><p class="lead">Langjährige Erfahrung mit Hochvolt-Batteriemanagementsystemen in der Pkw-Serienentwicklung</p></div>
+  {exp([("Seriensoftware", "Hochvolt-BMS-Software für Pkw-Serienprojekte, entwickelt nach ISO 26262 und Automotive SPICE."),
+        ("Konzepte", "System-, Betriebs- und Sicherheitskonzepte für Hochvolt-Batteriesysteme."),
+        ("Architektur", "System- und Softwarearchitekturen für das BMS, von der Funktionsaufteilung bis zur Hardware-Software-Schnittstelle."),
+        ("Entwicklungsprozess", "Von der Anforderung über Umsetzung und Verifikation bis zur Freigabe.")])}
  </div>
 </section>
 
@@ -136,8 +137,8 @@ HOME_EN = f'''
   <div class="head"><h2>Current developments</h2><p class="lead">Several regulations set new requirements for state estimation and fault reaction</p></div>
   <div class="trends">
    <div class="trend"><span class="when">1 Jul 2026</span><h3>China: GB 38031-2025</h3><p>In force since 1 July 2026: in the prescribed propagation test the battery system must neither catch fire nor explode, and a timely warning is required. This rests on cells, barriers, venting and mechanics; the BMS contributes detection, warning and fault reaction.</p></div>
-   <div class="trend urgent"><span class="when">29 Nov 2026</span><h3>Euro 7: battery durability</h3><p>New passenger-car types must retain 80&nbsp;% of certified energy after five years or 100,000&nbsp;km and 72&nbsp;% after eight years or 160,000&nbsp;km. Determining the state of certified energy (SOCE) becomes relevant for type approval.</p></div>
-   <div class="trend urgent"><span class="when">20 Jan 2027</span><h3>EU Machinery Regulation</h3><p>Software with a safety function and protection against corruption feed into the conformity assessment, depending on the safety function also for the battery system of electric construction and self-propelled agricultural machinery. Tractors fall under EU type approval (Regulation (EU) 167/2013).</p></div>
+   <div class="trend"><span class="when">29 Nov 2026</span><h3>Euro 7: battery durability</h3><p>New passenger-car types must retain 80&nbsp;% of certified energy after five years or 100,000&nbsp;km and 72&nbsp;% after eight years or 160,000&nbsp;km. Determining the state of certified energy (SOCE) becomes relevant for type approval.</p></div>
+   <div class="trend"><span class="when">20 Jan 2027</span><h3>EU Machinery Regulation</h3><p>Software with a safety function and protection against corruption feed into the conformity assessment, depending on the safety function also for the battery system of electric construction and self-propelled agricultural machinery. Tractors fall under EU type approval (Regulation (EU) 167/2013).</p></div>
    <div class="trend"><span class="when">18 Feb 2027</span><h3>EU battery passport</h3><p>Mandatory for EV batteries and industrial batteries above 2&nbsp;kWh. State-of-health data comes from the BMS.</p></div>
    <div class="trend"><span class="when">In production</span><h3>Electric work machines</h3><p>Tractors, excavators and wheel loaders with high-voltage batteries are in series production. Their BMS follows different rules than in a car: hours of continuous load instead of peaks, months of idle time and functional safety to ISO 25119, ISO 13849 or ISO 19014, depending on the machine.</p></div>
   </div>
@@ -146,10 +147,11 @@ HOME_EN = f'''
 
 <section id="experience">
  <div class="wrap">
-  <div class="head"><h2>What our work is built on</h2><p class="lead">Many years of experience in series development of high-voltage battery management systems</p></div>
-  {exp([("BMS development", "Development of high-voltage BMS software for passenger-car series production to ISO 26262 and Automotive SPICE, from requirements to series production."),
+  <div class="head"><h2>Experience</h2><p class="lead">Many years of experience with high-voltage battery management systems in passenger-car series development</p></div>
+  {exp([("Production software", "High-voltage BMS software for passenger-car series projects, developed to ISO 26262 and Automotive SPICE."),
         ("Concepts", "System, operating and safety concepts for high-voltage battery systems."),
-        ("Architecture", "System and software architectures for the BMS, from function allocation to the hardware-software interface.")])}
+        ("Architecture", "System and software architectures for the BMS, from function allocation to the hardware-software interface."),
+        ("Development process", "From requirements through implementation and verification to release.")])}
  </div>
 </section>
 
