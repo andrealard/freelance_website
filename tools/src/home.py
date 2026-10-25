@@ -57,7 +57,7 @@ HOME_DE = f'''
 
 <section id="loesungen">
  <div class="wrap">
-  <div class="head"><h2>Typische Herausforderungen in BMS-Projekten</h2><p class="lead">Vier Themen, die in BMS-Projekten häufig Aufwand verursachen.</p></div>
+  <div class="head"><h2>Typische Herausforderungen in BMS-Projekten</h2><p class="lead">Vier Themen, die in BMS-Projekten häufig Aufwand verursachen</p></div>
   <div class="sols">
    {sol("Ladezustand bei LFP-Zellen", "Im flachen Bereich der Kennlinie ändert sich die Ruhespannung (OCV) einer LFP-Zelle typischerweise um weniger als ein Millivolt pro Prozent Ladezustand. Hinzu kommt eine Hysterese, die von Zelltyp, Temperatur und Vorgeschichte abhängt. Korrekturen über die OCV greifen kaum, Coulomb-Counting driftet mit jedem Offset des Stromsensors.", "Modellbasierte Zustandsschätzer, etwa adaptive Kalman-Filter, abgestimmt auf reale Fahr- und Ladeprofile. Ruhephasen und die steileren Kennlinienbereiche bei niedrigem und hohem Ladezustand nutzen wir zur Rekalibrierung, soweit Relaxationszeit und Temperatur eine belastbare Korrektur zulassen.", "{r}leistungen/bms-softwareentwicklung.html", "BMS-Softwareentwicklung", LAB_DE)}
    {sol("Schütze, Precharge und Fehlerreaktion", "Ein verschweißtes Schütz, ein abgebrochener Precharge, ein Isolationswiderstand unter dem Grenzwert von 100&nbsp;Ω/V für Gleichspannungskreise nach UN-R100: Kritisch sind selten die Nominalzustände, sondern die Übergänge zwischen Fahren, Laden und Abschalten.", "Nominalabläufe und Fehlerfälle spezifizieren wir gemeinsam, abgeleitet aus funktionalen Anforderungen und Sicherheitskonzept. Für jeden sicherheitsrelevanten Fehler ist festgelegt, wie er erkannt wird und welcher sichere Zustand folgt; Erkennungs- und Reaktionszeit werden gegen die Fehlertoleranzzeit (FTTI) aus dem Sicherheitskonzept abgesichert.", "{r}leistungen/bms-softwareentwicklung.html", "Schützsteuerung und Betriebsmodi", LAB_DE)}
@@ -69,7 +69,7 @@ HOME_DE = f'''
 
 <section id="trends" class="band">
  <div class="wrap">
-  <div class="head"><h2>Was BMS-Teams 2026 und 2027 beschäftigt</h2><p class="lead">Mehrere Vorschriften stellen neue Anforderungen an Zustandsschätzung und Fehlerreaktion.</p></div>
+  <div class="head"><h2>Was BMS-Teams 2026 und 2027 beschäftigt</h2><p class="lead">Mehrere Vorschriften stellen neue Anforderungen an Zustandsschätzung und Fehlerreaktion</p></div>
   <div class="trends">
    <div class="trend"><span class="when">01.07.2026</span><h3>China: GB 38031-2025</h3><p>Seit 1.7.2026 in Kraft: In der vorgeschriebenen Propagationsprüfung darf das Batteriesystem weder Feuer fangen noch explodieren, eine Warnung muss rechtzeitig erfolgen. Erreicht wird das über Zellen, Barrieren, Entgasung und Mechanik; das BMS trägt Detektion, Warnung und Fehlerreaktion bei. <a href="{{r}}wissen/euro-7-gb-38031-bms.html">Was das für das BMS heißt</a></p></div>
    <div class="trend urgent"><span class="when">29.11.2026</span><h3>Euro 7: Batteriehaltbarkeit</h3><p>Neue Pkw-Typen müssen nach fünf Jahren oder 100.000&nbsp;km noch 80&nbsp;% ihrer zertifizierten Energie haben, nach acht Jahren oder 160.000&nbsp;km noch 72&nbsp;%. Die Ermittlung des State of Certified Energy (SOCE) wird damit typgenehmigungsrelevant.</p></div>
@@ -82,7 +82,7 @@ HOME_DE = f'''
 
 <section id="erfahrung">
  <div class="wrap">
-  <div class="head"><h2>Worauf unsere Arbeit beruht</h2><p class="lead">Langjährige Erfahrung in der Serienentwicklung von Hochvolt-Batteriemanagementsystemen.</p></div>
+  <div class="head"><h2>Worauf unsere Arbeit beruht</h2><p class="lead">Langjährige Erfahrung in der Serienentwicklung von Hochvolt-Batteriemanagementsystemen</p></div>
   {exp([("BMS-Entwicklung", "Entwicklung von Hochvolt-BMS-Software für die Pkw-Serie nach ISO 26262 und Automotive SPICE, von der Anforderung bis zur Serie."),
         ("Konzeption", "System-, Betriebs- und Sicherheitskonzepte für Hochvolt-Batteriesysteme."),
         ("Architektur", "System- und Softwarearchitekturen für das BMS, von der Funktionsaufteilung bis zur Schnittstelle zwischen Hardware und Software.")])}
@@ -121,7 +121,7 @@ HOME_EN = f'''
 
 <section id="solutions">
  <div class="wrap">
-  <div class="head"><h2>Typical challenges in BMS projects</h2><p class="lead">Four topics that often cost time in BMS projects.</p></div>
+  <div class="head"><h2>Typical challenges in BMS projects</h2><p class="lead">Four topics that often cost time in BMS projects</p></div>
   <div class="sols">
    {sol("State of charge with LFP cells", "In the flat region of the curve, the open-circuit voltage (OCV) of an LFP cell typically changes by less than one millivolt per percent of state of charge, plus hysteresis that depends on cell type, temperature and history. OCV-based correction barely works, and coulomb counting drifts with every current-sensor offset.", "Model-based state estimators, such as adaptive Kalman filters, tuned on real driving and charging profiles. We use rest phases and the steeper parts of the curve at low and high state of charge for recalibration, where relaxation time and temperature allow a reliable correction.", "{r}leistungen/bms-softwareentwicklung.html", "BMS software development (DE)", LAB_EN)}
    {sol("Contactors, precharge and fault reaction", "A welded contactor, an aborted precharge, insulation resistance below the UN R100 limit of 100&nbsp;Ω/V for DC circuits: the critical moments are rarely the nominal states but the transitions between driving, charging and shutdown.", "We specify nominal sequences and failure cases together, derived from the functional requirements and the safety concept. For every safety-relevant fault, detection and the resulting safe state are defined, and detection and reaction times are verified against the fault tolerant time interval (FTTI) from the safety concept.", "{r}leistungen/bms-softwareentwicklung.html", "Contactor and mode management (DE)", LAB_EN)}
@@ -133,7 +133,7 @@ HOME_EN = f'''
 
 <section id="trends" class="band">
  <div class="wrap">
-  <div class="head"><h2>What keeps BMS teams busy in 2026 and 2027</h2><p class="lead">Several regulations set new requirements for state estimation and fault reaction.</p></div>
+  <div class="head"><h2>What keeps BMS teams busy in 2026 and 2027</h2><p class="lead">Several regulations set new requirements for state estimation and fault reaction</p></div>
   <div class="trends">
    <div class="trend"><span class="when">1 Jul 2026</span><h3>China: GB 38031-2025</h3><p>In force since 1 July 2026: in the prescribed propagation test the battery system must neither catch fire nor explode, and a timely warning is required. This rests on cells, barriers, venting and mechanics; the BMS contributes detection, warning and fault reaction.</p></div>
    <div class="trend urgent"><span class="when">29 Nov 2026</span><h3>Euro 7: battery durability</h3><p>New passenger-car types must retain 80&nbsp;% of certified energy after five years or 100,000&nbsp;km and 72&nbsp;% after eight years or 160,000&nbsp;km. Determining the state of certified energy (SOCE) becomes relevant for type approval.</p></div>
@@ -146,7 +146,7 @@ HOME_EN = f'''
 
 <section id="experience">
  <div class="wrap">
-  <div class="head"><h2>What our work is built on</h2><p class="lead">Many years of experience in series development of high-voltage battery management systems.</p></div>
+  <div class="head"><h2>What our work is built on</h2><p class="lead">Many years of experience in series development of high-voltage battery management systems</p></div>
   {exp([("BMS development", "Development of high-voltage BMS software for passenger-car series production to ISO 26262 and Automotive SPICE, from requirements to series production."),
         ("Concepts", "System, operating and safety concepts for high-voltage battery systems."),
         ("Architecture", "System and software architectures for the BMS, from function allocation to the hardware-software interface.")])}
