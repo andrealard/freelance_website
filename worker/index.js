@@ -32,7 +32,7 @@ function page(lang, title, body, status = 200) {
   const t = T[lang];
   const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title} | dolavolt</title><meta name="robots" content="noindex"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/styles.css?v=6"></head><body><main id="main"><section class="hero solo"><div class="wrap">
+<link rel="stylesheet" href="/assets/styles.css?v=7"></head><body><main id="main"><section class="hero solo"><div class="wrap">
 <h1>${title}</h1>${body}<p style="margin-top:32px"><a class="btn quiet" href="${t.home}">${t.back}</a></p></div></section></main></body></html>`;
   return new Response(html, { status, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
 }

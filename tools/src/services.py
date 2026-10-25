@@ -19,7 +19,7 @@ def service_page(slug, title, desc, keywords, h1, intro, tasks, results, tools, 
     faq_h = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faq)
     body = f'''<article class="article">
 <nav class="crumbs" aria-label="Brotkrumen"><a href="{{r}}">Start</a> / <a href="{{r}}leistungen/">Leistungen</a></nav>
-<h1>{h1}</h1>
+<h1>{shy(h1)}</h1>
 <p class="lead">{intro}</p>
 <h2>Was wir übernehmen</h2>
 <ul>{li(tasks)}</ul>

@@ -27,6 +27,17 @@ SERVICES = [
  ("requirements-architektur-aspice", "Requirements und ASPICE"),
 ]
 
+# Weiche Trennstellen für lange Komposita in Überschriften (mobil)
+SHY = [("Softwareentwicklung","Software&shy;entwicklung"),("Softwarearchitektur","Software&shy;architektur"),
+       ("Batteriesysteme","Batterie&shy;systeme"),("Batteriesystem","Batterie&shy;system"),("Batteriemanagement","Batterie&shy;management"),
+       ("Batteriespeicher","Batterie&shy;speicher"),("Batteriepass","Batterie&shy;pass"),
+       ("Maschinenverordnung","Maschinen&shy;verordnung"),("Landmaschinen","Land&shy;maschinen"),
+       ("Elektrifizierung","Elektri&shy;fizierung"),("sicherheitskritischen","sicherheits&shy;kritischen")]
+def shy(t):
+    for a, b in SHY:
+        t = t.replace(a, b)
+    return t
+
 def header(r, lang):
     t = T[lang]; home = r + ("en/" if lang == "en" else "")
     items = "".join(f'<li><a href="{r}{h if not h.startswith("#") else h}">{l}</a></li>' if not h.startswith("#") else f'<li><a href="{home}{h}">{l}</a></li>' for h, l in t["nav"])
@@ -85,7 +96,7 @@ def page(path, title, desc, body, schema=None, robots="index,follow", ogtype="we
 <meta name="twitter:card" content="summary_large_image">
 {extra_head}<link rel="icon" href="{a}favicon.svg" type="image/svg+xml">
 <link rel="preload" href="{a}assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{a}assets/styles.css?v=6">
+<link rel="stylesheet" href="{a}assets/styles.css?v=7">
 {s}
 </head>
 <body>
@@ -117,7 +128,7 @@ def article(slug, title, desc, headline, intro, content, faq, subj):
     faq_html = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faq)
     body = f'''<article class="article">
 <nav class="crumbs" aria-label="Brotkrumen"><a href="{{r}}">Start</a> / <a href="{{r}}wissen/">Wissen</a></nav>
-<h1>{headline}</h1>
+<h1>{shy(headline)}</h1>
 <p class="meta">Stand: 15. Oktober 2026</p>
 <p class="lead">{intro}</p>
 {content}
