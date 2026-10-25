@@ -69,7 +69,7 @@ HOME_DE = f'''
 
 <section id="trends" class="band">
  <div class="wrap">
-  <div class="head"><h2>Was BMS-Teams 2026 und 2027 beschäftigt</h2><p class="lead">Mehrere Vorschriften stellen neue Anforderungen an Zustandsschätzung und Fehlerreaktion</p></div>
+  <div class="head"><h2>Aktuelle Entwicklungen</h2><p class="lead">Mehrere Vorschriften stellen neue Anforderungen an Zustandsschätzung und Fehlerreaktion</p></div>
   <div class="trends">
    <div class="trend"><span class="when">01.07.2026</span><h3>China: GB 38031-2025</h3><p>Seit 1.7.2026 in Kraft: In der vorgeschriebenen Propagationsprüfung darf das Batteriesystem weder Feuer fangen noch explodieren, eine Warnung muss rechtzeitig erfolgen. Erreicht wird das über Zellen, Barrieren, Entgasung und Mechanik; das BMS trägt Detektion, Warnung und Fehlerreaktion bei. <a href="{{r}}wissen/euro-7-gb-38031-bms.html">Was das für das BMS heißt</a></p></div>
    <div class="trend urgent"><span class="when">29.11.2026</span><h3>Euro 7: Batteriehaltbarkeit</h3><p>Neue Pkw-Typen müssen nach fünf Jahren oder 100.000&nbsp;km noch 80&nbsp;% ihrer zertifizierten Energie haben, nach acht Jahren oder 160.000&nbsp;km noch 72&nbsp;%. Die Ermittlung des State of Certified Energy (SOCE) wird damit typgenehmigungsrelevant.</p></div>
@@ -133,7 +133,7 @@ HOME_EN = f'''
 
 <section id="trends" class="band">
  <div class="wrap">
-  <div class="head"><h2>What keeps BMS teams busy in 2026 and 2027</h2><p class="lead">Several regulations set new requirements for state estimation and fault reaction</p></div>
+  <div class="head"><h2>Current developments</h2><p class="lead">Several regulations set new requirements for state estimation and fault reaction</p></div>
   <div class="trends">
    <div class="trend"><span class="when">1 Jul 2026</span><h3>China: GB 38031-2025</h3><p>In force since 1 July 2026: in the prescribed propagation test the battery system must neither catch fire nor explode, and a timely warning is required. This rests on cells, barriers, venting and mechanics; the BMS contributes detection, warning and fault reaction.</p></div>
    <div class="trend urgent"><span class="when">29 Nov 2026</span><h3>Euro 7: battery durability</h3><p>New passenger-car types must retain 80&nbsp;% of certified energy after five years or 100,000&nbsp;km and 72&nbsp;% after eight years or 160,000&nbsp;km. Determining the state of certified energy (SOCE) becomes relevant for type approval.</p></div>
