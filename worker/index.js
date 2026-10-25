@@ -9,14 +9,14 @@ const FROM = "anfrage@dolavolt.de";
 
 const T = {
   de: {
-    okT: "Danke für Ihre Anfrage", okP: "Ihre Nachricht ist bei uns angekommen. Sie bekommen innerhalb von zwei Werktagen eine Antwort von einem Ingenieur.",
+    okT: "Danke für Ihre Anfrage", okP: "Ihre Nachricht ist bei uns angekommen. Sie bekommen innerhalb von zwei Werktagen eine Antwort von uns.",
     back: "Zurück zur Startseite", home: "/",
     errT: "Anfrage unvollständig", errP: "Bitte geben Sie Name, eine gültige E-Mail-Adresse und Ihr Anliegen (mindestens 20 Zeichen) an.",
     fbT: "Fast geschafft", fbP: "Das Formular ist gerade nicht direkt mit unserem Postfach verbunden. Mit einem Klick öffnen Sie eine vorbereitete E-Mail mit Ihrer Anfrage.",
     fbB: "E-Mail mit Anfrage öffnen", subj: "Projektanfrage",
   },
   en: {
-    okT: "Thank you for your request", okP: "Your message has reached us. Within two business days you get an answer from an engineer.",
+    okT: "Thank you for your request", okP: "Your message has reached us. You will hear from us within two business days.",
     back: "Back to the homepage", home: "/en/",
     errT: "Request incomplete", errP: "Please enter your name, a valid email address and your request (at least 20 characters).",
     fbT: "Almost done", fbP: "The form is not directly connected to our inbox right now. One click opens a prepared email with your request.",

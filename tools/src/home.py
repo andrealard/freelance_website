@@ -98,7 +98,7 @@ HOME_DE = f'''
 
 <section id="kontakt" class="contact">
  <div class="wrap contact-grid">
-  <div><h2>Sprechen wir über Ihr Projekt.</h2><p>Beschreiben Sie kurz Aufgabe, Projektphase und Zeitrahmen. Sie bekommen innerhalb von zwei Werktagen eine Antwort von einem Ingenieur.</p></div>
+  <div><h2>Sprechen wir über Ihr Projekt.</h2><p>Beschreiben Sie kurz Aufgabe, Projektphase und Zeitrahmen. Sie bekommen innerhalb von zwei Werktagen eine Antwort von uns.</p></div>
   <div>{FORM_DE}</div>
  </div>
 </section>'''
@@ -159,7 +159,7 @@ HOME_EN = f'''
 
 <section id="contact" class="contact">
  <div class="wrap contact-grid">
-  <div><h2>Let’s talk about your project.</h2><p>Briefly describe the task, project phase and timeline. Within two business days you get an answer from an engineer.</p></div>
+  <div><h2>Let’s talk about your project.</h2><p>Briefly describe the task, project phase and timeline. You will hear from us within two business days.</p></div>
   <div>{FORM_EN}</div>
  </div>
 </section>'''
