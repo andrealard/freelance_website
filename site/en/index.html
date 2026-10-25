@@ -23,7 +23,7 @@
 <meta name="keywords" content="freelance BMS engineer, battery management system software, automotive freelancer Germany, embedded software engineer automotive, AUTOSAR freelancer, MATLAB Simulink freelancer, functional safety engineer ISO 26262, FuSa consultant, high-voltage battery software, Automotive SPICE, HIL testing, contractor Munich, electrification of agricultural machinery, electric tractor, off-highway electrification, construction machinery battery system, ISO 25119, BMS experts, BMS systems engineer, Euro 7 battery durability, SOCE, GB 38031, thermal runaway detection, J1939, commercial vehicle battery">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/styles.css?v=3">
+<link rel="stylesheet" href="../assets/styles.css?v=4">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.dolavolt.de/#org", "name": "dolavolt", "url": "https://www.dolavolt.de/", "logo": "https://www.dolavolt.de/assets/og.png", "email": "hallo@dolavolt.de", "description": "Expertise für BMS-Software, Embedded Software, MATLAB/Simulink, AUTOSAR und funktionale Sicherheit nach ISO 26262 im Automotive, auch als Freelancer im Dienst- oder Werkvertrag.", "address": {"@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE"}, "knowsLanguage": ["de", "en", "it"], "knowsAbout": ["Batteriemanagementsystem", "BMS-Software", "Hochvolt-Batteriesysteme", "State of Charge", "State of Health", "Schützsteuerung", "ISO 26262", "Funktionale Sicherheit", "AUTOSAR", "Embedded C", "MATLAB/Simulink", "Stateflow", "Embedded Coder", "Automotive SPICE", "HIL-Test", "UDS-Diagnose", "CAN FD", "ISO/SAE 21434", "EU-Batteriepass", "Software-Defined Vehicle"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do we work together?", "acceptedAnswer": {"@type": "Answer", "text": "As part of your team on an hourly or daily basis, or through clearly scoped fixed-price work packages."}}, {"@type": "Question", "name": "Do you work remotely or on site?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly remotely. We come on site for workshops, integration and testing, regularly around Munich, Ingolstadt, Regensburg and Stuttgart, and across Europe by arrangement."}}, {"@type": "Question", "name": "Do you work outside passenger cars?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We also support projects electrifying agricultural, construction and municipal machinery, under the standards that apply there, such as ISO 25119 and ISO 13849, and the Machinery Regulation or tractor type approval."}}]}]}</script>
 </head>
 <body>
@@ -94,7 +94,17 @@
 <section id="contact" class="contact">
  <div class="wrap contact-grid">
   <div><h2>Where is your BMS project stuck?</h2><p>Describe the technical problem. Within two business days you get an answer from an engineer.</p></div>
-  <div><a class="mail" href="mailto:hallo@dolavolt.de?subject=Project%20inquiry">hallo@dolavolt.de</a></div>
+  <div><form class="cform" method="post" action="/anfrage">
+   <input type="hidden" name="lang" value="en">
+   <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+   <div class="row2"><label>Name<input name="name" required maxlength="120" autocomplete="name"></label><label>Company<input name="company" maxlength="160" autocomplete="organization"></label></div>
+   <div class="row2"><label>Email<input type="email" name="email" required maxlength="200" autocomplete="email"></label><label>Phone (optional)<input type="tel" name="phone" maxlength="60" autocomplete="tel"></label></div>
+   <label>Topic<select name="topic"><option>BMS software development</option><option>Functional safety</option><option>Electrifying agricultural and construction machinery</option><option>Systems engineering and architecture</option><option>Other</option></select></label>
+   <label>Your request<textarea name="message" required minlength="20" maxlength="5000" rows="6" placeholder="What is it about, what phase is the project in, from when and to what extent do you need support?"></textarea></label>
+   <button class="btn" type="submit">Send request</button>
+   <p class="fnote">We use your details only to answer your request. See our <a href="../datenschutz.html">privacy policy</a>.</p>
+   <p class="fnote">Or email us directly: <a href="mailto:hallo@dolavolt.de">hallo@dolavolt.de</a></p>
+  </form></div>
  </div>
 </section>
 </main>

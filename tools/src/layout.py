@@ -81,7 +81,7 @@ def page(path, title, desc, body, schema=None, robots="index,follow", ogtype="we
 <meta name="twitter:card" content="summary_large_image">
 {extra_head}<link rel="icon" href="{a}favicon.svg" type="image/svg+xml">
 <link rel="preload" href="{a}assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{a}assets/styles.css?v=3">
+<link rel="stylesheet" href="{a}assets/styles.css?v=4">
 {s}
 </head>
 <body>

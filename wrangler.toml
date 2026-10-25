@@ -1,9 +1,19 @@
-# Cloudflare Workers mit statischen Assets (kein Build-Schritt).
-# Der Ordner ./site wird 1:1 ausgeliefert; _headers darin setzt die Security-Header.
 name = "freelance-website"
+main = "worker/index.js"
 compatibility_date = "2026-10-01"
 
 [assets]
 directory = "./site"
+binding = "ASSETS"
 not_found_handling = "404-page"
 html_handling = "auto-trailing-slash"
+run_worker_first = ["/anfrage"]
+
+# Kontaktformular per E-Mail: aktivieren, sobald dolavolt.de bei Cloudflare liegt
+# und Email Routing eingerichtet ist (Zieladresse dort verifizieren).
+# [[send_email]]
+# name = "MAIL"
+# destination_address = "hallo@dolavolt.de"
+#
+# [vars]
+# MAIL_TO = "hallo@dolavolt.de"

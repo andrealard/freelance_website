@@ -12,6 +12,33 @@ LAB_EN = ("Challenge", "Our approach")
 def exp(rows): return '<div class="skills">' + "".join(f'<div class="skill"><h3>{k}</h3><p>{v}</p></div>' for k, v in rows) + "</div>"
 
 
+def form(lang):
+    de = lang == "de"
+    L = (dict(n="Name", c="Unternehmen", e="E-Mail", p="Telefon (optional)", t="Thema", m="Ihr Anliegen",
+              mp="Worum geht es, in welcher Phase ist das Projekt, ab wann und in welchem Umfang brauchen Sie Unterstützung?",
+              opts=["BMS-Softwareentwicklung", "Funktionale Sicherheit", "Elektrifizierung Land- und Baumaschinen", "Systems Engineering und Architektur", "Sonstiges"],
+              b="Anfrage senden", note='Wir nutzen Ihre Angaben nur zur Beantwortung der Anfrage. Details in der <a href="{r}datenschutz.html">Datenschutzerklärung</a>.',
+              alt="Oder direkt per E-Mail:")
+         if de else
+         dict(n="Name", c="Company", e="Email", p="Phone (optional)", t="Topic", m="Your request",
+              mp="What is it about, what phase is the project in, from when and to what extent do you need support?",
+              opts=["BMS software development", "Functional safety", "Electrifying agricultural and construction machinery", "Systems engineering and architecture", "Other"],
+              b="Send request", note='We use your details only to answer your request. See our <a href="{r}datenschutz.html">privacy policy</a>.',
+              alt="Or email us directly:"))
+    o = "".join(f"<option>{x}</option>" for x in L["opts"])
+    return f"""<form class="cform" method="post" action="/anfrage">
+   <input type="hidden" name="lang" value="{lang}">
+   <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+   <div class="row2"><label>{L['n']}<input name="name" required maxlength="120" autocomplete="name"></label><label>{L['c']}<input name="company" maxlength="160" autocomplete="organization"></label></div>
+   <div class="row2"><label>{L['e']}<input type="email" name="email" required maxlength="200" autocomplete="email"></label><label>{L['p']}<input type="tel" name="phone" maxlength="60" autocomplete="tel"></label></div>
+   <label>{L['t']}<select name="topic">{o}</select></label>
+   <label>{L['m']}<textarea name="message" required minlength="20" maxlength="5000" rows="6" placeholder="{L['mp']}"></textarea></label>
+   <button class="btn" type="submit">{L['b']}</button>
+   <p class="fnote">{L['note']}</p>
+   <p class="fnote">{L['alt']} <a href="mailto:hallo@dolavolt.de">hallo@dolavolt.de</a></p>
+  </form>"""
+FORM_DE, FORM_EN = form("de"), form("en")
+
 HOME_DE = f'''
 <section class="hero solo">
  <div class="wrap">
@@ -72,7 +99,7 @@ HOME_DE = f'''
 <section id="kontakt" class="contact">
  <div class="wrap contact-grid">
   <div><h2>Wo hängt Ihr BMS-Projekt?</h2><p>Schildern Sie uns das technische Problem. Sie bekommen innerhalb von zwei Werktagen eine Antwort von einem Ingenieur.</p></div>
-  <div><a class="mail" href="mailto:hallo@dolavolt.de?subject=Projektanfrage">hallo@dolavolt.de</a></div>
+  <div>{FORM_DE}</div>
  </div>
 </section>'''
 
@@ -133,7 +160,7 @@ HOME_EN = f'''
 <section id="contact" class="contact">
  <div class="wrap contact-grid">
   <div><h2>Where is your BMS project stuck?</h2><p>Describe the technical problem. Within two business days you get an answer from an engineer.</p></div>
-  <div><a class="mail" href="mailto:hallo@dolavolt.de?subject=Project%20inquiry">hallo@dolavolt.de</a></div>
+  <div>{FORM_EN}</div>
  </div>
 </section>'''
 
