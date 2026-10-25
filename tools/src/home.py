@@ -169,10 +169,10 @@ KW_DE = KW_DE + ", Experten Batteriemanagement, Systemingenieur BMS, Lastenheft 
 KW_EN = KW_EN + ", BMS experts, BMS systems engineer, Euro 7 battery durability, SOCE, GB 38031, thermal runaway detection, J1939, commercial vehicle battery"
 HOME_DE, HOME_EN = with_icons(HOME_DE), with_icons(HOME_EN)
 page("index.html", "Experten für Batteriemanagement (BMS) und funktionale Sicherheit nach ISO 26262 | dolavolt",
-     "Experten für Batteriemanagement-Software und funktionale Sicherheit: Systemkonzepte, SOC/SOH/SOP, Schützsteuerung, AUTOSAR, MATLAB/Simulink, ISO 26262 bis ASIL D, ISO 25119. Für Pkw, Nutzfahrzeuge und elektrische Land- und Baumaschinen. Auch als Freelancer, aus München.",
+     "Experten für Batteriemanagement-Software und funktionale Sicherheit: Systemkonzepte, SOC/SOH/SOP, Schützsteuerung, AUTOSAR, MATLAB/Simulink, ISO 26262 bis ASIL D, ISO 25119. Für Pkw, Nutzfahrzeuge und elektrische Land- und Baumaschinen. Auch als Freelancer.",
      HOME_DE, {"@context": "https://schema.org", "@graph": [ORG, SERVICE, {"@type": "WebSite", "url": BASE + "/", "name": "dolavolt", "inLanguage": "de-DE"}, faq_schema(FAQ_DE)]},
      extra_head=HREFLANG + f'<meta name="keywords" content="{KW_DE}">\n')
 page("en/index.html", "Experts in Battery Management (BMS) and ISO 26262 Functional Safety | dolavolt",
-     "Experts in battery management software and functional safety: system concepts, SOC/SOH/SOP, contactor control, AUTOSAR, MATLAB/Simulink, ISO 26262 up to ASIL D, ISO 25119. For cars, commercial vehicles and electric agricultural and construction machinery. Freelance or fixed-price, based in Munich.",
+     "Experts in battery management software and functional safety: system concepts, SOC/SOH/SOP, contactor control, AUTOSAR, MATLAB/Simulink, ISO 26262 up to ASIL D, ISO 25119. For cars, commercial vehicles and electric agricultural and construction machinery. Freelance or fixed-price.",
      HOME_EN, {"@context": "https://schema.org", "@graph": [ORG, faq_schema(FAQ_EN)]}, lang="en",
      extra_head=HREFLANG + f'<meta name="keywords" content="{KW_EN}">\n')
