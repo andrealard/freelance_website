@@ -75,7 +75,7 @@ HOME_DE = f'''
    <div class="trend urgent"><span class="when">29.11.2026</span><h3>Euro 7: Batteriehaltbarkeit</h3><p>Neue Pkw-Typen müssen nach fünf Jahren oder 100.000&nbsp;km noch 80&nbsp;% ihrer zertifizierten Energie haben, nach acht Jahren oder 160.000&nbsp;km noch 72&nbsp;%. Die Ermittlung des State of Certified Energy (SOCE) wird damit typgenehmigungsrelevant.</p></div>
    <div class="trend urgent"><span class="when">20.01.2027</span><h3>Maschinenverordnung</h3><p>Software mit Sicherheitsfunktion und der Schutz gegen Korrumpierung fließen in die Konformitätsbewertung ein, je nach Sicherheitsfunktion auch beim Batteriesystem elektrischer Bau- und selbstfahrender Landmaschinen. Traktoren unterliegen der Typgenehmigung nach Verordnung (EU) 167/2013. <a href="{{r}}wissen/maschinenverordnung-2027-batteriesystem.html">Mehr dazu</a></p></div>
    <div class="trend"><span class="when">18.02.2027</span><h3>EU-Batteriepass</h3><p>Pflicht für EV-Batterien und Industriebatterien über 2&nbsp;kWh. Angaben zum Gesundheitszustand kommen aus dem BMS. <a href="{{r}}wissen/eu-batteriepass-2027.html">Mehr dazu</a></p></div>
-   <div class="trend"><span class="when">In Serie</span><h3>Elektrische Traktoren</h3><p>Mit dem Fendt e107 Vario ist ein Elektrotraktor mit 100&nbsp;kWh und DC-Laden bis 80&nbsp;kW in Serie. Dauerlast, lange Standzeiten und Feldbedingungen stellen andere Anforderungen an das BMS als der Pkw.</p></div>
+   <div class="trend"><span class="when">In Serie</span><h3>Elektrische Arbeitsmaschinen</h3><p>Traktoren, Bagger und Radlader mit Hochvoltbatterie sind in Serie. Für das BMS gelten dort andere Regeln als im Pkw: stundenlange Dauerlast statt Lastspitzen, monatelange Standzeiten und funktionale Sicherheit nach ISO 25119 oder ISO 13849 statt ISO 26262.</p></div>
   </div>
  </div>
 </section>
@@ -139,7 +139,7 @@ HOME_EN = f'''
    <div class="trend urgent"><span class="when">29 Nov 2026</span><h3>Euro 7: battery durability</h3><p>New passenger-car types must retain 80&nbsp;% of certified energy after five years or 100,000&nbsp;km and 72&nbsp;% after eight years or 160,000&nbsp;km. Determining the state of certified energy (SOCE) becomes relevant for type approval.</p></div>
    <div class="trend urgent"><span class="when">20 Jan 2027</span><h3>EU Machinery Regulation</h3><p>Software with a safety function and protection against corruption feed into the conformity assessment, depending on the safety function also for the battery system of electric construction and self-propelled agricultural machinery. Tractors fall under EU type approval (Regulation (EU) 167/2013).</p></div>
    <div class="trend"><span class="when">18 Feb 2027</span><h3>EU battery passport</h3><p>Mandatory for EV batteries and industrial batteries above 2&nbsp;kWh. State-of-health data comes from the BMS.</p></div>
-   <div class="trend"><span class="when">In production</span><h3>Electric tractors</h3><p>The Fendt e107 Vario, an electric tractor with 100&nbsp;kWh and DC charging up to 80&nbsp;kW, is in series production. Continuous load, long idle periods and field conditions place different demands on the BMS than a car.</p></div>
+   <div class="trend"><span class="when">In production</span><h3>Electric work machines</h3><p>Tractors, excavators and wheel loaders with high-voltage batteries are in series production. Their BMS follows different rules than in a car: hours of continuous load instead of peaks, months of idle time and functional safety to ISO 25119 or ISO 13849 instead of ISO 26262.</p></div>
   </div>
  </div>
 </section>
@@ -165,7 +165,7 @@ HOME_EN = f'''
 </section>'''
 
 
-KW_DE = KW_DE + ", Experten Batteriemanagement, Systemingenieur BMS, Lastenheft Batteriesystem, Euro 7 Batteriehaltbarkeit, SOCE, GB 38031, thermisches Durchgehen, Thermal Runaway Erkennung, ECE-R100, IEC 62619, J1939, Nutzfahrzeug Hochvoltbatterie, Elektrotraktor, Fendt e107"
+KW_DE = KW_DE + ", Experten Batteriemanagement, Systemingenieur BMS, Lastenheft Batteriesystem, Euro 7 Batteriehaltbarkeit, SOCE, GB 38031, thermisches Durchgehen, Thermal Runaway Erkennung, ECE-R100, IEC 62619, J1939, Nutzfahrzeug Hochvoltbatterie, Elektrotraktor, elektrische Arbeitsmaschine"
 KW_EN = KW_EN + ", BMS experts, BMS systems engineer, Euro 7 battery durability, SOCE, GB 38031, thermal runaway detection, J1939, commercial vehicle battery"
 HOME_DE, HOME_EN = with_icons(HOME_DE), with_icons(HOME_EN)
 page("index.html", "Experten für Batteriemanagement (BMS) und funktionale Sicherheit nach ISO 26262 | dolavolt",
