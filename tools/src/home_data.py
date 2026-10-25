@@ -24,14 +24,14 @@ SHORT_EN = [
  ("requirements-architektur-aspice", "Requirements and ASPICE", "Requirements, software architecture and Automotive SPICE."),
 ]
 FAQ_DE = [
- ("Wie arbeiten wir zusammen?", "Als Verstärkung Ihres Teams auf Stunden- oder Tagesbasis im Dienstvertrag oder mit klar abgegrenzten Arbeitspaketen zum Festpreis im Werkvertrag."),
- ("Arbeiten Sie remote oder vor Ort?", "Überwiegend remote. Für Workshops, Integration und Tests kommen wir zu Ihnen, im Raum München, Ingolstadt, Regensburg und Stuttgart regelmäßig, europaweit nach Absprache."),
- ("Arbeiten Sie auch außerhalb der Automobilbranche?", "Ja. Neben Pkw und Nutzfahrzeugen unterstützen wir Projekte zur Elektrifizierung von Land-, Bau- und Kommunalmaschinen. Dort gelten je nach Maschine andere Normen, etwa ISO 25119, ISO 13849 oder ISO 19014, und statt der Fahrzeug-Typgenehmigung die Maschinenverordnung bzw. bei Traktoren die Typgenehmigung nach Verordnung (EU) 167/2013."),
+ ("Wie arbeiten wir zusammen?", "Als Verstärkung Ihres Teams im Dienstvertrag oder mit abgegrenzten Arbeitspaketen zum Festpreis."),
+ ("Arbeiten Sie remote oder vor Ort?", "Überwiegend remote, für Workshops, Integration und Tests auch vor Ort im Raum München, Ingolstadt, Regensburg und Stuttgart."),
+ ("Arbeiten Sie auch außerhalb der Automobilbranche?", "Ja, auch bei der Elektrifizierung von Land-, Bau- und Kommunalmaschinen, nach den dort geltenden Normen wie ISO 25119, ISO 13849 oder ISO 19014."),
 ]
 FAQ_EN = [
- ("How do we work together?", "As part of your team on an hourly or daily basis, or through clearly scoped fixed-price work packages."),
- ("Do you work remotely or on site?", "Mostly remotely. We come on site for workshops, integration and testing, regularly around Munich, Ingolstadt, Regensburg and Stuttgart, and across Europe by arrangement."),
- ("Do you work outside the automotive industry?", "Yes. Besides cars and commercial vehicles, we support projects electrifying agricultural, construction and municipal machinery. Depending on the machine, other standards apply there, such as ISO 25119, ISO 13849 or ISO 19014, and instead of vehicle type approval the Machinery Regulation or, for tractors, type approval under Regulation (EU) 167/2013."),
+ ("How do we work together?", "As part of your team, or through clearly scoped fixed-price work packages."),
+ ("Do you work remotely or on site?", "Mostly remotely, on site for workshops, integration and testing around Munich, Ingolstadt, Regensburg and Stuttgart."),
+ ("Do you work outside the automotive industry?", "Yes, also in electrifying agricultural, construction and municipal machinery, under the standards that apply there, such as ISO 25119, ISO 13849 or ISO 19014."),
 ]
 
 def facts(rows): return '<dl class="facts">' + "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows) + "</dl>"
