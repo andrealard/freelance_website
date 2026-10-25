@@ -188,7 +188,7 @@ service_page(
  "elektrifizierung-land-baumaschinen",
  "Elektrifizierung von Landmaschinen und Baumaschinen: Batteriesystem, BMS und Sicherheit | dolavolt",
  "Partner für die Elektrifizierung von Land-, Bau- und Kommunalmaschinen: Batteriesystem-Konzept, BMS-Software, Hochvolt-Integration und Sicherheitskonzept nach ISO 25119, ISO 13849 und Maschinenverordnung 2027.",
- "Elektrifizierung Landmaschinen, Elektrifizierung Baumaschinen, Elektrotraktor BMS, Fendt e107, LFP LTO Off-Highway, Bergbau Batterie, Nutzfahrzeug Hochvoltbatterie, elektrischer Traktor, Elektro-Traktor, batterieelektrische Landmaschine, Off-Highway Elektrifizierung, Batteriesystem Landtechnik, BMS Landmaschine, BMS Baumaschine, Hochvolt mobile Arbeitsmaschine, elektrisches Kommunalfahrzeug, ISO 25119, ISO 13849, ISO 19014, Maschinenverordnung 2027, Partner Elektrifizierung",
+ "Elektrifizierung Landmaschinen, Elektrifizierung Baumaschinen, Elektrotraktor BMS, LFP LTO Off-Highway, Bergbau Batterie, Nutzfahrzeug Hochvoltbatterie, elektrischer Traktor, Elektro-Traktor, batterieelektrische Landmaschine, Off-Highway Elektrifizierung, Batteriesystem Landtechnik, BMS Landmaschine, BMS Baumaschine, Hochvolt mobile Arbeitsmaschine, elektrisches Kommunalfahrzeug, ISO 25119, ISO 13849, ISO 19014, Maschinenverordnung 2027, Partner Elektrifizierung",
  "Elektrifizierung von Land- und Baumaschinen",
  "Zunehmend werden auch Traktoren, Hoflader, Bagger und Kommunalfahrzeuge elektrisch angetrieben. Die Batterietechnik dafür kommt aus dem Pkw, die Anforderungen sind andere: hohe Dauerlasten, Staub, Vibration, lange Standzeiten und eigene Sicherheitsnormen. Wir bringen unsere Erfahrung aus der Hochvolt-BMS-Serienentwicklung in Ihr Elektrifizierungsprojekt, vom Konzept bis zur sicheren Integration.",
  ["Anforderungen an das Batteriesystem aus Einsatzprofilen und Lastzyklen ableiten",
@@ -215,7 +215,6 @@ service_page(
 <li><strong>Normen und Zulassung:</strong> je nach Maschine und Funktion ISO 25119, ISO 13849 oder ISO 19014 statt ISO 26262; für selbstfahrende Arbeitsmaschinen CE-Kennzeichnung nach Maschinenverordnung, für Traktoren Typgenehmigung nach Verordnung (EU) 167/2013</li>
 <li><strong>Stückzahlen:</strong> kleine Serien mit vielen Varianten, die Software muss skalieren</li>
 </ul>
-<p>Wie weit die Technik ist, zeigt der Fendt e107 Vario: ein Elektrotraktor in Serie mit 100&nbsp;kWh Batterie, CCS2-Anschluss und DC-Laden bis 80&nbsp;kW, ausgelegt auf vier bis sieben Stunden Teillastbetrieb.</p>
 <p>Mehr dazu im Fachartikel <a href="{r}wissen/maschinenverordnung-2027-batteriesystem.html">Maschinenverordnung 2027 und das Batteriesystem</a>.</p>''',
  audience="Für Hersteller von Land-, Forst-, Bau- und Kommunalmaschinen sowie ihre Zulieferer, die den Schritt zum batterieelektrischen Antrieb gehen und dafür Unterstützung bei Hochvolt- und BMS-Themen brauchen.")
 
