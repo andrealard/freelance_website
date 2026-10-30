@@ -82,10 +82,11 @@ HOME_DE = f'''
 
 <section id="erfahrung">
  <div class="wrap">
-  <div class="head"><h2>Erfahrung</h2><p class="lead">Langjährige Erfahrung mit Hochvolt-Batteriemanagementsystemen in der Pkw-Serienentwicklung</p></div>
-  {exp([("Seriensoftware", "Hochvolt-BMS-Software für Pkw-Serienprojekte führender Automobilhersteller, entwickelt nach ISO 26262 und Automotive SPICE."),
-        ("Konzepte", "System-, Betriebs- und Sicherheitskonzepte für Hochvolt-Batteriesysteme."),
-        ("Architektur", "System- und Softwarearchitekturen für das BMS, von der Funktionsaufteilung bis zur Hardware-Software-Schnittstelle.")])}
+  <div class="head"><h2>Erfahrung</h2><p class="lead">Langjährige Erfahrung mit Batteriesystemen in der Pkw-Entwicklung, im Hoch- und im Niedervolt</p></div>
+  {exp([("BMS-Entwicklung", "Hochvolt-BMS-Software für Pkw-Serienprojekte führender Automobilhersteller, entwickelt nach ISO 26262 und Automotive SPICE."),
+        ("Konzepte und Architektur", "System-, Betriebs- und Sicherheitskonzepte sowie System- und Softwarearchitekturen für das BMS."),
+        ("OEM-Integration", "Enge Zusammenarbeit mit Automobilherstellern bei der Integration ihrer Softwarekomponenten in das BMS."),
+        ("Niedervoltspeicher", "Entwicklung von Niedervolt-Batteriespeichern im Pkw.")])}
  </div>
 </section>
 
@@ -146,10 +147,11 @@ HOME_EN = f'''
 
 <section id="experience">
  <div class="wrap">
-  <div class="head"><h2>Experience</h2><p class="lead">Many years of experience with high-voltage battery management systems in passenger-car series development</p></div>
-  {exp([("Production software", "High-voltage BMS software for passenger-car series projects of leading carmakers, developed to ISO 26262 and Automotive SPICE."),
-        ("Concepts", "System, operating and safety concepts for high-voltage battery systems."),
-        ("Architecture", "System and software architectures for the BMS, from function allocation to the hardware-software interface.")])}
+  <div class="head"><h2>Experience</h2><p class="lead">Many years of experience with battery systems in passenger-car development, high and low voltage</p></div>
+  {exp([("BMS development", "High-voltage BMS software for passenger-car series projects of leading carmakers, developed to ISO 26262 and Automotive SPICE."),
+        ("Concepts and architecture", "System, operating and safety concepts as well as system and software architectures for the BMS."),
+        ("OEM integration", "Close cooperation with carmakers on integrating their software components into the BMS."),
+        ("Low-voltage storage", "Development of low-voltage battery storage for passenger cars.")])}
  </div>
 </section>
 
