@@ -146,52 +146,100 @@ def _fig(inner, aria, note):
     return (f'<figure class="fig"><svg viewBox="0 0 280 100" role="img" aria-label="{aria}">{DEFS}{inner}'
             f'</svg><figcaption>{note}</figcaption></figure>')
 
-def fig_lfp(lang):
+def _pchip(xs, ys):
+    """Monotone kubische Interpolation (Fritsch-Carlson)."""
+    n = len(xs); h = [xs[i+1]-xs[i] for i in range(n-1)]; d = [(ys[i+1]-ys[i])/h[i] for i in range(n-1)]
+    m = [d[0]] + [0.0]*(n-2) + [d[-1]]
+    for i in range(1, n-1):
+        if d[i-1]*d[i] > 0:
+            w1, w2 = 2*h[i]+h[i-1], h[i]+2*h[i-1]
+            m[i] = (w1+w2)/(w1/d[i-1]+w2/d[i])
+    def f(x):
+        x = min(max(x, xs[0]), xs[-1])
+        i = max(j for j in range(n-1) if xs[j] <= x) if x < xs[-1] else n-2
+        t = (x-xs[i])/h[i]
+        return ((2*t**3-3*t**2+1)*ys[i] + (t**3-2*t**2+t)*h[i]*m[i] + (-2*t**3+3*t**2)*ys[i+1] + (t**3-t**2)*h[i]*m[i+1])
+    return f
+
+# typische OCV-Kennlinie einer LFP-Zelle (Entladen), SOC in %, Spannung in V
+_LFP = _pchip([0, 2, 5, 10, 20, 30, 40, 50, 60, 65, 70, 80, 90, 95, 98, 100],
+              [2.90, 3.05, 3.17, 3.21, 3.245, 3.265, 3.275, 3.282, 3.290, 3.300, 3.315, 3.322, 3.328, 3.340, 3.380, 3.500])
+def _lfp(soc, charge=False):
     import math
+    g = 0.02 * (1 - math.exp(-soc/4)) * (1 - math.exp((soc-100)/3)) if charge else 0.0
+    return _LFP(soc) + g
+
+def fig_lfp(lang):
     de = lang == "de"
-    X0, X1, Y0, Y1 = 44, 306, 150, 14          # Plotbereich
-    V0, V1 = 2.9, 3.6                           # Spannungsachse in V
-    def ocv(s):                                 # typischer LFP-Verlauf (Entladen)
-        return (2.9 + 0.35 * (1 - math.exp(-s / 0.025)) + 0.025 * s
-                + 0.035 / (1 + math.exp(-(s - 0.62) / 0.02)) + 0.26 * math.exp((s - 1) / 0.022))
-    def X(s): return X0 + (X1 - X0) * s
-    def Y(v): return Y0 - (Y0 - Y1) * (min(max(v, V0), V1) - V0) / (V1 - V0)
-    def path(dv):
-        pts = [i / 200 for i in range(201)]
-        return "M" + " L".join(f"{X(t):.1f},{Y(ocv(t) + dv * (1 - math.exp(-t / 0.05)) * (1 - math.exp((t - 1) / 0.05))):.1f}" for t in pts)
+    dec = (lambda v, n: f"{v:.{n}f}".replace(".", ",")) if de else (lambda v, n: f"{v:.{n}f}")
+    X0, X1, Y0, Y1 = 50, 348, 200, 14
+    V0, V1 = 2.9, 3.5
+    X = lambda s: X0 + (X1-X0)*s/100
+    Y = lambda v: Y0 - (Y0-Y1)*(v-V0)/(V1-V0)
+    pts = [i/2 for i in range(201)]
+    def line(fx, fy, ch, rng=pts):
+        return "M" + " L".join(f"{fx(t):.1f},{fy(_lfp(t, ch)):.1f}" for t in rng)
     o = []
-    # Plateau-Bereich
-    o.append(f'<rect x="{X(0.15):.1f}" y="{Y1}" width="{X(0.9) - X(0.15):.1f}" height="{Y0 - Y1}" fill="{PALE}"/>')
-    # Raster und Achsen
-    for v in (3.0, 3.2, 3.4, 3.6):
-        o.append(f'<line x1="{X0}" y1="{Y(v):.1f}" x2="{X1}" y2="{Y(v):.1f}" stroke="{ALU}"/>')
-        o.append(_t(X0 - 6, Y(v) + 3.5, f"{v:.1f}".replace(".", "," if de else "."), 9, 400, MUT, "end"))
+    # Raster
+    for v in (3.0, 3.1, 3.2, 3.3, 3.4):
+        o.append(f'<line x1="{X0}" y1="{Y(v):.1f}" x2="{X1}" y2="{Y(v):.1f}" stroke="{LIN}" stroke-width=".6" stroke-dasharray="1.5 2.5"/>')
+    for k in range(20, 100, 20):
+        o.append(f'<line x1="{X(k):.1f}" y1="{Y1}" x2="{X(k):.1f}" y2="{Y0}" stroke="{LIN}" stroke-width=".6" stroke-dasharray="1.5 2.5"/>')
+    # Achsenbeschriftung
+    for v in (2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5):
+        o.append(f'<line x1="{X0-4}" y1="{Y(v):.1f}" x2="{X0}" y2="{Y(v):.1f}" stroke="{INK}"/>')
+        o.append(_t(X0-7, Y(v)+3.5, dec(v, 1), 10, 600, INK, "end"))
     for k in range(0, 101, 20):
-        o.append(f'<line x1="{X(k/100):.1f}" y1="{Y0}" x2="{X(k/100):.1f}" y2="{Y0 + 4}" stroke="{LIN}"/>')
-        o.append(_t(X(k/100), Y0 + 14, f"{k}", 9, 400, MUT, "middle"))
-    o.append(f'<line x1="{X0}" y1="{Y0}" x2="{X1}" y2="{Y0}" stroke="{MUT}"/><line x1="{X0}" y1="{Y0}" x2="{X0}" y2="{Y1}" stroke="{MUT}"/>')
-    o.append(_t(X0 - 6, Y1 - 4, "OCV / V", 9, 600, MUT, "end" if False else "start") )
-    o.append(_t(X1, Y0 + 27, "SOC / %", 9, 600, MUT, "end"))
-    # Kurven: Laden über Entladen (Hysterese)
-    o.append(f'<path d="{path(0.0)}" fill="none" stroke="{COB}" stroke-width="2"/>')
-    o.append(f'<path d="{path(0.02)}" fill="none" stroke="{COP}" stroke-width="2"/>')
-    # Beschriftungen
-    o.append(_t((X(0.15) + X(0.9)) / 2, Y(3.47), "Plateau: &lt; 1 mV pro % SOC" if de else "Plateau: &lt; 1 mV per % SOC", 10, 700, INK, "middle"))
-    o.append(_t((X(0.15) + X(0.9)) / 2, Y(3.42), "OCV-Korrektur kaum möglich" if de else "OCV correction hardly possible", 9, 400, MUT, "middle"))
-    xs = X(0.4); yd = Y(ocv(0.4)); yc = Y(ocv(0.4) + 0.02)
-    o.append(f'<line x1="{xs:.1f}" y1="{yc - 14:.1f}" x2="{xs:.1f}" y2="{yc - 2:.1f}" stroke="{INK}" stroke-width="1" marker-end="url(#ah)"/>')
-    o.append(f'<line x1="{xs:.1f}" y1="{yd + 14:.1f}" x2="{xs:.1f}" y2="{yd + 2:.1f}" stroke="{INK}" stroke-width="1" marker-end="url(#ah)"/>')
-    o.append(_t(xs + 6, yd + 16, "Hysterese ca. 20 mV" if de else "Hysteresis approx. 20 mV", 9, 600, INK))
-    # Steile Bereiche
-    o.append(_t(X(0.05), Y(3.02), "steil" if de else "steep", 9, 600, MUT, "start"))
-    o.append(_t(X(0.955), Y(3.12), "steil" if de else "steep", 9, 600, MUT, "middle"))
+        o.append(f'<line x1="{X(k):.1f}" y1="{Y0}" x2="{X(k):.1f}" y2="{Y0+4}" stroke="{INK}"/>')
+        o.append(_t(X(k), Y0+16, str(k), 10, 600, INK, "middle"))
+    o.append(_t(X0-36, (Y0+Y1)/2, "", 1))
+    o.append(f'<text x="14" y="{(Y0+Y1)/2:.0f}" font-size="10.5" font-weight="700" fill="{INK}" text-anchor="middle" transform="rotate(-90 14 {(Y0+Y1)/2:.0f})">OCV / V</text>')
+    o.append(_t((X0+X1)/2, Y0+31, "SOC / %", 10.5, 700, INK, "middle"))
+    # Zoombereich im Hauptdiagramm
+    zs0, zs1, zv0, zv1 = 10, 40, 3.20, 3.30
+    o.append(f'<rect x="{X(zs0):.1f}" y="{Y(zv1):.1f}" width="{X(zs1)-X(zs0):.1f}" height="{Y(zv0)-Y(zv1):.1f}" fill="{PALE}" stroke="{COB}" stroke-width=".8" stroke-dasharray="2 2"/>')
+    # Kurven
+    o.append(f'<path d="{line(X, Y, False)}" fill="none" stroke="{COB}" stroke-width="2.4" stroke-linejoin="round"/>')
+    o.append(f'<path d="{line(X, Y, True)}" fill="none" stroke="{COP}" stroke-width="2.4" stroke-linejoin="round"/>')
+    # Richtungspfeile auf den Kurven
+    def tri(s, ch, right):
+        x, y = X(s), Y(_lfp(s, ch)); c = COP if ch else COB
+        return (f'<path d="M{x-4:.1f},{y-3.5:.1f} L{x+4:.1f},{y:.1f} L{x-4:.1f},{y+3.5:.1f} z" fill="{c}"/>' if right else
+                f'<path d="M{x+4:.1f},{y-3.5:.1f} L{x-4:.1f},{y:.1f} L{x+4:.1f},{y+3.5:.1f} z" fill="{c}"/>')
+    o.append(tri(55, True, True)); o.append(tri(82, False, False))
+    # Inset: gleiche Spannung, zwei Ladezustände
+    IX0, IX1, IY0, IY1 = 176, 340, 176, 104
+    ix = lambda s: IX0 + (IX1-IX0)*(s-zs0)/(zs1-zs0)
+    iy = lambda v: IY0 - (IY0-IY1)*(v-zv0)/(zv1-zv0)
+    o.append(f'<line x1="{X(zs1):.1f}" y1="{Y(zv0):.1f}" x2="{IX0}" y2="{IY1}" stroke="{COB}" stroke-width=".7" stroke-dasharray="2 2"/>')
+    o.append(f'<rect x="{IX0}" y="{IY1}" width="{IX1-IX0}" height="{IY0-IY1}" fill="#fff" stroke="{INK}" stroke-width="1.2"/>')
+    rng = [zs0 + i*(zs1-zs0)/120 for i in range(121)]
+    o.append(f'<path d="{line(ix, iy, False, rng)}" fill="none" stroke="{COB}" stroke-width="2"/>')
+    o.append(f'<path d="{line(ix, iy, True, rng)}" fill="none" stroke="{COP}" stroke-width="2"/>')
+    vstar = 3.26
+    def solve(ch):
+        lo, hi = zs0, zs1
+        for _ in range(60):
+            mid = (lo+hi)/2
+            lo, hi = (mid, hi) if _lfp(mid, ch) < vstar else (lo, mid)
+        return (lo+hi)/2
+    sc, sd = solve(True), solve(False)
+    o.append(f'<line x1="{IX0}" y1="{iy(vstar):.1f}" x2="{ix(sd):.1f}" y2="{iy(vstar):.1f}" stroke="{INK}" stroke-width="1"/>')
+    for sv in (sc, sd):
+        o.append(f'<line x1="{ix(sv):.1f}" y1="{iy(vstar):.1f}" x2="{ix(sv):.1f}" y2="{IY0-2:.1f}" stroke="{INK}" stroke-width="1" marker-end="url(#ah)"/>')
+        o.append(_t(ix(sv), IY0+11, dec(sv, 0) + " %", 9.5, 700, INK, "middle"))
+    o.append(_t(IX0+4, iy(vstar)-4, dec(vstar, 2) + " V", 9, 700, INK))
+    o.append(_t((IX0+IX1)/2, IY1-6, ("gleiche OCV, " if de else "same OCV, ") + f"Δ ≈ {round(sd-sc)} % SOC", 9.5, 700, INK, "middle"))
     # Legende
-    lx, ly = X0 + 8, Y1 + 10
-    o.append(f'<line x1="{lx}" y1="{ly}" x2="{lx + 14}" y2="{ly}" stroke="{COP}" stroke-width="2"/>' + _t(lx + 18, ly + 3.5, "Laden" if de else "Charge", 9, 600, INK))
-    o.append(f'<line x1="{lx + 62}" y1="{ly}" x2="{lx + 76}" y2="{ly}" stroke="{COB}" stroke-width="2"/>' + _t(lx + 80, ly + 3.5, "Entladen" if de else "Discharge", 9, 600, INK))
-    aria = ("Ruhespannung einer LFP-Zelle über dem Ladezustand: flaches Plateau zwischen etwa 15 und 90 Prozent, steile Bereiche an den Enden, Lade- und Entladekurve um etwa 20 Millivolt versetzt"
-            if de else "Open-circuit voltage of an LFP cell over state of charge: flat plateau between about 15 and 90 percent, steep ends, charge and discharge curves offset by about 20 millivolts")
-    return (f'<figure class="fig fig-lg"><svg viewBox="0 0 320 186" role="img" aria-label="{aria}">{DEFS}{"".join(o)}</svg>'
+    lx, ly = X0+12, Y1+14
+    o.append(f'<line x1="{lx}" y1="{ly}" x2="{lx+16}" y2="{ly}" stroke="{COP}" stroke-width="2.4"/>' + _t(lx+21, ly+3.5, "Laden" if de else "Charge", 10, 700, INK))
+    o.append(f'<line x1="{lx+70}" y1="{ly}" x2="{lx+86}" y2="{ly}" stroke="{COB}" stroke-width="2.4"/>' + _t(lx+91, ly+3.5, "Entladen" if de else "Discharge", 10, 700, INK))
+    o.append(_t(X(66), Y(3.42), "Plateau &lt; 1 mV/%" if de else "plateau &lt; 1 mV/%", 9.5, 600, MUT, "middle"))
+    # Rahmen
+    o.append(f'<rect x="{X0}" y="{Y1}" width="{X1-X0}" height="{Y0-Y1}" fill="none" stroke="{INK}" stroke-width="1.3"/>')
+    aria = ("Ruhespannung einer LFP-Zelle über dem Ladezustand für Laden und Entladen. Die Ausschnittsvergrößerung zeigt: Bei gleicher Spannung von 3,26 Volt liegen die Ladezustände etwa neun Prozentpunkte auseinander."
+            if de else "Open-circuit voltage of an LFP cell over state of charge for charge and discharge. The zoomed inset shows that the same voltage of 3.26 volts corresponds to states of charge about nine percentage points apart.")
+    return (f'<figure class="fig fig-lg"><svg viewBox="0 0 360 240" role="img" aria-label="{aria}">{DEFS}{"".join(o)}</svg>'
             f'<figcaption>{"typischer Verlauf, schematisch" if de else "typical curve, schematic"}</figcaption></figure>')
 
 def fig_modes(lang):
