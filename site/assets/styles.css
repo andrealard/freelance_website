@@ -319,3 +319,4 @@ a:hover{color:var(--cobalt);text-decoration-color:var(--cobalt)}
 .related a:hover::after{transform:translateX(4px)}
 @media (max-width:620px){.related{columns:1}}
 @media (max-width:520px){.article h1{font-size:1.9rem;line-height:1.1;overflow-wrap:normal;hyphens:manual;-webkit-hyphens:manual}}
+.fig.fig-lg{max-width:480px}
